@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.jugol.bd.app-mergeDebugResources-110:/values-en-rSG/values-en-rSG.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\f51d669810a6ce814d32c5d391e8952b\\transformed\\jetified-play-services-wallet-19.1.0\\res\\values-en-rSG\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "206",
+                        "endColumns": "70",
+                        "endOffsets": "276"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "74",
+                        "endOffsets": "125"
+                    }
+                }
+            ]
+        }
+    ]
+}

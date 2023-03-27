@@ -1,50 +1,56 @@
 {
-    "expo": {
-        "name": "Jugol",
-        "slug": "Jugol",
-        "version": "1.0.0",
-        "orientation": "portrait",
-        "icon": "./assets/icon.png",
-        "userInterfaceStyle": "light",
-        "splash": {
-            "image": "./assets/splash.png",
-            "resizeMode": "contain",
-            "backgroundColor": "#ffffff"
-        },
-        "assetBundlePatterns": ["**/*"],
-        "ios": {
-            "supportsTablet": true
-        },
-        "android": {
-            "adaptiveIcon": {
-                "foregroundImage": "./assets/adaptive-icon.png",
-                "backgroundColor": "#ffffff"
-            }
-        },
-        "web": {
-            "favicon": "./assets/favicon.png"
-        },
-        "plugins": [
-            "@react-native-firebase/app",
-            "@react-native-firebase/crashlytics",
-            [
-                "expo-build-properties",
-                {
-                    "ios": {
-                        "useFrameworks": "static"
-                    }
-                }
-            ],
-            [
-                "react-native-fbsdk-next",
-                {
-                    "appID": "127108596968889",
-                    "clientToken": "967fa5cb431b9afffb473e2a2a7be52a",
-                    "displayName": "Jugol",
-                    "scheme": "fb127108596968889"
-                }
-            ],
-            "@notifee/react-native"
-        ]
-    }
+  "expo": {
+    "name": "Jugol",
+    "slug": "Jugol",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "127108596968889",
+          "clientToken": "967fa5cb431b9afffb473e2a2a7be52a",
+          "displayName": "Jugol",
+          "scheme": "fb127108596968889"
+        }
+      ],
+      "@notifee/react-native",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
+  }
 }
