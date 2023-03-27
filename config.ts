@@ -1,7 +1,7 @@
 import {Platform} from 'react-native';
 
-// export const BASE_URL = 'http://54.214.69.31:3500';
-export const BASE_URL = 'http://192.168.0.104:3500';
+export const BASE_URL = 'http://54.214.69.31:3500';
+// export const BASE_URL = 'http://192.168.0.104:3500';
 // export const BASE_URL = 'https://jugal-api.onrender.com';
 export const DEFAULT_IMAGE = 'https://res.cloudinary.com/dwfthpcaq/image/upload/v1674708156/profile-user-icon-isolated-on-white-background-eps10-free-vector_tukpw6.jpg'
 export const API_URL = BASE_URL + '/api/';
