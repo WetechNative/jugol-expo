@@ -1,6 +1,7 @@
 import { IMessage } from 'react-native-gifted-chat';
 export interface IMessageState {
     messages: IMessage[];
+    rtcToken: string;
 }
 
 export interface IAddMessageAction {

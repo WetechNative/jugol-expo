@@ -54,6 +54,8 @@ import colors from "@colors";
 import * as TaskManager from "expo-task-manager";
 import * as Location from "expo-location";
 import { store } from "@store/index";
+import { useGetRTCTokenQuery } from "@store/api/callApi/callApiSlice";
+import { addRtcToken } from "@store/features/messagesSlice/messagesSlice";
 
 const TASK_NAME = "BACKGROUND_LOCATION_TASK";
 let foregroundSubscription = null;
@@ -63,21 +65,25 @@ TaskManager.defineTask(TASK_NAME, async ({ data, error }) => {
     console.error(error);
     return;
   }
-  if (data) {
-    const { locations } = data;
-    const location = locations[0];
+  try {
+    if (data) {
+      const { locations } = data;
+      const location = locations[0];
 
-    if (location) {
-      const latitude = location.coords.latitude;
-      const longitude = location.coords.longitude;
-      const userLocation = {
-        latitude,
-        longitude,
-      };
-      await store?.dispatch(
-        userApiSlice.endpoints.addUserLocation.initiate(userLocation)
-      );
+      if (location) {
+        const latitude = location.coords.latitude;
+        const longitude = location.coords.longitude;
+        const userLocation = {
+          latitude,
+          longitude,
+        };
+        await store?.dispatch(
+          userApiSlice.endpoints.addUserLocation.initiate(userLocation)
+        );
+      }
     }
+  } catch (error) {
+    console.log(error);
   }
 });
 
@@ -93,7 +99,24 @@ export default function DiscoverScreen() {
   const loading = useSelector(selectLoading);
   const dispatch = useDispatch();
   const toast = useToast();
-  const [position, setPosition] = useState(null);
+  const uid = useSelector(selectUID);
+  const {
+    data: rtcToken,
+    isError,
+    isLoading,
+  } = useGetRTCTokenQuery({
+    channelName: "calling",
+    role: "audience",
+    tokentype: "uid",
+    uid: uid,
+  });
+
+  useEffect(() => {
+    if (rtcToken) {
+      console.log(rtcToken);
+      dispatch(addRtcToken(rtcToken.rtcToken));
+    }
+  }, [rtcToken]);
 
   useFcmToken();
 
@@ -136,33 +159,35 @@ export default function DiscoverScreen() {
     }, 2000);
   }, []);
 
-  useEffect(() => {
-    if (allUserIsError) {
-      Alert.alert("Required", "Do you want to refresh ?", [
-        {
-          text: "Refresh",
-          onPress: () => refetch(),
-        },
-      ]);
-    }
-  }, [allUserIsError]);
+  // useEffect(() => {
+  //   if (allUserIsError) {
+  //     Alert.alert("Required", "Do you want to refresh ?", [
+  //       {
+  //         text: "Refresh",
+  //         onPress: () => refetch(),
+  //       },
+  //     ]);
+  //   }
+  // }, [allUserIsError]);
 
   const checkNotificationPermission = useSelector(
     selectCheckNotificationPermission
   );
   const navigation = useNavigation();
-  const uid = useSelector(selectUID);
 
   async function onMessageReceived(data) {
     try {
       if (data?.data?.notifee) {
+        console.log(data?.data?.notifee);
         const parseDate = JSON.parse(data?.data?.notifee);
         const channel = parseDate?.android?.channelId;
         if (channel) {
           await notifee.createChannel({
             id: channel,
             name: "Message",
-            sound: "default",
+            sound: "message",
+            vibration: true,
+            vibrationPattern: [300, 500],
             importance: AndroidImportance.HIGH,
           });
           notifee.displayNotification(parseDate);

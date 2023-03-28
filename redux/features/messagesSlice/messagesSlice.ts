@@ -6,6 +6,7 @@ import { RootState } from '../../index';
 
 const initialState: IMessageState = {
     messages: [],
+    rtcToken: '',
 };
 
 export const messagesSlice = createSlice({
@@ -21,13 +22,17 @@ export const messagesSlice = createSlice({
         removeMessage: (state, action: IRemoveMessageAction) => {
             const filteredMessage = state.messages.filter(message => message._id !== action.payload);
             state.messages = filteredMessage;
-        }
+        },
+        addRtcToken: (state, action) => {
+            state.rtcToken = action.payload;
+        },
     },
 });
 
-export const { addMessages, addSingleMessage, removeMessage } = messagesSlice.actions;
+export const { addMessages, addSingleMessage, removeMessage, addRtcToken } = messagesSlice.actions;
 
 export const selectMessages = (state: RootState) => state.messages.messages;
+export const selectRtcToken = (state: RootState) => state.messages.rtcToken;
 
 const messageReducer = messagesSlice.reducer;
 

@@ -3,7 +3,7 @@ import React from "react";
 import LOGO from "@images/logo.png";
 import { useWindowDimensions } from "react-native";
 import requestCameraAndAudioPermission from "./components/Permission";
-import * as Linking from "expo-linking";
+import { Linking } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { store } from "@store/index";
 import { callApiSlice } from "@store/api/callApi/callApiSlice";

@@ -54,8 +54,6 @@ export const messageApiSlice = apiSlice.injectEndpoints({
                       data?.userID === reciver && data?.currentUser === sender,
                   );
 
-                  console.log({isSenderAlreadyInTheConversation})
-
                   if (isReciverAlreadyInTheConversation) {
                     isReciverAlreadyInTheConversation.lastMessage = lastMessage;
                     isReciverAlreadyInTheConversation.createdAt =

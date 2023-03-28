@@ -2,7 +2,7 @@ import LOGO from "@images/logo.png";
 import { MotiView } from "moti";
 import { Button, Image, Text, VStack } from "native-base";
 import React from "react";
-import * as Linking from "expo-linking";
+import { Linking } from "react-native";
 
 export default function NoInternet() {
   return (

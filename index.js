@@ -24,7 +24,7 @@ async function onMessageReceived(data) {
       await notifee.createChannel({
         id: channel,
         name: 'Message',
-        sound: 'default',
+        sound: 'message',
         importance: AndroidImportance.HIGH,
       });
       notifee.displayNotification(JSON.parse(data?.data?.notifee));

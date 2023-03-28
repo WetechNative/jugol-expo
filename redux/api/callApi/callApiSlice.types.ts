@@ -7,6 +7,6 @@ export interface ICallInfo {
 export interface ITokenInfo {
     channelName: string;
     role: string;
-    uid: string;
+    uid: string | number;
     tokentype: string;
 }

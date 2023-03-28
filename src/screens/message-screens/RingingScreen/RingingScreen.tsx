@@ -6,7 +6,7 @@ import getSocket from "@utils/socketClient";
 import { Avatar, HStack, Pressable, Text, VStack } from "native-base";
 import React, { useEffect, useState } from "react";
 import { Alert } from "react-native";
-import * as Linking from "expo-linking";
+import { Linking } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { useSelector } from "react-redux";
 import notifee, { AndroidImportance } from "@notifee/react-native";
@@ -17,15 +17,6 @@ export default function RingingScrren() {
   const navigation = useNavigation();
   const uid = useSelector(selectUID);
   const [callStatus, setCallStatus] = useState("Calling...");
-  const [permissions, setPermissions] = useState(false);
-
-  const checkPermissions = async () => {
-    await requestCameraAndAudioPermission();
-  };
-
-  useEffect(() => {
-    checkPermissions();
-  }, []);
 
   useEffect(() => {
     const socket = getSocket();
@@ -34,14 +25,20 @@ export default function RingingScrren() {
         const senderFromParams = saveCallInfo?.sender?.user;
         const reciverFromParams = saveCallInfo?.reciver?.user;
         const reciverFromSocket = data.reciverFirebaseId;
+        console.log({
+          uid,
+          senderFromParams,
+          reciverFromParams,
+          reciverFromSocket,
+        });
 
         const isCurrentUserCall =
           uid === senderFromParams && reciverFromParams === reciverFromSocket;
         console.log({ isCurrentUserCall });
 
         if (isCurrentUserCall) {
-          callTimerNotification(data?.callChannelId);
           Linking.openURL(`jugol://call/${data?.callChannelId}`);
+          callTimerNotification(data?.callChannelId);
         }
       });
 
