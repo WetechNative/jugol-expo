@@ -112,12 +112,14 @@ export default function DiscoverScreen() {
     uid: 0,
   });
 
-  console.log({ rtcToken });
-
   useEffect(() => {
     if (rtcToken) {
       console.log(rtcToken);
-      dispatch(addRtcToken(rtcToken.rtcToken));
+      dispatch(
+        addRtcToken(
+          "006ff8513e5cef1498a8b7b0d0de937ee29IADw6mvPRTup4QWMay3Zx7RN4DdTaGi/3Jw10L8hHk+nIQx+f9iO3j7zIgCV6X+6huEzZAQAAQCeyjJkAgCeyjJkAwCeyjJkBACeyjJk"
+        )
+      );
     }
   }, [rtcToken]);
 

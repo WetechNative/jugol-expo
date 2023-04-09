@@ -30,8 +30,9 @@ const CallingScreen = () => {
 
   const connectionData = {
     appId: "ff8513e5cef1498a8b7b0d0de937ee29",
-    channel: "calling",
+    channel: "test",
     token: rtcToken,
+    uid: "nitish",
   };
 
   useEffect(() => {
