@@ -101,7 +101,6 @@ export default function FilterSearchScreen() {
   };
 
   const handleConfirmClick = () => {
-    console.log(values);
     dispatch(
       setFilterData({
         gender: values.gender,

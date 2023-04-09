@@ -104,12 +104,15 @@ export default function DiscoverScreen() {
     data: rtcToken,
     isError,
     isLoading,
+    error,
   } = useGetRTCTokenQuery({
     channelName: "calling",
-    role: "audience",
+    role: "publisher",
     tokentype: "uid",
-    uid: uid,
+    uid: 0,
   });
+
+  console.log({ rtcToken });
 
   useEffect(() => {
     if (rtcToken) {
@@ -153,6 +156,17 @@ export default function DiscoverScreen() {
 
   const onRefresh = React.useCallback(() => {
     setRefreshing(true);
+    dispatch(
+      setFilterData({
+        gender: "",
+        countryName: "",
+        cityName: "",
+        profession: "",
+        religion: "",
+        ageTo: "",
+        ageFrom: "",
+      })
+    );
     refetch();
     setTimeout(() => {
       setRefreshing(false);
@@ -250,6 +264,7 @@ export default function DiscoverScreen() {
     await addLike(body);
     toast.show({
       placement: "top",
+      duration: 1000,
       render: () => {
         return (
           <Box bg="danger.200" px="2" py="2" rounded="sm" w="full">
@@ -270,6 +285,7 @@ export default function DiscoverScreen() {
     await addLike(body);
     toast.show({
       placement: "top",
+      duration: 1000,
       render: () => {
         return (
           <Box bg="primary.100" px="2" py="2" rounded="sm">
@@ -290,6 +306,7 @@ export default function DiscoverScreen() {
     await addLike(body);
     toast.show({
       placement: "top",
+      duration: 1000,
       render: () => {
         return (
           <Box bg="primary.100" px="2" py="2" rounded="sm">
