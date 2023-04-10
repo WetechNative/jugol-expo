@@ -11,7 +11,10 @@ import notifee, { AndroidImportance } from "@notifee/react-native";
 import messaging from "@react-native-firebase/messaging";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { dashBoardRoutes, homeRoutes } from "@routes/index";
-import { useAddLikeMutation } from "@store/api/likeApi/likeApiSlice";
+import {
+  useAddLikeMutation,
+  useGetAllLikesQuery,
+} from "@store/api/likeApi/likeApiSlice";
 import {
   useAddUserLocationMutation,
   useGetAllUserQuery,
@@ -232,14 +235,49 @@ export default function DiscoverScreen() {
       );
     });
     socket.on("getMatched", (data) => {
-      // Alert.alert('Matched', 'You have matched with someone!', [
-      //   {
-      //     text: 'view',
-      //     onPress: () =>
-      //       navigation.navigate(homeRoutes.match.path as never, data as never),
-      //   },
-      // ]);
-      Alert.alert("You have matched with someone!");
+      if (data?.user1Details?.user === uid) {
+        Alert.alert(
+          "Matched",
+          `You have matched with ${data?.user2Details?.firstName}!`,
+          [
+            {
+              text: "view",
+              onPress: () =>
+                navigation.navigate(
+                  homeRoutes.match.path as never,
+                  {
+                    user1: data?.user1Details,
+                    user2: data?.user2Details,
+                  } as never
+                ),
+            },
+            {
+              text: "cancel",
+            },
+          ]
+        );
+      } else if (data?.user2Details?.user === uid) {
+        Alert.alert(
+          "Matched",
+          `You have matched with ${data?.user1Details?.firstName}!`,
+          [
+            {
+              text: "view",
+              onPress: () =>
+                navigation.navigate(
+                  homeRoutes.match.path as never,
+                  {
+                    user1: data?.user2Details,
+                    user2: data?.user1Details,
+                  } as never
+                ),
+            },
+            {
+              text: "cancel",
+            },
+          ]
+        );
+      }
     });
   }, []);
 

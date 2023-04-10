@@ -59,9 +59,9 @@ export default function LikedCard({ item, type, isPremium }: ILikedCard) {
       mt={"20px"}
       onPress={() => {
         if (type === "likedYou") {
-          navigation.navigate("BePremium");
+          navigation.navigate("BePremium" as never);
         } else {
-          navigation.navigate("LikeProfileScreen", item);
+          navigation.navigate("LikeProfileScreen" as never, item as never);
         }
       }}
     >

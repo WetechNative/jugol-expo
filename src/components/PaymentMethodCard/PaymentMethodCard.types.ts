@@ -2,7 +2,7 @@
 import { ImageSourcePropType } from 'react-native';
 import { PressableProps, TextProps } from '../../types/native-base.types';
 export interface IPaymentMethodCard extends PressableProps {
-    image: ImageSourcePropType;
+    icon: JSX.Element;
     title: string;
     titleStyle?: TextProps;
 }

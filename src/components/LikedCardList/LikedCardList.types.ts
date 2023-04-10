@@ -5,11 +5,12 @@ export interface ILikedItem {
     lastName: string;
     profilePic: string;
     birthDate: string | Date;
-    status: string;
+    status?: string;
 }
 
 export interface ILikedCardList {
     data: ILikedItem[];
     type: string;
     isPremium?: boolean;
+    onRefresh?: JSX.Element;
 }

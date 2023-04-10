@@ -5,7 +5,7 @@ import AntDesign from "@expo/vector-icons/AntDesign";
 import { fontSizes } from "@typography";
 
 export default function PaymentMethodCard({
-  image,
+  icon,
   title,
   titleStyle,
   ...rest
@@ -19,7 +19,7 @@ export default function PaymentMethodCard({
       {...rest}
     >
       <HStack alignItems={"center"}>
-        <Image source={image} alt={title} />
+        {icon}
         <Text
           ml="10px"
           fontSize={fontSizes["2xs"]}

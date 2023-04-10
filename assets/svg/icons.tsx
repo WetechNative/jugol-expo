@@ -23,6 +23,11 @@ import threeDots from "./dots.svg";
 import gallery from "./gallery.svg";
 import success_payment from "./success_payment.svg";
 import error_payment from "./error_payment.svg";
+import premium from "./premium.svg";
+import bkash from "./bkash.svg";
+import nagad from "./nagad.svg";
+import rocket from "./rocket.svg";
+import card from "./card.svg";
 
 type TVectorImage = React.ComponentProps<typeof Image>;
 export type TIcon = Omit<TVectorImage, "source">;
@@ -111,4 +116,19 @@ export const SuccessPayment = (props: TIcon) => (
 
 export const ErrorPayment = (props: TIcon) => (
   <Image style={{ height: 20, width: 20 }} {...props} source={error_payment} />
+);
+export const Premium = (props: TIcon) => (
+  <Image style={{ height: 20, width: 20 }} {...props} source={premium} />
+);
+export const Bkash = (props: TIcon) => (
+  <Image style={{ height: 20, width: 20 }} {...props} source={bkash} />
+);
+export const Rocket = (props: TIcon) => (
+  <Image style={{ height: 20, width: 20 }} {...props} source={rocket} />
+);
+export const Nagad = (props: TIcon) => (
+  <Image style={{ height: 20, width: 20 }} {...props} source={nagad} />
+);
+export const Card = (props: TIcon) => (
+  <Image style={{ height: 20, width: 20 }} {...props} source={card} />
 );

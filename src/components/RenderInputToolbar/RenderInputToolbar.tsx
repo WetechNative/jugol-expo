@@ -94,22 +94,6 @@ const RenderInputToolbar = (props: InputToolbarProps<IMessage>) => {
           ) : undefined
         }
       />
-      {/* <InputToolbar
-        {...props}
-        containerStyle={{
-          marginLeft: 45,
-          borderWidth: 0.8,
-          borderColor: '#E8E6EA',
-          // bottom: 10,
-          borderRadius: 15,
-          paddingLeft: 4,
-          marginTop: 20,
-          width: '63%',
-          alignItems: 'center',
-          paddingVertical: 0,
-        }}
-        renderSend={RenderSend}
-      /> */}
       <Pressable
         borderWidth={"1px"}
         borderColor={"#E8E6EA"}

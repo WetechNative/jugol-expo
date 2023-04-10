@@ -1,6 +1,8 @@
 import { setAllUserDetails } from '@store/features/user/userSlice';
 import { apiSlice } from '../apiSlice';
 import { userApiSlice } from '../userApi/userApiSlice';
+import  io  from 'socket.io-client';
+import { BASE_URL } from '@config';
 
 const likeApiSlice = apiSlice.injectEndpoints({
     endpoints: builder => ({
