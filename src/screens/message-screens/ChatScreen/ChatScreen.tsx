@@ -52,9 +52,9 @@ export default function ChatScreen() {
   });
 
   const loadMoreMessages = () => {
-    const pageNumber = messageList?.data?.pageNumber;
-    const pageSize = messageList?.data?.pageSize;
-    const totalPages = messageList?.data?.totalPages;
+    const pageNumber = messageList?.pageNumber;
+    const pageSize = messageList?.pageSize;
+    const totalPages = messageList?.totalPages;
     if (pageNumber < totalPages) {
       dispatch(
         messageApiSlice?.endpoints?.getInfiniteMessage?.initiate({
@@ -66,21 +66,21 @@ export default function ChatScreen() {
     }
   };
 
-  const chatList: IMessage[] = messageList?.data?.messages?.map((message) => ({
-    _id: message._id,
-    text: message.message,
-    user: {
-      _id: message?.sender?._id,
-      name: message?.sender?.firstName + " " + message?.sender?.lastName,
-      avatar: message?.sender?.profilePic,
-    },
-    createdAt: new Date(message.createdAt),
-    image: JSON.stringify(message?.files),
-    sent: message?.sender?._id === result?.data?.data?.sender?._id,
-    received: message?.sender?._id !== result?.data?.data?.sender?._id,
-  }));
+  // const chatList: IMessage[] = messageList?.data?.messages?.map((message) => ({
+  //   _id: message._id,
+  //   text: message.message,
+  //   user: {
+  //     _id: message?.sender?._id,
+  //     name: message?.sender?.firstName + " " + message?.sender?.lastName,
+  //     avatar: message?.sender?.profilePic,
+  //   },
+  //   createdAt: new Date(message.createdAt),
+  //   image: JSON.stringify(message?.files),
+  //   sent: message?.sender?._id === result?.data?.data?.sender?._id,
+  //   received: message?.sender?._id !== result?.data?.data?.sender?._id,
+  // }));
 
-  const sortedMessages = chatList
+  const sortedMessages = messageList?.chatList
     ?.slice()
     ?.sort(
       (prev, next) => new Date(next?.createdAt) - new Date(prev?.createdAt)
@@ -116,10 +116,7 @@ export default function ChatScreen() {
     if (messageList) {
       navigation.setOptions({
         headerLeft: () => (
-          <ChatHeader
-            user={messageList.data.reciverDetails}
-            isActive={isActive}
-          />
+          <ChatHeader user={messageList?.reciverDetails} isActive={isActive} />
         ),
       });
     }
@@ -181,6 +178,18 @@ export default function ChatScreen() {
         message.append(`images${i + 1}`, imgeData);
       }
     }
+    // const sendItem = {
+    //   message,
+    //   _id: draft._id,
+    //   text: draft.message,
+    //   user: {
+    //     _id: draft?.sender?._id,
+    //     name: draft?.sender?.firstName + " " + message?.sender?.lastName,
+    //     avatar: message?.sender?.profilePic,
+    //   },
+    //   createdAt: new Date(message.createdAt),
+    //   image: JSON.stringify(message?.files),
+    // };
     await sendMessage(message);
   };
 

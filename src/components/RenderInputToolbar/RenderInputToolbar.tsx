@@ -11,10 +11,11 @@ import { SheetManager } from "react-native-actions-sheet";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import SelectInputImageTypeSheet from "@action-sheets/SelectInputImageTypeSheet/SelectInputImageTypeSheet";
 import {
-  Image,
   NativeSyntheticEvent,
+  TextInput,
   TextInputFocusEventData,
 } from "react-native";
+import { Image } from "expo-image";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { Asset } from "react-native-image-picker";
 
@@ -41,6 +42,18 @@ const RenderInputToolbar = (props: InputToolbarProps<IMessage>) => {
     }
   };
 
+  const _onImageChange = (event) => {
+    const { uri, linkUri, mime, data } = event.nativeEvent;
+    // console.log({ uri, linkUri, mime, data });
+    setMessageImage([
+      {
+        fileName: uri?.split("/").pop(),
+        uri: linkUri,
+        type: mime,
+      },
+    ]);
+  };
+
   return (
     <HStack position="absolute" bottom="10px" space={4} mx="20px">
       {messageImage?.length > 0 ? (
@@ -48,11 +61,13 @@ const RenderInputToolbar = (props: InputToolbarProps<IMessage>) => {
           <FlatList
             data={messageImage}
             renderItem={({ item, index }) => {
+              console.log({ item });
               return (
                 <HStack>
                   <Image
                     source={{ uri: item.uri }}
                     style={{ height: 40, width: 40 }}
+                    contentFit="contain"
                   />
                   <VStack position={"absolute"} right={0} bg="#00000025">
                     <AntDesign
@@ -78,6 +93,7 @@ const RenderInputToolbar = (props: InputToolbarProps<IMessage>) => {
         onChangeText={(text) => setTextMessage(text)}
         onBlur={handleBlur}
         onFocus={handleFocus}
+        onImageChange={_onImageChange}
         rightElement={
           textMessage || messageImage?.length > 0 ? (
             <MaterialCommunityIcons
@@ -94,6 +110,7 @@ const RenderInputToolbar = (props: InputToolbarProps<IMessage>) => {
           ) : undefined
         }
       />
+      {/* <TextInput style={{ width: "80%" }} onImageChange={_onImageChange} /> */}
       <Pressable
         borderWidth={"1px"}
         borderColor={"#E8E6EA"}

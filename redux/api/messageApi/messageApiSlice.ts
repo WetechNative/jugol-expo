@@ -1,8 +1,8 @@
-import {BASE_URL} from '@config';
-import io from 'socket.io-client';
-import {IConversationProps} from '../../../src/screens/message-screens/MessagesScreen/MessageScreen.types';
-import {RootState} from '../../index';
-import {apiSlice} from '../apiSlice';
+import { BASE_URL } from "@config";
+import io from "socket.io-client";
+import { IConversationProps } from "../../../src/screens/message-screens/MessagesScreen/MessageScreen.types";
+import { RootState } from "../../index";
+import { apiSlice } from "../apiSlice";
 import {
   IConversationResponse,
   IGetConversations,
@@ -10,20 +10,21 @@ import {
   IMessageData,
   IMessageDraft,
   IMessageResponse,
-} from './messageApiSlice.types';
+} from "./messageApiSlice.types";
+import { IMessage } from "react-native-gifted-chat";
 
 export const messageApiSlice = apiSlice.injectEndpoints({
-  endpoints: builder => ({
+  endpoints: (builder) => ({
     getConversations: builder.query({
       query: () => {
         return {
-          url: 'messages/getConversations',
-          method: 'GET',
+          url: "messages/getConversations",
+          method: "GET",
         };
       },
       async onCacheEntryAdded(
         args,
-        {cacheDataLoaded, cacheEntryRemoved, updateCachedData, getState},
+        { cacheDataLoaded, cacheEntryRemoved, updateCachedData, getState }
       ) {
         try {
           const socket = io(BASE_URL);
@@ -31,7 +32,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
 
           const userId = state?.auth?.uid;
 
-          socket.on('sendMessage', async (message: IMessageResponse) => {
+          socket.on("sendMessage", async (message: IMessageResponse) => {
             try {
               const reciver = message?.reciver?._id;
               const sender = message?.sender?._id;
@@ -46,12 +47,12 @@ export const messageApiSlice = apiSlice.injectEndpoints({
               updateCachedData((draft: IConversationResponse) => {
                 if (draft?.data) {
                   const isSenderAlreadyInTheConversation = draft?.data?.find(
-                    data =>
-                      data?.userID === sender && data?.currentUser === reciver,
+                    (data) =>
+                      data?.userID === sender && data?.currentUser === reciver
                   );
                   const isReciverAlreadyInTheConversation = draft?.data?.find(
-                    data =>
-                      data?.userID === reciver && data?.currentUser === sender,
+                    (data) =>
+                      data?.userID === reciver && data?.currentUser === sender
                   );
 
                   if (isReciverAlreadyInTheConversation) {
@@ -59,7 +60,8 @@ export const messageApiSlice = apiSlice.injectEndpoints({
                     isReciverAlreadyInTheConversation.createdAt =
                       messageCreatedAt;
                     isReciverAlreadyInTheConversation.files = files;
-                    isReciverAlreadyInTheConversation.isActive = reciverIsActive;
+                    isReciverAlreadyInTheConversation.isActive =
+                      reciverIsActive;
                   }
                   if (isSenderAlreadyInTheConversation) {
                     isSenderAlreadyInTheConversation.lastMessage = lastMessage;
@@ -91,7 +93,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
                         lastMessage,
                         userID: nextUser?._id,
                         currentUser: currentUser?._id,
-                        name: nextUser?.firstName + ' ' + nextUser?.lastName,
+                        name: nextUser?.firstName + " " + nextUser?.lastName,
                         firebaseID: nextUser?.user,
                         unread: 0,
                         updatedAt: message?.updatedAt,
@@ -102,7 +104,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
                     }
                   }
                 } else {
-                  console.warn('draft is undefined');
+                  console.warn("draft is undefined");
                 }
               });
             } catch (error) {
@@ -110,7 +112,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
             }
           });
 
-          socket.on('addBlockedUser', async blockedData => {
+          socket.on("addBlockedUser", async (blockedData) => {
             try {
               const user1DatabaseId = blockedData.blocker;
               const user2DatabaseId = blockedData.blocked;
@@ -118,14 +120,14 @@ export const messageApiSlice = apiSlice.injectEndpoints({
               updateCachedData((draft: IConversationResponse) => {
                 if (draft?.data) {
                   const condition1 = draft.data.filter(
-                    data =>
+                    (data) =>
                       data.currentUser === user1DatabaseId &&
-                      data.userID === user2DatabaseId,
+                      data.userID === user2DatabaseId
                   );
                   const condition2 = draft.data.filter(
-                    data =>
+                    (data) =>
                       data.currentUser === user2DatabaseId &&
-                      data.userID === user1DatabaseId,
+                      data.userID === user1DatabaseId
                   );
 
                   if (condition2.length > 0) {
@@ -146,21 +148,21 @@ export const messageApiSlice = apiSlice.injectEndpoints({
             }
           });
 
-          socket.on('removeBlockedUser', async blockedData => {
+          socket.on("removeBlockedUser", async (blockedData) => {
             try {
               const user1DatabaseId = blockedData.unblocker;
               const user2DatabaseId = blockedData.unblocked;
               updateCachedData((draft: IConversationResponse) => {
                 if (draft?.data) {
                   const condition1 = draft.data.filter(
-                    data =>
+                    (data) =>
                       data.currentUser === user1DatabaseId &&
-                      data.userID === user2DatabaseId,
+                      data.userID === user2DatabaseId
                   );
                   const condition2 = draft.data.filter(
-                    data =>
+                    (data) =>
                       data.currentUser === user2DatabaseId &&
-                      data.userID === user1DatabaseId,
+                      data.userID === user1DatabaseId
                   );
 
                   if (condition2.length > 0) {
@@ -181,7 +183,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
             }
           });
 
-          socket.on('deleteConversation', async data => {
+          socket.on("deleteConversation", async (data) => {
             try {
               const user1 = data?.user1;
               const user2 = data?.user2;
@@ -189,21 +191,21 @@ export const messageApiSlice = apiSlice.injectEndpoints({
               updateCachedData((draft: IConversationResponse) => {
                 if (draft?.data) {
                   const isSenderAlreadyInTheConversation = draft?.data?.find(
-                    data =>
-                      data?.userID === user1 && data?.currentUser === user2,
+                    (data) =>
+                      data?.userID === user1 && data?.currentUser === user2
                   );
                   const isReciverAlreadyInTheConversation = draft?.data?.find(
-                    data =>
-                      data?.userID === user2 && data?.currentUser === user1,
+                    (data) =>
+                      data?.userID === user2 && data?.currentUser === user1
                   );
 
                   if (isReciverAlreadyInTheConversation) {
                     const newConv = draft?.data?.filter(
-                      convData =>
+                      (convData) =>
                         convData?.currentUser !==
                           isReciverAlreadyInTheConversation?.currentUser ||
                         convData?.userID !==
-                          isReciverAlreadyInTheConversation?.userID,
+                          isReciverAlreadyInTheConversation?.userID
                     );
                     const newConversation = {
                       data: newConv,
@@ -217,11 +219,11 @@ export const messageApiSlice = apiSlice.injectEndpoints({
 
                   if (isSenderAlreadyInTheConversation) {
                     const newConv = draft?.data?.filter(
-                      convData =>
+                      (convData) =>
                         convData?.userID !==
                           isSenderAlreadyInTheConversation?.userID ||
                         convData?.currentUser !==
-                          isSenderAlreadyInTheConversation?.currentUser,
+                          isSenderAlreadyInTheConversation?.currentUser
                     );
                     const newConversation = {
                       data: newConv,
@@ -239,7 +241,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
             }
           });
 
-          socket.on('activeUsers', async (data) => {
+          socket.on("activeUsers", async (data) => {
             try {
               const parseData = JSON.parse(data);
 
@@ -248,8 +250,9 @@ export const messageApiSlice = apiSlice.injectEndpoints({
               updateCachedData((draft: IConversationResponse) => {
                 if (draft?.data) {
                   const condition1 = draft.data.filter(
-                    data =>
-                      data.firebaseID === nextUserUID || data.currentUserFirebaseId === nextUserUID
+                    (data) =>
+                      data.firebaseID === nextUserUID ||
+                      data.currentUserFirebaseId === nextUserUID
                   );
 
                   if (condition1.length > 0) {
@@ -262,7 +265,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
             }
           });
 
-          socket.on('inactiveUsers', async (data) => {
+          socket.on("inactiveUsers", async (data) => {
             try {
               const parseData = JSON.parse(data);
 
@@ -270,10 +273,8 @@ export const messageApiSlice = apiSlice.injectEndpoints({
 
               updateCachedData((draft: IConversationResponse) => {
                 if (draft?.data) {
-
                   const condition1 = draft.data.filter(
-                    data =>
-                      data.firebaseID === nextUserUID
+                    (data) => data.firebaseID === nextUserUID
                   );
 
                   if (condition1.length > 0) {
@@ -300,33 +301,33 @@ export const messageApiSlice = apiSlice.injectEndpoints({
         let queryParams =
           data?.pageNumber && data?.pageSize
             ? `?pageSize=${data?.pageSize}&pageNumber=${data?.pageNumber}`
-            : '';
+            : "";
         const url = `messages/getConversations${queryParams}`;
         return {
           url,
-          method: 'GET',
+          method: "GET",
         };
       },
-      async onQueryStarted(args, {dispatch, queryFulfilled}) {
+      async onQueryStarted(args, { dispatch, queryFulfilled }) {
         try {
           const result = await queryFulfilled;
 
           if (result?.data?.data?.length > 0) {
             dispatch(
               messageApiSlice.util.updateQueryData(
-                'getConversations',
+                "getConversations",
                 undefined,
                 (draft: IConversationResponse) => {
-                  const draftData = draft?.data?.map(d => d);
-                  const resultData = result?.data?.data?.map(d => d);
+                  const draftData = draft?.data?.map((d) => d);
+                  const resultData = result?.data?.data?.map((d) => d);
                   const newData = {
                     ...draft,
                     pageNumber: result?.data?.pageNumber,
                     data: [...draftData, ...resultData],
                   };
                   return newData;
-                },
-              ),
+                }
+              )
             );
           }
         } catch (e) {
@@ -335,10 +336,10 @@ export const messageApiSlice = apiSlice.injectEndpoints({
       },
     }),
     getMessage: builder.query({
-      query: id => {
+      query: (id) => {
         return {
           url: `messages/getMessage/${id}`,
-          method: 'GET',
+          method: "GET",
         };
       },
       async onCacheEntryAdded(
@@ -349,7 +350,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
           updateCachedData,
           getState,
           dispatch,
-        },
+        }
       ) {
         try {
           const socket = io(BASE_URL);
@@ -357,14 +358,26 @@ export const messageApiSlice = apiSlice.injectEndpoints({
 
           const userId = state?.auth?.uid;
 
-          socket.on('sendMessage', message => {
+          socket.on("sendMessage", (message) => {
+            const messageItem = {
+              _id: message._id,
+              text: message.message,
+              user: {
+                _id: message?.sender?._id,
+                name:
+                  message?.sender?.firstName + " " + message?.sender?.lastName,
+                avatar: message?.sender?.profilePic,
+              },
+              createdAt: new Date(message.createdAt),
+              image: JSON.stringify(message?.files),
+            };
             try {
               if (
                 message?.sender?.user === userId ||
                 message?.reciver?.user === userId
               ) {
-                updateCachedData(draft => {
-                  draft?.data?.messages?.push(message);
+                updateCachedData((draft) => {
+                  draft?.chatList?.push(messageItem);
                 });
               }
             } catch (error) {
@@ -380,40 +393,87 @@ export const messageApiSlice = apiSlice.injectEndpoints({
           // cacheDataLoaded throws
         }
       },
+      transformResponse: (response) => {
+        const chatList: IMessage[] = response?.data?.messages?.map(
+          (message) => ({
+            _id: message._id,
+            text: message.message,
+            user: {
+              _id: message?.sender?._id,
+              name:
+                message?.sender?.firstName + " " + message?.sender?.lastName,
+              avatar: message?.sender?.profilePic,
+            },
+            createdAt: new Date(message.createdAt),
+            image: JSON.stringify(message?.files),
+          })
+        );
+        const messageList = {
+          pageNumber: response?.data?.pageNumber,
+          pageSize: response?.data?.pageSize,
+          totalPages: response?.data?.totalPages,
+          reciverDetails: response?.data?.reciverDetails,
+          senderDetails: response?.data?.senderDetails,
+          chatList,
+          totalMessages: response?.data?.totalMessages,
+        };
+
+        return messageList;
+      },
     }),
     getInfiniteMessage: builder.query({
       query: (data: IGetMessages) => {
         let queryParams =
           data?.pageNumber && data?.pageSize
             ? `?pageSize=${data?.pageSize}&pageNumber=${data?.pageNumber}`
-            : '';
+            : "";
         return {
           url: `messages/getMessage/${data.id}${queryParams}`,
-          method: 'GET',
+          method: "GET",
         };
       },
-      async onQueryStarted(args, {dispatch, queryFulfilled}) {
+      async onQueryStarted(args, { dispatch, queryFulfilled }) {
         try {
           const result = await queryFulfilled;
-          if (result?.data?.data?.messages?.length > 0) {
+          const chatList: IMessage[] = result?.data?.data?.messages?.map(
+            (message) => ({
+              _id: message._id,
+              text: message.message,
+              user: {
+                _id: message?.sender?._id,
+                name:
+                  message?.sender?.firstName + " " + message?.sender?.lastName,
+                avatar: message?.sender?.profilePic,
+              },
+              createdAt: new Date(message.createdAt),
+              image: JSON.stringify(message?.files),
+            })
+          );
+          const messageList = {
+            pageNumber: result?.data?.data?.pageNumber,
+            pageSize: result?.data?.data?.pageSize,
+            totalPages: result?.data?.data?.totalPages,
+            reciverDetails: result?.data?.data?.reciverDetails,
+            senderDetails: result?.data?.data?.senderDetails,
+            chatList,
+            totalMessages: result?.data?.data?.totalMessages,
+          };
+          if (messageList?.chatList?.length > 0) {
             dispatch(
               messageApiSlice.util.updateQueryData(
-                'getMessage',
+                "getMessage",
                 args.id.toString(),
-                (draft: IMessageDraft) => {
-                  const draftData = draft?.data?.messages?.map(d => d);
-                  const resultData = result?.data?.data?.messages?.map(d => d);
+                (draft) => {
+                  const draftData = draft?.chatList?.map((d) => d);
+                  const resultData = messageList?.chatList?.map((d) => d);
                   const newData = {
-                    ...draft?.data,
-                    pageNumber: result?.data?.data?.pageNumber,
-                    messages: [...draftData, ...resultData],
+                    ...draft,
+                    pageNumber: messageList?.pageNumber,
+                    chatList: [...draftData, ...resultData],
                   };
-                  const newDraft = {
-                    data: newData,
-                  };
-                  return newDraft;
-                },
-              ),
+                  return newData;
+                }
+              )
             );
           }
         } catch (e) {
@@ -423,24 +483,59 @@ export const messageApiSlice = apiSlice.injectEndpoints({
     }),
 
     sendMessage: builder.mutation({
-      query: data => ({
-        method: 'POST',
-        url: '/messages/sendMessage',
+      query: (data) => ({
+        method: "POST",
+        url: "/messages/sendMessage",
         body: data,
       }),
+      async onQueryStarted(data, { dispatch, queryFulfilled, getState }) {
+        const state: RootState = getState();
+
+          const id = state?.auth?.uid;
+          
+        const patchResult = dispatch(
+          messageApiSlice.util.updateQueryData('getMessage', id, (draft) => {
+            console.log({draft});
+            const messageItem = {
+              _id: draft._id,
+              text: draft.message,
+              user: {
+                _id: draft?.sender?._id,
+                name:
+                  draft?.sender?.firstName + " " + message?.sender?.lastName,
+                avatar: message?.sender?.profilePic,
+              },
+              createdAt: new Date(message.createdAt),
+              image: JSON.stringify(message?.files),
+            };
+            Object.assign(messageItem);
+          })
+        )
+        try {
+          await queryFulfilled
+        } catch {
+          // patchResult.undo()
+
+          /**
+           * Alternatively, on failure you can invalidate the corresponding cache tags
+           * to trigger a re-fetch:
+           * dispatch(api.util.invalidateTags(['Post']))
+           */
+        }
+      },
     }),
 
     callUser: builder.mutation({
-      query: data => ({
-        method: 'POST',
-        url: '/messages/callUser',
+      query: (data) => ({
+        method: "POST",
+        url: "/messages/callUser",
         body: data,
       }),
     }),
 
     deleteConversation: builder.mutation({
-      query: reciverID => ({
-        method: 'DELETE',
+      query: (reciverID) => ({
+        method: "DELETE",
         url: `/messages/deleteConversation/${reciverID}`,
       }),
     }),

@@ -10,6 +10,7 @@ import messaging from '@react-native-firebase/messaging';
 import { name as appName } from './app.json';
 import handleNotification from './src/utils/notificationHandler';
 import 'react-native-gesture-handler';
+import 'react-native-image-keyboard';
 // import { Settings } from 'react-native-fbsdk-next';
 // Settings.initializeSDK();
 

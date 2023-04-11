@@ -46,6 +46,7 @@ export default function GridImageViewer({ images }: IGridImageViewer) {
           }
         >
           <Image
+            contentFit="contain"
             source={{
               uri: images[0],
             }}
@@ -85,6 +86,7 @@ export default function GridImageViewer({ images }: IGridImageViewer) {
               }
             >
               <Image
+                contentFit="contain"
                 style={{
                   height: "100%",
                   width: "100%",
@@ -112,6 +114,7 @@ export default function GridImageViewer({ images }: IGridImageViewer) {
               }
             >
               <Image
+                contentFit="contain"
                 style={{
                   height: "100%",
                   width: "100%",
@@ -142,6 +145,7 @@ export default function GridImageViewer({ images }: IGridImageViewer) {
               }
             >
               <Image
+                contentFit="contain"
                 style={{
                   height: "100%",
                   width: "100%",
@@ -176,6 +180,7 @@ export default function GridImageViewer({ images }: IGridImageViewer) {
                 h="100%"
               >
                 <Image
+                  contentFit="contain"
                   style={{
                     height: "100%",
                     width: "100%",
