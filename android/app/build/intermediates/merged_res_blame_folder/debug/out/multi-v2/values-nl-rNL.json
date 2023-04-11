@@ -4,7 +4,7 @@
             "outputFile": "com.jugol.bd.app-mergeDebugResources-110:/values-nl-rNL/values-nl-rNL.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\6713e6afa6ce81c848a3577baad0d3f9\\transformed\\jetified-stripe-3ds2-android-6.1.7\\res\\values-nl-rNL\\values-nl-rNL.xml",
+                    "source": "C:\\Users\\ekjon\\.gradle\\caches\\transforms-3\\6713e6afa6ce81c848a3577baad0d3f9\\transformed\\jetified-stripe-3ds2-android-6.1.7\\res\\values-nl-rNL\\values-nl-rNL.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
