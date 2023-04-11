@@ -4,7 +4,17 @@
             "outputFile": "com.jugol.bd.app-mergeDebugResources-110:/values-ru-rRU/values-ru-rRU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\6713e6afa6ce81c848a3577baad0d3f9\\transformed\\jetified-stripe-3ds2-android-6.1.7\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "source": "C:\\Users\\ekjon\\.gradle\\caches\\transforms-3\\fbaa494c195bac626d54787063b89dd1\\transformed\\jetified-Android-Image-Cropper-4.3.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,167,214,272,320,396,468,531,596",
+                        "endColumns": "111,46,57,47,75,71,62,64,69",
+                        "endOffsets": "162,209,267,315,391,463,526,591,661"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ekjon\\.gradle\\caches\\transforms-3\\6713e6afa6ce81c848a3577baad0d3f9\\transformed\\jetified-stripe-3ds2-android-6.1.7\\res\\values-ru-rRU\\values-ru-rRU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -18,16 +28,6 @@
                         "startOffsets": "666,752,855,922,989,1053,1140",
                         "endColumns": "85,102,66,66,63,86,71",
                         "endOffsets": "747,850,917,984,1048,1135,1207"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\fbaa494c195bac626d54787063b89dd1\\transformed\\jetified-Android-Image-Cropper-4.3.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,167,214,272,320,396,468,531,596",
-                        "endColumns": "111,46,57,47,75,71,62,64,69",
-                        "endOffsets": "162,209,267,315,391,463,526,591,661"
                     }
                 }
             ]

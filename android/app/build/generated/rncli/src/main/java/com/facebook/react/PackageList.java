@@ -51,6 +51,8 @@ import com.agontuk.RNFusedLocation.RNFusedLocationPackage;
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-get-random-values
 import org.linusu.RNGetRandomValuesPackage;
+// react-native-image-keyboard
+import com.rnimagekeyboard.MediaInputPackage;
 // react-native-image-picker
 import com.imagepicker.ImagePickerPackage;
 // react-native-linear-gradient
@@ -128,6 +130,7 @@ public class PackageList {
       new RNFusedLocationPackage(),
       new RNGestureHandlerPackage(),
       new RNGetRandomValuesPackage(),
+      new MediaInputPackage(),
       new ImagePickerPackage(),
       new LinearGradientPackage(),
       new ReanimatedPackage(),
