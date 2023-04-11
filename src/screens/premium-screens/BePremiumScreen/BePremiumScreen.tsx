@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import { Box, Button, HStack, Image, Text, VStack } from "native-base";
 import MATCH_PICTUR1 from "@images/matchPicture1.png";
-import PREMIUM_ICON from "@images/premium.png";
 import KeyboardAwareView from "../../../components/KeyboardAwareView/KeyboardAwareView";
 import { useNavigation } from "@react-navigation/native";
 import { fontSizes } from "@typography";

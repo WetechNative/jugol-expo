@@ -1,7 +1,6 @@
 import KeyboardAwareView from "@ui/KeyboardAwareView/KeyboardAwareView";
 import { Button, HStack, Image, Text, VStack } from "native-base";
 import React, { useState } from "react";
-import PREMIUM_ICON from "@images/premium.png";
 import PremiumPackageCard from "@ui/PremiumPackageCard/PremiumPackageCard";
 import { useNavigation } from "@react-navigation/native";
 import { messageRoutes } from "@routes/index";

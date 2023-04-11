@@ -1,12 +1,14 @@
+import { useNavigation } from "@react-navigation/native";
 import { useDeleteBlockMutation } from "@store/api/blockApi/blockApiSlice";
 import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
 import { HStack, Image, Pressable, Text, VStack } from "native-base";
 import React, { useState } from "react";
-import { IBlockedUserCard } from "./BlockedUserCard.types";
 
-export default function BlockedUserCard(item: IBlockedUserCard) {
+export default function BlockedUserCard(item) {
   const [loading, setLoading] = useState(false);
   const [deleteBlock, deleteResult] = useDeleteBlockMutation();
+  const navigation = useNavigation();
+  const user = item;
 
   return (
     <>
@@ -15,7 +17,11 @@ export default function BlockedUserCard(item: IBlockedUserCard) {
         alignItems={"center"}
         mt={"20px"}
       >
-        <HStack alignItems={"center"}>
+        <Pressable
+          flexDirection="row"
+          onPress={() => navigation.navigate("LikeProfileScreen", user)}
+          alignItems={"center"}
+        >
           <Image
             source={{ uri: item.profilePic }}
             alt={item.firstName}
@@ -30,7 +36,7 @@ export default function BlockedUserCard(item: IBlockedUserCard) {
             </Text>
             <Text>{item.countryName}</Text>
           </VStack>
-        </HStack>
+        </Pressable>
         <Pressable
           onPress={async () => {
             setLoading(true);

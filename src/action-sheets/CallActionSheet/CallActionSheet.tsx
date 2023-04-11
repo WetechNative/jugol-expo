@@ -5,7 +5,7 @@ import { HStack, Image, Pressable, Text, VStack } from "native-base";
 import CustomCallButton from "../../components/CustomCallButton/CustomCallButton";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { SheetManager } from "react-native-actions-sheet";
-import PREMIUM_ICON from "@images/premium.png";
+import { Premium } from "@assets/svg/icons";
 
 export default function CallActionSheet(props) {
   const { payload } = props;
@@ -31,13 +31,13 @@ export default function CallActionSheet(props) {
             Video Call
           </Text>
           {payload ? null : (
-            <Image
-              position={"absolute"}
-              top="-18px"
-              source={PREMIUM_ICON}
-              h={"24px"}
-              w={"28px"}
-              alt="premium"
+            <Premium
+              style={{
+                height: 24,
+                width: 28,
+                position: "absolute",
+                top: -18,
+              }}
             />
           )}
         </VStack>

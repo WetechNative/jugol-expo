@@ -2,7 +2,6 @@
 import { Divider, HStack, Image, Pressable, Text, VStack } from "native-base";
 import React, { useState } from "react";
 import AntDesign from "@expo/vector-icons/AntDesign";
-import PREMIUM_ICON from "@assets/images/premium.png";
 import { ILikedCard } from "./LikedCard.types";
 import Feather from "@expo/vector-icons/Feather";
 import { SheetManager } from "react-native-actions-sheet";
@@ -17,6 +16,7 @@ import { getUserAge } from "@utils/getUserAge";
 import { Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { dashBoardRoutes } from "@routes/index";
+import { Premium } from "@assets/svg/icons";
 
 export default function LikedCard({ item, type, isPremium }: ILikedCard) {
   const [addLike, result] = useAddLikeMutation();
@@ -80,12 +80,7 @@ export default function LikedCard({ item, type, isPremium }: ILikedCard) {
               justifyContent="center"
               flex={1}
             >
-              <Image
-                source={PREMIUM_ICON}
-                alt="premium"
-                h={"25px"}
-                w={"30px"}
-              />
+              <Premium style={{ height: 25, width: 35 }} />
               <Text color="white" fontSize={"12px"} mt={"5px"}>
                 Be Premium
               </Text>

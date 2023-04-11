@@ -1,5 +1,5 @@
-import AuthHeader from '@ui/AuthHeader/AuthHeader';
-import React, {useState} from 'react';
+import AuthHeader from "@ui/AuthHeader/AuthHeader";
+import React, { useState } from "react";
 import {
   Center,
   Divider,
@@ -8,18 +8,17 @@ import {
   Skeleton,
   Text,
   VStack,
-} from 'native-base';
-import BlockedUserCard from '@ui/BlockedUserCard/BlockedUserCard';
+} from "native-base";
+import BlockedUserCard from "@ui/BlockedUserCard/BlockedUserCard";
 import {
   useDeleteBlockMutation,
   useGetAllBlockQuery,
-} from '@store/api/blockApi/blockApiSlice';
-import {IBlockedUserCard} from '@ui/BlockedUserCard/BlockedUserCard.types';
+} from "@store/api/blockApi/blockApiSlice";
 
 function EmptyCardComponent() {
   return (
-    <VStack flex={1} alignItems={'center'} justifyContent={'center'}>
-      <Text color="danger.400" fontSize={'20px'} fontWeight={400}>
+    <VStack flex={1} alignItems={"center"} justifyContent={"center"}>
+      <Text color="danger.400" fontSize={"20px"} fontWeight={400}>
         The blocked user list is empty!
       </Text>
     </VStack>
@@ -35,7 +34,11 @@ export default function BlockedUsers() {
     isSuccess: allBlockedUserIsSuccess,
   } = useGetAllBlockQuery(undefined);
 
-  console.log({allBlockedUsers, allBlockedUserIsLoading, allBlockedUserError});
+  console.log({
+    allBlockedUsers,
+    allBlockedUserIsLoading,
+    allBlockedUserError,
+  });
 
   if (allBlockedUserIsLoading) {
     return (
@@ -48,11 +51,12 @@ export default function BlockedUsers() {
             rounded="md"
             alignItems="center"
             _dark={{
-              borderColor: 'coolGray.500',
+              borderColor: "coolGray.500",
             }}
             _light={{
-              borderColor: 'coolGray.200',
-            }}>
+              borderColor: "coolGray.200",
+            }}
+          >
             <Skeleton h="40" />
             <Skeleton
               borderWidth={1}
@@ -81,7 +85,7 @@ export default function BlockedUsers() {
   }
 
   return (
-    <VStack p={'40px'} bg={'white'} flex={1}>
+    <VStack p={"40px"} bg={"white"} flex={1}>
       <AuthHeader title="Blocked Users" />
       {/* <Text mt={'30px'}>Users</Text> */}
       {!allBlockedUsers || allBlockedUserError?.status === 404 ? (
@@ -89,8 +93,8 @@ export default function BlockedUsers() {
       ) : (
         <FlatList
           data={allBlockedUsers}
-          keyExtractor={(item: IBlockedUserCard) => item._id}
-          renderItem={({item}) => <BlockedUserCard {...item} />}
+          keyExtractor={(item) => item._id}
+          renderItem={({ item }) => <BlockedUserCard {...item} />}
         />
       )}
     </VStack>
