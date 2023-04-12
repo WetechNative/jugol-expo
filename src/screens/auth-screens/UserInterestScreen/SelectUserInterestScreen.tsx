@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
-import {Box, Button, HStack, Text, useToast} from 'native-base';
-import React, {useLayoutEffect, useState} from 'react';
+import { Box, Button, HStack, Text, useToast } from "native-base";
+import React, { useLayoutEffect, useState } from "react";
 
 import {
   ArtIcon,
@@ -15,82 +15,82 @@ import {
   TravellingIcon,
   VideogameIcon,
   YogaIcon,
-} from '@assets/svg/icons';
-import KeyboardAwareView from '@ui/KeyboardAwareView/KeyboardAwareView';
-import {fontSizes} from '@typography';
-import colors from '@colors';
-import AuthHeader from '@ui/AuthHeader/AuthHeader';
-import {authRoutes} from '@routes/index';
-import {useNavigation} from '@react-navigation/native';
-import {useDispatch, useSelector} from 'react-redux';
-import {useUpdateUserDataMutation} from '@store/api/userApi/userApiSlice';
-import {setCheckUserInformation} from '@store/features/auth/authSlice';
-import CustomLoadingModal from '@ui/CustomLoadingModal/CustomLoadingModal';
+} from "@assets/svg/icons";
+import KeyboardAwareView from "@ui/KeyboardAwareView/KeyboardAwareView";
+import { fontSizes } from "@typography";
+import colors from "@colors";
+import AuthHeader from "@ui/AuthHeader/AuthHeader";
+import { authRoutes } from "@routes/index";
+import { useNavigation } from "@react-navigation/native";
+import { useDispatch, useSelector } from "react-redux";
+import { useUpdateUserDataMutation } from "@store/api/userApi/userApiSlice";
+import { setCheckUserInformation } from "@store/features/auth/authSlice";
+import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
 
 const interestData = [
   {
-    id: '1',
-    name: 'Photography',
+    id: "1",
+    name: "Photography",
     icon: CameraIcon,
   },
   {
-    id: '2',
-    name: 'Shopping',
+    id: "2",
+    name: "Shopping",
     icon: ShoppingIcon,
   },
   {
-    id: '3',
-    name: 'Yoga',
+    id: "3",
+    name: "Yoga",
     icon: YogaIcon,
   },
   {
-    id: '4',
-    name: 'Cooking',
+    id: "4",
+    name: "Cooking",
     icon: CookingIcon,
   },
   {
-    id: '5',
-    name: 'Tennis',
+    id: "5",
+    name: "Tennis",
     icon: PlayingIcon,
   },
   {
-    id: '6',
-    name: 'Karaoke',
+    id: "6",
+    name: "Karaoke",
     icon: MusicIcon,
   },
   {
-    id: '7',
-    name: 'Swimming',
+    id: "7",
+    name: "Swimming",
     icon: SwimmingIcon,
   },
   {
-    id: '8',
-    name: 'Traveling',
+    id: "8",
+    name: "Traveling",
     icon: TravellingIcon,
   },
   {
-    id: '9',
-    name: 'Art',
+    id: "9",
+    name: "Art",
     icon: ArtIcon,
   },
   {
-    id: '10',
-    name: 'Extreme',
+    id: "10",
+    name: "Extreme",
     icon: ExtremeIcon,
   },
   {
-    id: '11',
-    name: 'Music',
+    id: "11",
+    name: "Music",
     icon: MusicIcon,
   },
   {
-    id: '12',
-    name: 'Drink',
+    id: "12",
+    name: "Drink",
     icon: DrinkIcon,
   },
   {
-    id: '13',
-    name: 'Video games',
+    id: "13",
+    name: "Video games",
     icon: VideogameIcon,
   },
 ];
@@ -106,10 +106,10 @@ export default function SelectUserInterestScreen() {
   const handleSelection = (name: string) => {
     const isAlreadySelected = selectedButtons.includes(name);
     if (isAlreadySelected) {
-      const filtredItems = selectedButtons.filter(item => item !== name);
+      const filtredItems = selectedButtons.filter((item) => item !== name);
       setSelectedButtons(filtredItems);
     } else {
-      setSelectedButtons(prev => [...prev, name]);
+      setSelectedButtons((prev) => [...prev, name]);
     }
   };
 
@@ -117,10 +117,11 @@ export default function SelectUserInterestScreen() {
     if (selectedButtons.length > 0) {
       setLoading(true);
       try {
-        await updateUserData({interests: selectedButtons}).unwrap();
+        await updateUserData({ interests: selectedButtons }).unwrap();
         setLoading(false);
         toast.show({
-          placement: 'bottom',
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="primary.100" px="2" py="2" rounded="sm">
@@ -135,11 +136,12 @@ export default function SelectUserInterestScreen() {
         console.log(error?.data?.message);
         setLoading(false);
         toast.show({
-          placement: 'bottom',
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="danger.200" px="2" py="2" rounded="sm">
-                {error?.data?.message || 'Something went wrong'}
+                {error?.data?.message || "Something went wrong"}
               </Box>
             );
           },
@@ -147,7 +149,8 @@ export default function SelectUserInterestScreen() {
       }
     } else {
       toast.show({
-        placement: 'bottom',
+        placement: "top",
+        duration: 1000,
         render: () => {
           return (
             <Box bg="danger.200" px="2" py="2" rounded="sm">
@@ -162,37 +165,40 @@ export default function SelectUserInterestScreen() {
   return (
     <KeyboardAwareView
       containerStyle={{
-        justifyContent: 'space-between',
-      }}>
+        justifyContent: "space-between",
+      }}
+    >
       <AuthHeader
         title="Your interests"
         subTitle="Select a few of your interests and let everyone know what you’re passionate about."
       />
 
       <HStack flexWrap="wrap" justifyContent="space-between">
-        {interestData.map(btnInfo => {
+        {interestData.map((btnInfo) => {
           const Icon = btnInfo.icon;
           const isSelected = selectedButtons.includes(btnInfo.name);
           return (
             <Button
-              borderWidth={'1.5px'}
+              borderWidth={"1.5px"}
               borderColor={isSelected ? colors.primary[100] : colors.light[100]}
               onPress={() => handleSelection(btnInfo.name)}
-              justifyContent={'flex-start'}
+              justifyContent={"flex-start"}
               w="47%"
               mb="10px"
-              variant={isSelected ? 'primary' : 'outline'}
-              key={btnInfo.name}>
-              <HStack alignItems={'center'} bg={'transparent'}>
+              variant={isSelected ? "primary" : "outline"}
+              key={btnInfo.name}
+            >
+              <HStack alignItems={"center"} bg={"transparent"}>
                 <Icon
                   style={{
-                    tintColor: isSelected ? '#fff' : '#000',
+                    tintColor: isSelected ? "#fff" : "#000",
                   }}
                 />
                 <Text
-                  fontSize={fontSizes['2xs']}
-                  color={isSelected ? '#fff' : '#000'}
-                  ml="8.79px">
+                  fontSize={fontSizes["2xs"]}
+                  color={isSelected ? "#fff" : "#000"}
+                  ml="8.79px"
+                >
                   {btnInfo.name}
                 </Text>
               </HStack>
@@ -201,7 +207,7 @@ export default function SelectUserInterestScreen() {
         })}
       </HStack>
 
-      <Button onPress={handleContinueClick} variant={'primary'} mt="10px">
+      <Button onPress={handleContinueClick} variant={"primary"} mt="10px">
         Continue
       </Button>
       <CustomLoadingModal modalVisible={loading} />

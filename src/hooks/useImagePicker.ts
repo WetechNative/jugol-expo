@@ -48,17 +48,31 @@ export default function useImagePicker({
     });
 
     if (!result.canceled) {
-      const modifiedResult = {
-        assets: [
-          {
-            type: result.assets[0].type,
-            uri: result.assets[0].uri,
-            fileName: result.assets[0].uri.split("/").pop(),
-          },
-        ],
-      };
-      console.log(result);
-      console.log(modifiedResult);
+      let modifiedResult;
+
+      if (result?.assets[0]?.type?.split("/")?.length === 1) {
+        modifiedResult = {
+          assets: [
+            {
+              type: result.assets[0].type+"/"+result.assets[0].uri.split("/").pop()?.split(".")?.pop(),
+              uri: result.assets[0].uri,
+              fileName: result.assets[0].uri.split("/").pop(),
+            },
+          ],
+        };
+      }else{
+        modifiedResult = {
+          assets: [
+            {
+              type: result.assets[0].type,
+              uri: result.assets[0].uri,
+              fileName: result.assets[0].uri.split("/").pop(),
+            },
+          ],
+        };
+      }
+
+      console.log(modifiedResult)
       return modifiedResult;
     }
     // let isGranted = false;

@@ -34,12 +34,6 @@ export default function BlockedUsers() {
     isSuccess: allBlockedUserIsSuccess,
   } = useGetAllBlockQuery(undefined);
 
-  console.log({
-    allBlockedUsers,
-    allBlockedUserIsLoading,
-    allBlockedUserError,
-  });
-
   if (allBlockedUserIsLoading) {
     return (
       <VStack>

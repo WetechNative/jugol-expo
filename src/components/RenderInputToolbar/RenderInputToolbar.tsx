@@ -44,7 +44,6 @@ const RenderInputToolbar = (props: InputToolbarProps<IMessage>) => {
 
   const _onImageChange = (event) => {
     const { uri, linkUri, mime, data } = event.nativeEvent;
-    // console.log({ uri, linkUri, mime, data });
     setMessageImage([
       {
         fileName: uri?.split("/").pop(),
@@ -61,7 +60,6 @@ const RenderInputToolbar = (props: InputToolbarProps<IMessage>) => {
           <FlatList
             data={messageImage}
             renderItem={({ item, index }) => {
-              console.log({ item });
               return (
                 <HStack>
                   <Image

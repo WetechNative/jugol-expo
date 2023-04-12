@@ -29,7 +29,7 @@ export default function ChatHeader({ user, isActive }) {
         />
         <VStack ml={"10px"}>
           <Text fontSize={fontSizes.lg} fontWeight={700}>
-            {user.firstName} {user.lastName}
+            {user?.firstName} {user?.lastName}
           </Text>
           <Text
             fontSize={fontSizes["2xs"]}

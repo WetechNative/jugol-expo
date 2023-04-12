@@ -50,7 +50,8 @@ export default function SelectGenderScreen() {
         await updateUserData({ gender: selectedGender }).unwrap();
         setLoading(false);
         toast.show({
-          placement: "bottom",
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="primary.100" px="2" py="2" rounded="sm">
@@ -65,7 +66,8 @@ export default function SelectGenderScreen() {
         setLoading(false);
         console.log(error?.message || "Something went wrong");
         toast.show({
-          placement: "bottom",
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="danger.200" px="2" py="2" rounded="sm">
@@ -77,7 +79,8 @@ export default function SelectGenderScreen() {
       }
     } else {
       toast.show({
-        placement: "bottom",
+        placement: "top",
+        duration: 1000,
         render: () => {
           return (
             <Box bg="danger.200" px="2" py="2" rounded="sm">

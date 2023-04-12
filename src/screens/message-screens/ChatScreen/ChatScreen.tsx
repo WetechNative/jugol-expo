@@ -19,6 +19,10 @@ import { useDispatch, useSelector } from "react-redux";
 import RenderBubble from "../../../components/RenderBubble/RenderBubble";
 import RenderInputToolbar from "../../../components/RenderInputToolbar/RenderInputToolbar";
 import { IMessageProps } from "./ChatScreen.types";
+import {
+  selectAllUserDetails,
+  selectUserProfile,
+} from "@store/features/user/userSlice";
 
 export default function ChatScreen() {
   const route = useRoute();
@@ -31,6 +35,8 @@ export default function ChatScreen() {
   const dispatch = useDispatch();
   const toast = useToast();
   const isKeyboardVisible = useKeyboardVisible();
+
+  const userDetails = useSelector(selectUserProfile);
 
   const {
     data: messageList,
@@ -66,20 +72,6 @@ export default function ChatScreen() {
     }
   };
 
-  // const chatList: IMessage[] = messageList?.data?.messages?.map((message) => ({
-  //   _id: message._id,
-  //   text: message.message,
-  //   user: {
-  //     _id: message?.sender?._id,
-  //     name: message?.sender?.firstName + " " + message?.sender?.lastName,
-  //     avatar: message?.sender?.profilePic,
-  //   },
-  //   createdAt: new Date(message.createdAt),
-  //   image: JSON.stringify(message?.files),
-  //   sent: message?.sender?._id === result?.data?.data?.sender?._id,
-  //   received: message?.sender?._id !== result?.data?.data?.sender?._id,
-  // }));
-
   const sortedMessages = messageList?.chatList
     ?.slice()
     ?.sort(
@@ -100,7 +92,8 @@ export default function ChatScreen() {
     } catch (error) {
       console.log(error);
       toast.show({
-        placement: "bottom",
+        placement: "top",
+        duration: 1000,
         render: () => {
           return (
             <Box bg="danger.200" px="2" py="2" rounded="sm">
@@ -162,6 +155,7 @@ export default function ChatScreen() {
 
   const onSubmit = async ({ text, image }: IMessageProps) => {
     let message = new FormData();
+    let images = [];
     message.append("reciver", id);
     if (text) {
       message.append("message", text);
@@ -170,6 +164,7 @@ export default function ChatScreen() {
       for (let i = 0; i < image.length; i++) {
         const imageName = image[i]?.fileName;
         const imageType = image[i]?.type;
+        images.push(image[i]?.uri);
         const imgeData = {
           name: imageName,
           type: imageType,
@@ -178,19 +173,21 @@ export default function ChatScreen() {
         message.append(`images${i + 1}`, imgeData);
       }
     }
-    // const sendItem = {
-    //   message,
-    //   _id: draft._id,
-    //   text: draft.message,
-    //   user: {
-    //     _id: draft?.sender?._id,
-    //     name: draft?.sender?.firstName + " " + message?.sender?.lastName,
-    //     avatar: message?.sender?.profilePic,
-    //   },
-    //   createdAt: new Date(message.createdAt),
-    //   image: JSON.stringify(message?.files),
-    // };
-    await sendMessage(message);
+    const sendItem = {
+      message,
+      messageData: {
+        _id: id,
+        text: text,
+        user: {
+          _id: userDetails?._id?.toString(),
+          name: userDetails?.firstName + " " + userDetails?.lastName,
+          avatar: userDetails?.profilePic,
+        },
+        createdAt: new Date(),
+        image: JSON.stringify(images),
+      },
+    };
+    await sendMessage(sendItem);
   };
 
   return (

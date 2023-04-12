@@ -1,25 +1,25 @@
-import KeyboardAwareView from '@ui/KeyboardAwareView/KeyboardAwareView';
-import MaterialInput from '@ui/MaterialInput/MaterialInput';
-import {Box, Button, Pressable, Text, useToast, VStack} from 'native-base';
-import React, {useState} from 'react';
+import KeyboardAwareView from "@ui/KeyboardAwareView/KeyboardAwareView";
+import MaterialInput from "@ui/MaterialInput/MaterialInput";
+import { Box, Button, Pressable, Text, useToast, VStack } from "native-base";
+import React, { useState } from "react";
 
-import {useNavigation} from '@react-navigation/native';
-import {authRoutes} from '@routes/index';
-import AuthHeader from '@ui/AuthHeader/AuthHeader';
-import PasswordToggler from '@ui/PasswordToggler/PasswordToggler';
-import TextWithButton from '@ui/TextWithButton/TextWithButton';
-import {useFormik} from 'formik';
+import { useNavigation } from "@react-navigation/native";
+import { authRoutes } from "@routes/index";
+import AuthHeader from "@ui/AuthHeader/AuthHeader";
+import PasswordToggler from "@ui/PasswordToggler/PasswordToggler";
+import TextWithButton from "@ui/TextWithButton/TextWithButton";
+import { useFormik } from "formik";
 
-import auth from '@react-native-firebase/auth';
-import {useCheckUserMutation} from '@store/api/authApi/authApiSlice';
+import auth from "@react-native-firebase/auth";
+import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 import {
   login,
   setCheckUserInformation,
   setUID,
-} from '@store/features/auth/authSlice';
-import CustomLoadingModal from '@ui/CustomLoadingModal/CustomLoadingModal';
-import {Keyboard} from 'react-native';
-import {useDispatch} from 'react-redux';
+} from "@store/features/auth/authSlice";
+import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
+import { Keyboard } from "react-native";
+import { useDispatch } from "react-redux";
 
 export default function LoginScreen() {
   const [isPasswordVisible, setIsPasswordVisible] = React.useState(false);
@@ -31,16 +31,16 @@ export default function LoginScreen() {
 
   const formik = useFormik({
     initialValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
-    onSubmit: async value => {
+    onSubmit: async (value) => {
       setLoading(true);
       Keyboard.dismiss();
       try {
-        const {user} = await auth().signInWithEmailAndPassword(
+        const { user } = await auth().signInWithEmailAndPassword(
           value.email,
-          value.password,
+          value.password
         );
         const idToken = await auth().currentUser?.getIdToken();
 
@@ -65,7 +65,7 @@ export default function LoginScreen() {
           dispatch(setCheckUserInformation(true));
         } else if (!hasUpdatedInterest) {
           navigation.navigate(
-            authRoutes.selectUserInterestScreen.path as never,
+            authRoutes.selectUserInterestScreen.path as never
           );
           dispatch(setCheckUserInformation(true));
         } else {
@@ -76,11 +76,12 @@ export default function LoginScreen() {
       } catch (error: any) {
         setLoading(false);
         toast.show({
-          placement: 'bottom',
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="danger.200" px="2" py="2" rounded="sm">
-                {error?.message || 'Something went wrong'}
+                {error?.message || "Something went wrong"}
               </Box>
             );
           },
@@ -89,7 +90,7 @@ export default function LoginScreen() {
     },
   });
 
-  const {values, handleChange, handleBlur, handleSubmit, errors, touched} =
+  const { values, handleChange, handleBlur, handleSubmit, errors, touched } =
     formik;
 
   const handleSignupClick = () => {
@@ -111,28 +112,28 @@ export default function LoginScreen() {
       <VStack>
         <MaterialInput
           value={values.email}
-          onChangeText={handleChange('email')}
-          onBlur={handleBlur('email')}
-          errorMessage={touched.email && errors.email ? errors.email : ''}
+          onChangeText={handleChange("email")}
+          onBlur={handleBlur("email")}
+          errorMessage={touched.email && errors.email ? errors.email : ""}
           keyboardType="email-address"
           label="Email"
         />
 
         <MaterialInput
-          type={isPasswordVisible ? 'text' : 'password'}
+          type={isPasswordVisible ? "text" : "password"}
           label="Password"
           value={values.password}
-          onChangeText={handleChange('password')}
-          onBlur={handleBlur('password')}
+          onChangeText={handleChange("password")}
+          onBlur={handleBlur("password")}
           errorMessage={
-            touched.password && errors.password ? errors.password : ''
+            touched.password && errors.password ? errors.password : ""
           }
           rightElement={
             <PasswordToggler
               shouldShowToggler={values.password.length > 0}
               isPasswordVisible={isPasswordVisible}
               onTogglePasswordVisibility={() =>
-                setIsPasswordVisible(prev => !prev)
+                setIsPasswordVisible((prev) => !prev)
               }
             />
           }
@@ -145,10 +146,10 @@ export default function LoginScreen() {
           buttonText="Sign up"
         />
         <Button onPress={handleSubmit} disabled={loading} variant="primary">
-          {loading ? 'Please wait...' : 'Login'}
+          {loading ? "Please wait..." : "Login"}
         </Button>
         <Pressable onPress={handleForgetPassword}>
-          <Text color={'dark.200'} textAlign={'center'}>
+          <Text color={"dark.200"} textAlign={"center"}>
             Forget Password
           </Text>
         </Pressable>

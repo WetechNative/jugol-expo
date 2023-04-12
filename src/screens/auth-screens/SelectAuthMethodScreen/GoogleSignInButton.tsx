@@ -1,21 +1,21 @@
-import {GOOGLE_CLIENT_ID} from '@config';
-import auth from '@react-native-firebase/auth';
+import { GOOGLE_CLIENT_ID } from "@config";
+import auth from "@react-native-firebase/auth";
 import {
   GoogleSignin,
   statusCodes,
-} from '@react-native-google-signin/google-signin';
-import {useNavigation} from '@react-navigation/native';
-import {authRoutes} from '@routes/index';
-import {useCheckUserMutation} from '@store/api/authApi/authApiSlice';
+} from "@react-native-google-signin/google-signin";
+import { useNavigation } from "@react-navigation/native";
+import { authRoutes } from "@routes/index";
+import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 import {
   login,
   setCheckUserInformation,
   setUID,
-} from '@store/features/auth/authSlice';
-import SocialIconButton from '@ui/SocialIconButton/SocialIconButton';
-import {Box, useToast} from 'native-base';
-import React, {useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+} from "@store/features/auth/authSlice";
+import SocialIconButton from "@ui/SocialIconButton/SocialIconButton";
+import { Box, useToast } from "native-base";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 export default function GoogleSignInButton() {
   const toast = useToast();
@@ -25,8 +25,10 @@ export default function GoogleSignInButton() {
 
   const handleGoogleSignin = async () => {
     try {
-      await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
-      const {idToken} = await GoogleSignin.signIn();
+      await GoogleSignin.hasPlayServices({
+        showPlayServicesUpdateDialog: true,
+      });
+      const { idToken } = await GoogleSignin.signIn();
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
       await auth().signInWithCredential(googleCredential);
       const iDToken = await auth().currentUser?.getIdToken();
@@ -57,7 +59,8 @@ export default function GoogleSignInButton() {
     } catch (error: any) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         toast.show({
-          placement: 'bottom',
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="danger.200" px="2" py="2" rounded="sm">
@@ -68,7 +71,8 @@ export default function GoogleSignInButton() {
         });
       } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
         toast.show({
-          placement: 'bottom',
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="danger.200" px="2" py="2" rounded="sm">
@@ -79,11 +83,12 @@ export default function GoogleSignInButton() {
         });
       } else {
         toast.show({
-          placement: 'bottom',
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="danger.200" px="2" py="2" rounded="sm">
-                {error?.message || 'Something went wrong'}
+                {error?.message || "Something went wrong"}
               </Box>
             );
           },

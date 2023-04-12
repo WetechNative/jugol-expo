@@ -1,16 +1,16 @@
-import auth from '@react-native-firebase/auth';
-import {useNavigation} from '@react-navigation/native';
-import {authRoutes} from '@routes/index';
-import {useCheckUserMutation} from '@store/api/authApi/authApiSlice';
+import auth from "@react-native-firebase/auth";
+import { useNavigation } from "@react-navigation/native";
+import { authRoutes } from "@routes/index";
+import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 import {
   setUID,
   login,
   setCheckUserInformation,
-} from '@store/features/auth/authSlice';
-import SocialIconButton from '@ui/SocialIconButton/SocialIconButton';
-import {Box, useToast} from 'native-base';
-import {LoginManager, AccessToken} from 'react-native-fbsdk-next';
-import {useDispatch} from 'react-redux';
+} from "@store/features/auth/authSlice";
+import SocialIconButton from "@ui/SocialIconButton/SocialIconButton";
+import { Box, useToast } from "native-base";
+import { LoginManager, AccessToken } from "react-native-fbsdk-next";
+import { useDispatch } from "react-redux";
 
 export default function FacebookButton() {
   const toast = useToast();
@@ -23,25 +23,25 @@ export default function FacebookButton() {
       LoginManager.logOut();
       // Attempt login with permissions
       const result = await LoginManager.logInWithPermissions([
-        'email',
-        'public_profile',
-        'user_friends',
+        "email",
+        "public_profile",
+        "user_friends",
       ]);
 
       if (result.isCancelled) {
-        throw 'User cancelled the login process';
+        throw "User cancelled the login process";
       }
 
       // Once signed in, get the users AccesToken
       const data = await AccessToken.getCurrentAccessToken();
 
       if (!data) {
-        throw 'Something went wrong obtaining access token';
+        throw "Something went wrong obtaining access token";
       }
 
       // Create a Firebase credential with the AccessToken
       const facebookCredential = auth.FacebookAuthProvider.credential(
-        data.accessToken,
+        data.accessToken
       );
 
       // Sign-in the user with the credential
@@ -78,11 +78,12 @@ export default function FacebookButton() {
     } catch (error: any) {
       console.log(error);
       toast.show({
-        placement: 'bottom',
+        placement: "top",
+        duration: 1000,
         render: () => {
           return (
             <Box bg="danger.200" px="2" py="2" rounded="sm">
-              {error?.message || 'Something went wrong'}
+              {error?.message || "Something went wrong"}
             </Box>
           );
         },

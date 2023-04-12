@@ -384,6 +384,34 @@ export const messageApiSlice = apiSlice.injectEndpoints({
               console.error(error);
             }
           });
+
+          socket.on('deleteMessage', (message) => {
+            try {
+              if (
+                message?.senderUID === userId ||
+                message?.reciverUID === userId
+              ) {
+                updateCachedData((draft) => {
+                  const newChatList = draft?.chatList?.map((item) => {
+                    if(item?._id === message?.messageId){
+                      return {
+                        ...item,
+                        text: message?.text,
+                        image: JSON.stringify([]),
+                      }
+                    }
+                    return item;
+                  })
+                  return {
+                    ...draft,
+                    chatList: newChatList
+                  }
+                });
+              }
+            } catch (error) {
+              console.error(error);
+            }
+          })
           // });
           await cacheEntryRemoved;
           socket.close();
@@ -486,35 +514,22 @@ export const messageApiSlice = apiSlice.injectEndpoints({
       query: (data) => ({
         method: "POST",
         url: "/messages/sendMessage",
-        body: data,
+        body: data?.message,
       }),
-      async onQueryStarted(data, { dispatch, queryFulfilled, getState }) {
-        const state: RootState = getState();
+      async onQueryStarted(data, { dispatch, queryFulfilled }) {
+        const id = data?.messageData?.user?._id;
 
-          const id = state?.auth?.uid;
-          
         const patchResult = dispatch(
-          messageApiSlice.util.updateQueryData('getMessage', id, (draft) => {
-            console.log({draft});
-            const messageItem = {
-              _id: draft._id,
-              text: draft.message,
-              user: {
-                _id: draft?.sender?._id,
-                name:
-                  draft?.sender?.firstName + " " + message?.sender?.lastName,
-                avatar: message?.sender?.profilePic,
-              },
-              createdAt: new Date(message.createdAt),
-              image: JSON.stringify(message?.files),
-            };
-            Object.assign(messageItem);
+          messageApiSlice.util.updateQueryData("getMessage", id, (draft) => {
+            console.log(JSON.stringify(draft));
+            Object.assign(draft, ...data?.messageData);
           })
-        )
+        );
+
         try {
-          await queryFulfilled
+          await queryFulfilled;
         } catch {
-          // patchResult.undo()
+          patchResult.undo();
 
           /**
            * Alternatively, on failure you can invalidate the corresponding cache tags
@@ -539,6 +554,13 @@ export const messageApiSlice = apiSlice.injectEndpoints({
         url: `/messages/deleteConversation/${reciverID}`,
       }),
     }),
+
+    deleteMessage: builder.mutation({
+      query: (id) => ({
+        method: "DELETE",
+        url: `/messages/deleteMessage/${id}`,
+      }),
+    }),
   }),
   overrideExisting: true,
 });
@@ -551,4 +573,5 @@ export const {
   useGetInfiniteConversationsQuery,
   useGetInfiniteMessageQuery,
   useDeleteConversationMutation,
+  useDeleteMessageMutation,
 } = messageApiSlice;

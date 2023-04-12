@@ -87,7 +87,8 @@ export default function EditUserGallery() {
       }
       setLoading(false);
       toast.show({
-        placement: "bottom",
+        placement: "top",
+        duration: 1000,
         render: () => {
           return (
             <Box bg="primary.100" px="2" py="2" rounded="sm">
@@ -101,7 +102,8 @@ export default function EditUserGallery() {
       console.log(error);
       setLoading(false);
       toast.show({
-        placement: "bottom",
+        placement: "top",
+        duration: 1000,
         render: () => {
           return (
             <Box bg="danger.200" px="2" py="2" rounded="sm">

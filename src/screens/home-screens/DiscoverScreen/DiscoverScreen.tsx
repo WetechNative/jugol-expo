@@ -18,6 +18,7 @@ import {
 import {
   useAddUserLocationMutation,
   useGetAllUserQuery,
+  useGetUserDetailsQuery,
   userApiSlice,
 } from "@store/api/userApi/userApiSlice";
 import {
@@ -103,6 +104,13 @@ export default function DiscoverScreen() {
   const dispatch = useDispatch();
   const toast = useToast();
   const uid = useSelector(selectUID);
+  const {
+    data: userProfile,
+    isLoading: userDetailsLoading,
+    error: userDetailsError,
+    isError: userDetailsIsError,
+    isSuccess: userDetailsIsSuccess,
+  } = useGetUserDetailsQuery(undefined);
   const {
     data: rtcToken,
     isError,

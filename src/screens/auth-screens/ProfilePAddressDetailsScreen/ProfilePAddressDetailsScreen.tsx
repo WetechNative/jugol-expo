@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 
-import CustomActionsheetList from '@action-sheets/CustomActionsheetList/CustomActionsheetList';
-import {useFormik} from 'formik';
+import CustomActionsheetList from "@action-sheets/CustomActionsheetList/CustomActionsheetList";
+import { useFormik } from "formik";
 import {
   Box,
   Button,
@@ -11,27 +11,27 @@ import {
   Text,
   useToast,
   VStack,
-} from 'native-base';
-import React, {useLayoutEffect, useState} from 'react';
-import CountryPicker from 'react-native-country-picker-modal';
-import * as Yup from 'yup';
-import KeyboardAwareView from '@ui/KeyboardAwareView/KeyboardAwareView';
-import MaterialInput from '@ui/MaterialInput/MaterialInput';
-import MaterialTextArea from '@ui/MaterialTextArea/MaterialTextArea';
-import OutLineButton from '@ui/OutlineButton/OutLineButton';
-import AuthHeader from '@ui/AuthHeader/AuthHeader';
-import {IInitialValues} from './ProfilePAddressDetailsScreen.types';
-import {useNavigation} from '@react-navigation/native';
-import {authRoutes} from '@routes/index';
-import SkipButton from '@ui/SkipButton/SkipButton';
+} from "native-base";
+import React, { useLayoutEffect, useState } from "react";
+import CountryPicker from "react-native-country-picker-modal";
+import * as Yup from "yup";
+import KeyboardAwareView from "@ui/KeyboardAwareView/KeyboardAwareView";
+import MaterialInput from "@ui/MaterialInput/MaterialInput";
+import MaterialTextArea from "@ui/MaterialTextArea/MaterialTextArea";
+import OutLineButton from "@ui/OutlineButton/OutLineButton";
+import AuthHeader from "@ui/AuthHeader/AuthHeader";
+import { IInitialValues } from "./ProfilePAddressDetailsScreen.types";
+import { useNavigation } from "@react-navigation/native";
+import { authRoutes } from "@routes/index";
+import SkipButton from "@ui/SkipButton/SkipButton";
 import {
   useGetProfessionListQuery,
   useGetReligionListQuery,
   useUpdateUserDataMutation,
-} from '@store/api/userApi/userApiSlice';
-import {useDispatch, useSelector} from 'react-redux';
-import CustomLoadingModal from '@ui/CustomLoadingModal/CustomLoadingModal';
-import {setCheckUserInformation} from '@store/features/auth/authSlice';
+} from "@store/api/userApi/userApiSlice";
+import { useDispatch, useSelector } from "react-redux";
+import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
+import { setCheckUserInformation } from "@store/features/auth/authSlice";
 
 export default function ProfilePAddressDetailsScreen() {
   const [countryModalVisible, setCountryModalVisible] =
@@ -63,36 +63,37 @@ export default function ProfilePAddressDetailsScreen() {
   const user = useSelector((autuUser: any) => autuUser.user);
 
   const schema = Yup.object().shape({
-    countryName: Yup.string().required('Country name is required'),
+    countryName: Yup.string().required("Country name is required"),
     // addressLine1: Yup.string().required('Address is required'),
-    cityName: Yup.string().required('City name is required'),
+    cityName: Yup.string().required("City name is required"),
     // postCode: Yup.string().required('Postcode is required'),
-    profession: Yup.string().required('Profession is required'),
-    religion: Yup.string().required('Religion is required'),
+    profession: Yup.string().required("Profession is required"),
+    religion: Yup.string().required("Religion is required"),
     // userAbout: Yup.string().required('About you is required'),
   });
 
   const initialValues: IInitialValues = {
     // addressLine1: '',
     // addressLine2: '',
-    cityName: '',
+    cityName: "",
     // postCode: '',
-    profession: '',
-    religion: '',
+    profession: "",
+    religion: "",
     // userAbout: '',
-    countryName: '',
+    countryName: "",
     country: null,
   };
 
   const formik = useFormik({
     initialValues,
-    onSubmit: async value => {
+    onSubmit: async (value) => {
       setLoading(true);
       try {
         await updateUserData(value).unwrap();
         setLoading(false);
         toast.show({
-          placement: 'bottom',
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="primary.100" px="2" py="2" rounded="sm">
@@ -107,7 +108,8 @@ export default function ProfilePAddressDetailsScreen() {
         console.log(error.data.message);
         setLoading(false);
         toast.show({
-          placement: 'bottom',
+          placement: "top",
+          duration: 1000,
           render: () => {
             return (
               <Box bg="danger.200" px="2" py="2" rounded="sm">
@@ -133,8 +135,8 @@ export default function ProfilePAddressDetailsScreen() {
 
   const handleSelect = (country: any) => {
     setCountryModalVisible(false);
-    setFieldValue('countryName', country.name);
-    setFieldValue('country', country);
+    setFieldValue("countryName", country.name);
+    setFieldValue("country", country);
   };
 
   if (!professionIsLoading && professionIsSuccess) {
@@ -168,11 +170,12 @@ export default function ProfilePAddressDetailsScreen() {
             rounded="md"
             alignItems="center"
             _dark={{
-              borderColor: 'coolGray.500',
+              borderColor: "coolGray.500",
             }}
             _light={{
-              borderColor: 'coolGray.200',
-            }}>
+              borderColor: "coolGray.200",
+            }}
+          >
             <Skeleton h="40" />
             <Skeleton
               borderWidth={1}
@@ -228,12 +231,12 @@ export default function ProfilePAddressDetailsScreen() {
         />
 
         <MaterialInput
-          label={'City'}
-          onBlur={handleBlur('cityName')}
+          label={"City"}
+          onBlur={handleBlur("cityName")}
           errorMessage={
-            touched.cityName && errors.cityName ? errors.cityName : ''
+            touched.cityName && errors.cityName ? errors.cityName : ""
           }
-          onChangeText={handleChange('cityName')}
+          onChangeText={handleChange("cityName")}
         />
 
         {/* <MaterialInput

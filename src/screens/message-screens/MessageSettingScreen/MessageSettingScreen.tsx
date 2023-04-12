@@ -1,17 +1,17 @@
-import {useNavigation} from '@react-navigation/native';
-import {authRoutes, messageRoutes} from '@routes/index';
-import AuthHeader from '@ui/AuthHeader/AuthHeader';
-import KeyboardAwareView from '@ui/KeyboardAwareView/KeyboardAwareView';
-import SettingButton from '@ui/SettingButton/SettingButton';
-import {Box, Button, useToast, VStack} from 'native-base';
-import React, {useState} from 'react';
+import { useNavigation } from "@react-navigation/native";
+import { authRoutes, messageRoutes } from "@routes/index";
+import AuthHeader from "@ui/AuthHeader/AuthHeader";
+import KeyboardAwareView from "@ui/KeyboardAwareView/KeyboardAwareView";
+import SettingButton from "@ui/SettingButton/SettingButton";
+import { Box, Button, useToast, VStack } from "native-base";
+import React, { useState } from "react";
 
-import auth from '@react-native-firebase/auth';
-import {useDispatch, useSelector} from 'react-redux';
-import {logout, selectFCMToken} from '@store/features/auth/authSlice';
-import {useDeleteFCMTokenMutation} from '@store/api/authApi/authApiSlice';
-import CustomLoadingModal from '@ui/CustomLoadingModal/CustomLoadingModal';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import auth from "@react-native-firebase/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectFCMToken } from "@store/features/auth/authSlice";
+import { useDeleteFCMTokenMutation } from "@store/api/authApi/authApiSlice";
+import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function MessageSettingScreen() {
   const navigation = useNavigation();
@@ -23,7 +23,7 @@ export default function MessageSettingScreen() {
 
   const removeData = async () => {
     try {
-      await AsyncStorage.removeItem('login_token');
+      await AsyncStorage.removeItem("login_token");
     } catch (e) {
       console.log(e);
     }
@@ -43,11 +43,11 @@ export default function MessageSettingScreen() {
         <SettingButton
           title="Become Premium"
           subTitle="Chicago, IL United States"
-          onPress={() => navigation.navigate('BePremium' as never)}
+          onPress={() => navigation.navigate("BePremium" as never)}
         />
       </VStack>
       <Button
-        variant={'primary'}
+        variant={"primary"}
         onPress={async () => {
           try {
             setLoading(true);
@@ -63,17 +63,19 @@ export default function MessageSettingScreen() {
             console.log(error);
 
             toast.show({
-              placement: 'bottom',
+              placement: "top",
+              duration: 1000,
               render: () => {
                 return (
                   <Box bg="danger.200" px="2" py="2" rounded="sm">
-                    {error?.message || 'Something went wrong'}
+                    {error?.message || "Something went wrong"}
                   </Box>
                 );
               },
             });
           }
-        }}>
+        }}
+      >
         Log out
       </Button>
       <CustomLoadingModal modalVisible={loading} />
