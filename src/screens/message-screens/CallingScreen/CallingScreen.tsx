@@ -28,11 +28,11 @@ const CallingScreen = () => {
   const rtcToken = useSelector(selectRtcToken);
   console.log(rtcToken);
 
-  const connectionData = {
+  const connectionData: ConnectionData = {
     appId: "ff8513e5cef1498a8b7b0d0de937ee29",
-    channel: "test",
-    token: rtcToken,
-    uid: "nitish",
+    channel: "calling",
+    rtcToken: rtcToken,
+    rtcUid: 0,
   };
 
   useEffect(() => {

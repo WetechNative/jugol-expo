@@ -10,8 +10,8 @@ export const callApiSlice = apiSlice.injectEndpoints({
             })
         }),
         getRTCToken: builder.query({
-            query: ({ channelName, role, tokentype, uid }: ITokenInfo) => ({
-                url: `/messages/getRTCToken?channelName=${channelName}&role=${role}&tokentype=${tokentype}&uid=${uid}`,
+            query: () => ({
+                url: `/messages/getRTCToken`,
                 method: 'GET',
             })
         }),

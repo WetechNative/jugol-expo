@@ -116,21 +116,12 @@ export default function DiscoverScreen() {
     isError,
     isLoading,
     error,
-  } = useGetRTCTokenQuery({
-    channelName: "calling",
-    role: "publisher",
-    tokentype: "uid",
-    uid: 0,
-  });
+  } = useGetRTCTokenQuery(undefined);
 
   useEffect(() => {
     if (rtcToken) {
       console.log(rtcToken);
-      dispatch(
-        addRtcToken(
-          "006ff8513e5cef1498a8b7b0d0de937ee29IADw6mvPRTup4QWMay3Zx7RN4DdTaGi/3Jw10L8hHk+nIQx+f9iO3j7zIgCV6X+6huEzZAQAAQCeyjJkAgCeyjJkAwCeyjJkBACeyjJk"
-        )
-      );
+      dispatch(addRtcToken(rtcToken?.rtcToken));
     }
   }, [rtcToken]);
 
