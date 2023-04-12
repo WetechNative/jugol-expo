@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 
-// export const BASE_URL = 'http://54.214.69.31:3500';
-export const BASE_URL = 'http://192.168.1.105:3500';
+export const BASE_URL = 'http://54.214.69.31:3500';
+// export const BASE_URL = 'http://192.168.1.105:3500';
 // export const BASE_URL = 'https://jugal-api.onrender.com';
 export const DEFAULT_IMAGE =
     "https://res.cloudinary.com/dwfthpcaq/image/upload/v1674708156/profile-user-icon-isolated-on-white-background-eps10-free-vector_tukpw6.jpg";
@@ -17,38 +17,6 @@ export const GOOGLE_CLIENT_ID =
 export const STRIPE_PUBLISHED_KEY =
     "pk_test_51Ml76qCYaVgNbEBjnF2E1DRaw4NG4mZhLCBusp43J5SYAH2HGRjBGerSU8SZE9LeJIneYvdEBLnxwcnyo9YkifFl00dKHHpvHR";
 
-// export const PEER_CONFIG = {
-//   host: '192.168.0.7',
-//   port: 4000,
-//   path: '/peer',
-//   secure: false,
-//   config: {
-//     iceServers: [
-//     {
-//       url: 'stun:global.stun.twilio.com:3478',
-//       urls: 'stun:global.stun.twilio.com:3478'
-//     },
-//     {
-//       url: 'turn:global.turn.twilio.com:3478?transport=udp',
-//       username: '0548f14f3f7bed5564b44ff4744aac1907b50e002a15446230ab1568c14d0d38',
-//       urls: 'turn:global.turn.twilio.com:3478?transport=udp',
-//       credential: '1KWzdBmXnPceAv4q6UgokJPiptpAHxTUV6LHAoJ7/LA='
-//     },
-//     {
-//       url: 'turn:global.turn.twilio.com:3478?transport=tcp',
-//       username: '0548f14f3f7bed5564b44ff4744aac1907b50e002a15446230ab1568c14d0d38',
-//       urls: 'turn:global.turn.twilio.com:3478?transport=tcp',
-//       credential: '1KWzdBmXnPceAv4q6UgokJPiptpAHxTUV6LHAoJ7/LA='
-//     },
-//     {
-//       url: 'turn:global.turn.twilio.com:443?transport=tcp',
-//       username: '0548f14f3f7bed5564b44ff4744aac1907b50e002a15446230ab1568c14d0d38',
-//       urls: 'turn:global.turn.twilio.com:443?transport=tcp',
-//       credential: '1KWzdBmXnPceAv4q6UgokJPiptpAHxTUV6LHAoJ7/LA='
-//     }
-//   ],
-//   },
-// };
 
 export const FREE_ICE_SERVERS = [
     { url: "stun:stun01.sipphone.com" },
