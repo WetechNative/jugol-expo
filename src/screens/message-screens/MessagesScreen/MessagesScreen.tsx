@@ -17,6 +17,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
 import SettingButtonWithIcon from "../../../components/SettingButtonWithIcon/SettingButtonWithIcon";
 import { IConversationProps } from "./MessageScreen.types";
+import { RefreshControl } from "react-native";
+import colors from "@colors";
 
 const EmptyConversation = () => {
   return (
@@ -32,12 +34,21 @@ export default function MessagesScreen() {
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const [searchText, handleSearchText] = useState<string>("");
+  const [refreshing, setRefreshing] = React.useState(false);
+  const onRefresh = React.useCallback(() => {
+    setRefreshing(true);
+    refetch();
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 2000);
+  }, []);
 
   const {
     data: conversations,
     error: conversationsError,
     isLoading: conversationsIsLoading,
     isError: conversationsIsError,
+    refetch,
   } = useGetConversationsQuery(undefined);
 
   const uid = useSelector(selectUID);
@@ -111,6 +122,14 @@ export default function MessagesScreen() {
         {sortedConversationsData?.length > 0 ? (
           <VStack flex={1}>
             <FlatList
+              refreshControl={
+                <RefreshControl
+                  colors={[colors.primary[100]]}
+                  progressBackgroundColor="white"
+                  refreshing={refreshing}
+                  onRefresh={onRefresh}
+                />
+              }
               ListHeaderComponent={() => (
                 <VStack space="4">
                   <SearchInput

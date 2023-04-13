@@ -7,7 +7,6 @@ export default function UserInterests({
 }: {
   interestList: string[];
 }) {
-  console.log(interestList);
   return (
     <VStack mt={"30px"}>
       <Text fontSize="md" fontWeight={600}>

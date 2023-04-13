@@ -87,7 +87,7 @@ export default function ChatScreen() {
 
       navigation.navigate(
         dashBoardRoutes.ringingScreen.path as never,
-        { saveCallInfo, callDetails } as never
+        { saveCallInfo, callDetails, callStatus: "Calling..." } as never
       );
     } catch (error) {
       console.log(error);
@@ -179,7 +179,7 @@ export default function ChatScreen() {
         _id: id,
         text: text,
         user: {
-          _id: userDetails?._id?.toString(),
+          _id: userDetails?._id,
           name: userDetails?.firstName + " " + userDetails?.lastName,
           avatar: userDetails?.profilePic,
         },

@@ -2,6 +2,7 @@ import messaging from '@react-native-firebase/messaging';
 import notifee from '@notifee/react-native';
 export const checkNotifeePermission = async () => {
     try {
+        await messaging().registerDeviceForRemoteMessages();
         const authStatus = await messaging().requestPermission();
         notifee.requestPermission();
         const enabled =

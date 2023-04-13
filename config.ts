@@ -1,6 +1,6 @@
 import { Platform } from "react-native";
 
-export const BASE_URL = 'http://54.214.69.31:3500';
+export const BASE_URL = 'http://18.212.61.147:3500';
 // export const BASE_URL = 'http://192.168.1.105:3500';
 // export const BASE_URL = 'https://jugal-api.onrender.com';
 export const DEFAULT_IMAGE =

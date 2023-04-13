@@ -253,7 +253,7 @@ export default function FilterSearchScreen() {
         {values.ageFrom ||
         values.ageTo ||
         values.cityName ||
-        values.country ||
+        values.countryName ||
         values.gender ||
         values.profession ||
         values.religion ? (

@@ -31,7 +31,7 @@ import { DEFAULT_IMAGE } from "@config";
 
 export default function LikeProfileScreen() {
   const navigation = useNavigation();
-  const user = useRoute().params;
+  const user = useRoute().params as any;
   const windowHeight = Dimensions.get("window").height;
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();

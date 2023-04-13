@@ -31,7 +31,6 @@ export default function LikeScreen() {
     setRefreshing(true);
     refetch();
     setTimeout(() => {
-      console.log(allLikes);
       setRefreshing(false);
     }, 2000);
   }, []);

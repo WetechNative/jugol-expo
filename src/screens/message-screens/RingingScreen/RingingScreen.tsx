@@ -13,10 +13,14 @@ import notifee, { AndroidImportance } from "@notifee/react-native";
 import { callTimerNotification } from "@utils/callTimerNotification";
 
 export default function RingingScrren() {
-  const { saveCallInfo, callDetails } = useRoute().params;
+  const {
+    saveCallInfo,
+    callDetails,
+    callStatus: callingStatus,
+  } = useRoute().params as any;
   const navigation = useNavigation();
   const uid = useSelector(selectUID);
-  const [callStatus, setCallStatus] = useState("Calling...");
+  const [callStatus, setCallStatus] = useState(callingStatus);
 
   useEffect(() => {
     const socket = getSocket();
@@ -38,7 +42,7 @@ export default function RingingScrren() {
 
         if (isCurrentUserCall) {
           Linking.openURL(`jugol://call/${data?.callChannelId}`);
-          callTimerNotification(data?.callChannelId);
+          // callTimerNotification(data?.callChannelId);
         }
       });
 
@@ -68,7 +72,13 @@ export default function RingingScrren() {
       </VStack>
       <HStack justifyContent="center" alignItems="center" flex={1}>
         <Pressable
-          onPress={() => navigation.goBack()}
+          onPress={() => {
+            navigation.goBack();
+            // const socket = getSocket();
+            // socket.on("connect", () => {
+            //   socket.emit("endCallWithOutReceiving");
+            // });
+          }}
           h="52px"
           w="52px"
           rounded={"full"}

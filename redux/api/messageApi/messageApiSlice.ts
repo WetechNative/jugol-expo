@@ -357,8 +357,10 @@ export const messageApiSlice = apiSlice.injectEndpoints({
           const state: RootState = getState();
 
           const userId = state?.auth?.uid;
+          console.log({userId});
 
           socket.on("sendMessage", (message) => {
+            console.log({message})
             const messageItem = {
               _id: message._id,
               text: message.message,
@@ -517,18 +519,26 @@ export const messageApiSlice = apiSlice.injectEndpoints({
         body: data?.message,
       }),
       async onQueryStarted(data, { dispatch, queryFulfilled }) {
-        const id = data?.messageData?.user?._id;
-
+        const id = data?.messageData?._id;
+        console.log(id);
         const patchResult = dispatch(
-          messageApiSlice.util.updateQueryData("getMessage", id, (draft) => {
-            console.log(JSON.stringify(draft));
-            Object.assign(draft, ...data?.messageData);
+          messageApiSlice.util.updateQueryData("getMessage", id?.toString(), (draft) => {
+            const newData = {
+              ...draft,
+              chatList: [...draft?.chatList, data?.messageData]
+            }
+            console.log({newData});
+            console.log({draft})
+            Object.assign(newData);
+            // return newData;
           })
         );
 
         try {
           await queryFulfilled;
+          console.log("received message")
         } catch {
+          console.log("Received unexpected");
           patchResult.undo();
 
           /**

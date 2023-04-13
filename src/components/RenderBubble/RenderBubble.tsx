@@ -115,7 +115,13 @@ export default function RenderBubble(props: Bubble<TMessage>["props"]) {
           </Text>
         ) : null}
 
-        {imagesURI?.length > 0 ? <GridImageViewer images={imagesURI} /> : null}
+        <VStack
+          alignItems={props.position === "right" ? "flex-end" : "flex-start"}
+        >
+          {imagesURI?.length > 0 ? (
+            <GridImageViewer images={imagesURI} />
+          ) : null}
+        </VStack>
       </VStack>
       <Text
         color={"gray.200"}

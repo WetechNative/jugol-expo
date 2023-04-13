@@ -60,6 +60,7 @@ import * as Location from "expo-location";
 import { store } from "@store/index";
 import { useGetRTCTokenQuery } from "@store/api/callApi/callApiSlice";
 import { addRtcToken } from "@store/features/messagesSlice/messagesSlice";
+import { getOngoingNotificationId } from "@screens/message-screens/CallingScreen/CallingScreen";
 
 const TASK_NAME = "BACKGROUND_LOCATION_TASK";
 let foregroundSubscription = null;
@@ -215,6 +216,19 @@ export default function DiscoverScreen() {
       console.log({ error });
     }
   }
+
+  // useEffect(() => {
+  //   const socket = getSocket();
+  //   socket.on("endCallWithOutReceiving", async () => {
+  //     console.log("call without Receiving");
+  //     const ongoingNotification = await getOngoingNotificationId();
+  //     ongoingNotification?.forEach(async (notifee1) => {
+  //       if (notifee1?.id) {
+  //         await notifee.cancelNotification(notifee1?.id);
+  //       }
+  //     });
+  //   });
+  // }, []);
 
   useEffect(() => {
     messaging().onMessage(async (remoteMessage) => {
