@@ -64,28 +64,7 @@ export default function SignUpScreen() {
         const idToken = await auth().currentUser?.getIdToken();
         dispatch(login(idToken));
         dispatch(setUID(user?.uid));
-        if (user?.uid) {
-          const results = await checkUser(user?.uid).unwrap();
-          const {
-            hasUpdatedGender,
-            hasUpdatedAddress,
-            hasUpdatedProfile,
-            hasUpdatedInterest,
-            isNewUser,
-          } = results.data;
-          if (
-            !hasUpdatedGender ||
-            !hasUpdatedAddress ||
-            !hasUpdatedProfile ||
-            !hasUpdatedInterest
-          ) {
-            navigation.navigate(authRoutes.selectGenderScreen.path as never);
-            dispatch(setCheckUserInformation(true));
-          } else {
-            dispatch(setCheckUserInformation(false));
-          }
-          setLoading(false);
-        }
+        setLoading(false);
       } catch (error: any) {
         setLoading(false);
         toast.show({

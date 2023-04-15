@@ -44,27 +44,15 @@ export default function AppleSignIn() {
     );
 
     // Sign the user in with the credential
-    await auth().signInWithCredential(appleCredential);
+    const userDetails = await auth().signInWithCredential(appleCredential);
     const iDToken = await auth().currentUser?.getIdToken();
     const user = auth().currentUser;
     dispatch(setUID(user?.uid));
     dispatch(login(iDToken));
-    const results = await checkUser(user?.uid).unwrap();
-    const {
-      hasUpdatedGender,
-      hasUpdatedAddress,
-      hasUpdatedProfile,
-      hasUpdatedInterest,
-      isNewUser,
-    } = results.data;
-    if (
-      !hasUpdatedGender ||
-      !hasUpdatedAddress ||
-      !hasUpdatedProfile ||
-      !hasUpdatedInterest ||
-      isNewUser
-    ) {
+    console.log(userDetails);
+    if (userDetails?.additionalUserInfo?.isNewUser) {
       navigation.navigate(authRoutes.selectGenderScreen.path as never);
+      dispatch(setCheckUserInformation(true));
     } else {
       navigation.navigate(authRoutes.bottomTab.path as never);
       dispatch(setCheckUserInformation(false));
@@ -105,28 +93,14 @@ export default function AppleSignIn() {
     const appleCredential = auth.AppleAuthProvider.credential(id_token, nonce);
 
     // Sign the user in with the credential
-    await auth().signInWithCredential(appleCredential);
+    const userDetails = await auth().signInWithCredential(appleCredential);
 
     const iDToken = await auth().currentUser?.getIdToken();
     const user = auth().currentUser;
     dispatch(setUID(user?.uid));
     dispatch(login(iDToken));
-    const results = await checkUser(user?.uid).unwrap();
-    const {
-      hasUpdatedGender,
-      hasUpdatedAddress,
-      hasUpdatedProfile,
-      hasUpdatedInterest,
-      isNewUser,
-    } = results.data;
-
-    if (
-      !hasUpdatedGender ||
-      !hasUpdatedAddress ||
-      !hasUpdatedProfile ||
-      !hasUpdatedInterest ||
-      isNewUser
-    ) {
+    console.log(userDetails);
+    if (userDetails?.additionalUserInfo?.isNewUser) {
       navigation.navigate(authRoutes.selectGenderScreen.path as never);
       dispatch(setCheckUserInformation(true));
     } else {

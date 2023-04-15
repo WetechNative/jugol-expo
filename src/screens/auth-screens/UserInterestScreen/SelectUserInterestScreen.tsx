@@ -1,6 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
-import { Box, Button, HStack, Text, useToast } from "native-base";
-import React, { useLayoutEffect, useState } from "react";
+import {
+  Box,
+  Button,
+  Center,
+  HStack,
+  Skeleton,
+  Text,
+  VStack,
+  useToast,
+} from "native-base";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 import {
   ArtIcon,
@@ -20,12 +29,16 @@ import KeyboardAwareView from "@ui/KeyboardAwareView/KeyboardAwareView";
 import { fontSizes } from "@typography";
 import colors from "@colors";
 import AuthHeader from "@ui/AuthHeader/AuthHeader";
-import { authRoutes } from "@routes/index";
+import { authRoutes, dashBoardRoutes } from "@routes/index";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 import { useUpdateUserDataMutation } from "@store/api/userApi/userApiSlice";
-import { setCheckUserInformation } from "@store/features/auth/authSlice";
+import {
+  selectUID,
+  setCheckUserInformation,
+} from "@store/features/auth/authSlice";
 import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
+import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 
 const interestData = [
   {

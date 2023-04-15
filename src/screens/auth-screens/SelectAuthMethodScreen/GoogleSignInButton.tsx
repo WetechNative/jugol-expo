@@ -5,7 +5,7 @@ import {
   statusCodes,
 } from "@react-native-google-signin/google-signin";
 import { useNavigation } from "@react-navigation/native";
-import { authRoutes } from "@routes/index";
+import { authRoutes, dashBoardRoutes } from "@routes/index";
 import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 import {
   login,
@@ -30,26 +30,13 @@ export default function GoogleSignInButton() {
       });
       const { idToken } = await GoogleSignin.signIn();
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-      await auth().signInWithCredential(googleCredential);
+      const userDetails = await auth().signInWithCredential(googleCredential);
       const iDToken = await auth().currentUser?.getIdToken();
       const user = auth().currentUser;
       dispatch(setUID(user?.uid));
       dispatch(login(iDToken));
-      const results = await checkUser(user?.uid).unwrap();
-
-      const {
-        hasUpdatedGender,
-        hasUpdatedAddress,
-        hasUpdatedProfile,
-        hasUpdatedInterest,
-        isNewUser,
-      } = results.data;
-      if (
-        !hasUpdatedGender ||
-        !hasUpdatedAddress ||
-        !hasUpdatedProfile ||
-        !hasUpdatedInterest
-      ) {
+      console.log(userDetails);
+      if (userDetails?.additionalUserInfo?.isNewUser) {
         navigation.navigate(authRoutes.selectGenderScreen.path as never);
         dispatch(setCheckUserInformation(true));
       } else {

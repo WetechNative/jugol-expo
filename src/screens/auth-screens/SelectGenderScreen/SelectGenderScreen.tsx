@@ -1,10 +1,13 @@
 import { useNavigation } from "@react-navigation/native";
-import { authRoutes } from "@routes/index";
+import { authRoutes, dashBoardRoutes } from "@routes/index";
 import {
   useGetGenderListQuery,
   useUpdateUserDataMutation,
 } from "@store/api/userApi/userApiSlice";
-import { setCheckUserInformation } from "@store/features/auth/authSlice";
+import {
+  selectUID,
+  setCheckUserInformation,
+} from "@store/features/auth/authSlice";
 import { fontSizes } from "@typography";
 import AuthHeader from "@ui/AuthHeader/AuthHeader";
 import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
@@ -20,9 +23,10 @@ import {
   useToast,
   VStack,
 } from "native-base";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Feather from "@expo/vector-icons/Feather";
 import { useDispatch, useSelector } from "react-redux";
+import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 
 export default function SelectGenderScreen() {
   const [selectedGender, setSelectedGender] = React.useState<string>("");
@@ -41,7 +45,6 @@ export default function SelectGenderScreen() {
   } = useGetGenderListQuery(undefined);
 
   const dispatch = useDispatch();
-  const user = useSelector((autuUser: any) => autuUser.user);
 
   const handleContinueClick = async () => {
     setLoading(true);

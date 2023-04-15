@@ -15,6 +15,8 @@ import AuthRoutes from "./AuthRoutes";
 import dashBoardScreens from "./dashboard.routes";
 import auth from "@react-native-firebase/auth";
 import LikeProfileScreen from "@screens/like-screens/LikeProfileScreen/LikeProfileScreen";
+import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
+import { VStack } from "native-base";
 
 export default function DashBoardRoutes() {
   const screens = Object.values(dashBoardScreens);
@@ -22,12 +24,30 @@ export default function DashBoardRoutes() {
   const isAuthenticated = useAuthRoutes();
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState();
+  const [newUser, setNewUser] = useState(false);
+  const [checkUser, results] = useCheckUserMutation();
+  // const results = await checkUser(user?.uid).unwrap();
+  // const {
+  //   hasUpdatedGender,
+  //   hasUpdatedAddress,
+  //   hasUpdatedProfile,
+  //   hasUpdatedInterest,
+  //   isNewUser,
+  // } = results.data;
 
   // Handle user state changes
-  function onAuthStateChanged(user) {
-    setUser(user);
+  const onAuthStateChanged = async (user) => {
+    if (user) {
+      const results = await checkUser(user?.uid).unwrap();
+      const { isNewUser } = results.data;
+      setNewUser(isNewUser);
+      setUser(user);
+      console.log(isNewUser);
+    } else {
+      setUser(user);
+    }
     if (initializing) setInitializing(false);
-  }
+  };
 
   useEffect(() => {
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
@@ -36,6 +56,9 @@ export default function DashBoardRoutes() {
 
   if (initializing) return null;
 
+  if (results.isLoading) {
+    <VStack>Hello</VStack>;
+  }
   return (
     <Stack.Navigator
       screenOptions={{
@@ -47,7 +70,7 @@ export default function DashBoardRoutes() {
       }}
       initialRouteName={dashBoardScreens.bottomTab.path}
     >
-      {!user ? (
+      {!user || newUser ? (
         <Stack.Screen component={AuthRoutes} name="authRoutes" />
       ) : (
         <Stack.Group>

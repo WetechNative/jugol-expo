@@ -1,5 +1,15 @@
-import { Box, Button, Pressable, Text, useToast, VStack } from "native-base";
-import React, { useLayoutEffect, useState } from "react";
+import {
+  Box,
+  Button,
+  Center,
+  HStack,
+  Pressable,
+  Skeleton,
+  Text,
+  useToast,
+  VStack,
+} from "native-base";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 import dayjs from "dayjs";
 import { useFormik } from "formik";
@@ -24,7 +34,7 @@ import SelectInputImageTypeSheet, {
   IMAGE_INPUT_SHEET_ID,
 } from "@action-sheets/SelectInputImageTypeSheet/SelectInputImageTypeSheet";
 import useImageUri from "@hooks/useImageUri";
-import { authRoutes } from "@routes/index";
+import { authRoutes, dashBoardRoutes } from "@routes/index";
 import { useNavigation } from "@react-navigation/native";
 import SkipButton from "@ui/SkipButton/SkipButton";
 import {
@@ -36,7 +46,11 @@ import { IProfilePictureDetails } from "./ProfilePersonalDetails.types";
 import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
 import DatePickerComponent from "@ui/DatePickerComponent/DatePickerComponent";
 import colors from "@colors";
-import { setCheckUserInformation } from "@store/features/auth/authSlice";
+import {
+  selectUID,
+  setCheckUserInformation,
+} from "@store/features/auth/authSlice";
+import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 
 const PROFILE_IMAGE_SIZE = Math.round(scale(90)) + "px";
 
@@ -56,8 +70,6 @@ export default function ProfilePersonalDetailsScreen() {
   const toast = useToast();
   const [updateUserData, results] = useUpdateUserDataMutation();
   const [addProfilePicture, profilePicture] = useAddUserProfileMutation();
-
-  const user = useSelector((autuUser: any) => autuUser.user);
 
   const schema = Yup.object().shape({
     firstName: Yup.string().required("First name is required"),

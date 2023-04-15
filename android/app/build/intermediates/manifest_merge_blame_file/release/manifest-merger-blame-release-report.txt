@@ -1,0 +1,1681 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.jugol.bd"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+11-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:2:3-82
+11-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:2:20-80
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:3:3-78
+12-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:3:20-76
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:4:3-76
+13-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:4:20-74
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:5:3-62
+14-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:5:20-60
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:6:3-74
+15-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:6:20-72
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:7:3-64
+16-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:7:20-62
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:8:3-77
+17-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:8:20-75
+18    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+18-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:9:3-72
+18-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:9:20-70
+19    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+19-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:10:3-73
+19-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:10:20-71
+20    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+20-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:11:3-72
+20-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:11:20-70
+21    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+21-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:12:3-68
+21-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:12:20-66
+22    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+22-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:13:3-75
+22-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:13:20-73
+23    <uses-permission android:name="android.permission.VIBRATE" />
+23-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:14:3-63
+23-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:14:20-61
+24    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+24-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:15:3-78
+24-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:15:20-76
+25    <uses-permission android:name="android.permission.WAKE_LOCK" />
+25-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:18:3-66
+25-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:18:20-63
+26    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+26-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:19:3-80
+26-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:19:20-77
+27
+28    <permission
+28-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:20:3-22:45
+29        android:name="com.jugol.bd.permission.C2D_MESSAGE"
+29-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:21:7-57
+30        android:protectionLevel="signature" />
+30-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:22:7-42
+31
+32    <uses-permission android:name="com.jugol.bd.permission.C2D_MESSAGE" />
+32-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:23:3-73
+32-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:23:20-70
+33
+34    <queries>
+34-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:26:3-32:13
+35        <intent>
+35-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:27:5-31:14
+36            <action android:name="android.intent.action.VIEW" />
+36-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+36-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+37
+38            <category android:name="android.intent.category.BROWSABLE" />
+38-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:7-67
+38-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:17-65
+39
+40            <data android:scheme="https" />
+40-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+40-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+41        </intent>
+42        <!-- Query open documents -->
+43        <intent>
+43-->[:expo-file-system] D:\React Native\jugol-expo\node_modules\expo-file-system\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:9-17:18
+44            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+44-->[:expo-file-system] D:\React Native\jugol-expo\node_modules\expo-file-system\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-79
+44-->[:expo-file-system] D:\React Native\jugol-expo\node_modules\expo-file-system\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:21-76
+45        </intent>
+46        <intent>
+46-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:9-20:18
+47
+48            <!-- Required for picking images from the camera roll if targeting API 30 -->
+49            <action android:name="android.media.action.IMAGE_CAPTURE" />
+49-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-73
+49-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:21-70
+50        </intent>
+51        <intent>
+51-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:21:9-25:18
+52
+53            <!-- Required for picking images from the camera if targeting API 30 -->
+54            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
+54-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-80
+54-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:21-77
+55        </intent>
+56
+57        <package android:name="com.facebook.katana" /> <!-- Added to check the default browser that will host the AuthFlow. -->
+57-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:18:9-55
+57-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:18:18-52
+58        <intent>
+58-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:13:9-17:18
+59            <action android:name="android.intent.action.VIEW" />
+59-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+59-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+60
+61            <data android:scheme="http" />
+61-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+61-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+62        </intent> <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+63        <package android:name="com.android.chrome" />
+63-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:11:9-54
+63-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:11:18-51
+64
+65        <intent>
+65-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:10:9-16:18
+66            <action android:name="android.intent.action.GET_CONTENT" />
+66-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:11:13-72
+66-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:11:21-69
+67
+68            <category android:name="android.intent.category.OPENABLE" />
+68-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:13:13-73
+68-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:13:23-70
+69
+70            <data android:mimeType="*/*" />
+70-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+71        </intent> <!-- Needs to be explicitly declared on Android R+ -->
+72        <package android:name="com.google.android.apps.maps" />
+72-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\Asus\.gradle\caches\transforms-3\ba27fdf77112b4c99edfaa0e5e1c850b\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+72-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\Asus\.gradle\caches\transforms-3\ba27fdf77112b4c99edfaa0e5e1c850b\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
+73    </queries>
+74
+75    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+75-->[:react-native-community_netinfo] D:\React Native\jugol-expo\node_modules\@react-native-community\netinfo\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:7:5-79
+75-->[:react-native-community_netinfo] D:\React Native\jugol-expo\node_modules\@react-native-community\netinfo\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:7:22-76
+76    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+76-->[:react-native-community_netinfo] D:\React Native\jugol-expo\node_modules\@react-native-community\netinfo\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:8:5-76
+76-->[:react-native-community_netinfo] D:\React Native\jugol-expo\node_modules\@react-native-community\netinfo\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:8:22-73
+77    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+77-->[:react-native-agora] D:\React Native\jugol-expo\node_modules\react-native-agora\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-80
+77-->[:react-native-agora] D:\React Native\jugol-expo\node_modules\react-native-agora\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:22-77
+78    <uses-permission android:name="android.permission.BLUETOOTH" />
+78-->[:react-native-agora] D:\React Native\jugol-expo\node_modules\react-native-agora\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:5-68
+78-->[:react-native-agora] D:\React Native\jugol-expo\node_modules\react-native-agora\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:22-65
+79    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+79-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:25:5-77
+79-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:25:22-74
+80
+81    <uses-feature
+81-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\Asus\.gradle\caches\transforms-3\ba27fdf77112b4c99edfaa0e5e1c850b\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
+82        android:glEsVersion="0x00020000"
+82-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\Asus\.gradle\caches\transforms-3\ba27fdf77112b4c99edfaa0e5e1c850b\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
+83        android:required="true" />
+83-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\Asus\.gradle\caches\transforms-3\ba27fdf77112b4c99edfaa0e5e1c850b\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
+84
+85    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+85-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:16:5-79
+85-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:16:22-76
+86    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+86-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:25:5-81
+86-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:25:22-78
+87
+88    <permission
+88-->[androidx.core:core:1.9.0] C:\Users\Asus\.gradle\caches\transforms-3\73790f6c8d045d2910e069c1ca57b452\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+89        android:name="com.jugol.bd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+89-->[androidx.core:core:1.9.0] C:\Users\Asus\.gradle\caches\transforms-3\73790f6c8d045d2910e069c1ca57b452\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+90        android:protectionLevel="signature" />
+90-->[androidx.core:core:1.9.0] C:\Users\Asus\.gradle\caches\transforms-3\73790f6c8d045d2910e069c1ca57b452\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+91
+92    <uses-permission android:name="com.jugol.bd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+92-->[androidx.core:core:1.9.0] C:\Users\Asus\.gradle\caches\transforms-3\73790f6c8d045d2910e069c1ca57b452\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+92-->[androidx.core:core:1.9.0] C:\Users\Asus\.gradle\caches\transforms-3\73790f6c8d045d2910e069c1ca57b452\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+93    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+93-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:16:5-81
+93-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:16:22-78
+94    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+94-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:17:5-79
+94-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:17:22-76
+95    <uses-permission
+95-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:18:5-20:38
+96        android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"
+96-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:19:9-73
+97        android:maxSdkVersion="30" /> <!-- For Xiaomi devices to enable heads-up notifications as default (https://github.com/invertase/notifee/issues/296) -->
+97-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:20:9-35
+98    <uses-permission
+98-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:22:5-24:38
+99        android:name="android.permission.ACCESS_NOTIFICATION_POLICY"
+99-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:23:9-69
+100        android:minSdkVersion="23" />
+100-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:24:9-35
+101    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+101-->[com.android.installreferrer:installreferrer:1.0] C:\Users\Asus\.gradle\caches\transforms-3\6bcae209778ede32cbdc00f41e00658e\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+101-->[com.android.installreferrer:installreferrer:1.0] C:\Users\Asus\.gradle\caches\transforms-3\6bcae209778ede32cbdc00f41e00658e\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+102    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+102-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:15:5-98
+102-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:15:22-95
+103    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+103-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:16:5-94
+103-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:16:22-91
+104
+105    <application
+105-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:33:3-68:17
+106        android:name="com.jugol.bd.MainApplication"
+106-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:33:16-47
+107        android:allowBackup="true"
+107-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:33:162-188
+108        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+108-->[androidx.core:core:1.9.0] C:\Users\Asus\.gradle\caches\transforms-3\73790f6c8d045d2910e069c1ca57b452\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+109        android:icon="@mipmap/ic_launcher"
+109-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:33:81-115
+110        android:label="@string/app_name"
+110-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:33:48-80
+111        android:roundIcon="@mipmap/ic_launcher_round"
+111-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:33:116-161
+112        android:supportsRtl="true"
+112-->[com.facebook.android:facebook-android-sdk:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\9ccda48d0604b3ef94c9ceb8b8e6f34b\transformed\jetified-facebook-android-sdk-15.2.0\AndroidManifest.xml:16:18-44
+113        android:theme="@style/AppTheme"
+113-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:33:189-220
+114        android:usesCleartextTraffic="true" >
+114-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:33:221-256
+115        <meta-data
+115-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:34:5-101
+116            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+116-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:34:16-77
+117            android:value="false" />
+117-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:34:78-99
+118        <meta-data
+118-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:35:5-103
+119            android:name="com.facebook.sdk.ApplicationId"
+119-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:35:16-61
+120            android:value="@string/facebook_app_id" />
+120-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:35:62-101
+121        <meta-data
+121-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:36:5-87
+122            android:name="com.facebook.sdk.ApplicationName"
+122-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:36:16-63
+123            android:value="Jugol" />
+123-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:36:64-85
+124        <meta-data
+124-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:37:5-87
+125            android:name="com.facebook.sdk.AutoInitEnabled"
+125-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:37:16-63
+126            android:value="false" />
+126-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:37:64-85
+127        <meta-data
+127-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:38:5-95
+128            android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
+128-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:38:16-71
+129            android:value="false" />
+129-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:38:72-93
+130        <meta-data
+130-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:39:5-107
+131            android:name="com.facebook.sdk.ClientToken"
+131-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:39:16-59
+132            android:value="@string/facebook_client_token" />
+132-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:39:60-105
+133        <meta-data
+133-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:40:5-82
+134            android:name="expo.modules.updates.ENABLED"
+134-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:40:16-59
+135            android:value="true" />
+135-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:40:60-80
+136        <meta-data
+136-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:41:5-93
+137            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+137-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:41:16-68
+138            android:value="48.0.0" />
+138-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:41:69-91
+139        <meta-data
+139-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:42:5-105
+140            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+140-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:42:16-80
+141            android:value="ALWAYS" />
+141-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:42:81-103
+142        <meta-data
+142-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:43:5-99
+143            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+143-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:43:16-79
+144            android:value="0" />
+144-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:43:80-97
+145        <meta-data
+145-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:44:5-119
+146            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+146-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:44:16-67
+147            android:value="https://exp.host/@jugol_app/Jugol" />
+147-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:44:68-117
+148
+149        <activity
+149-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:5-58:16
+150            android:name="com.jugol.bd.MainActivity"
+150-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:15-43
+151            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+151-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:77-154
+152            android:exported="true"
+152-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:273-296
+153            android:label="@string/app_name"
+153-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:44-76
+154            android:launchMode="singleTask"
+154-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:155-186
+155            android:screenOrientation="portrait"
+155-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:297-333
+156            android:theme="@style/Theme.App.SplashScreen"
+156-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:227-272
+157            android:windowSoftInputMode="adjustPan" >
+157-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:45:187-226
+158            <intent-filter>
+158-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:46:7-49:23
+159                <action android:name="android.intent.action.MAIN" />
+159-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:47:9-60
+159-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:47:17-58
+160
+161                <category android:name="android.intent.category.LAUNCHER" />
+161-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:48:9-68
+161-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:48:19-66
+162            </intent-filter>
+163            <intent-filter>
+163-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:50:7-57:23
+164                <action android:name="android.intent.action.VIEW" />
+164-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+164-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+165
+166                <category android:name="android.intent.category.DEFAULT" />
+166-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:9-67
+166-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:19-65
+167                <category android:name="android.intent.category.BROWSABLE" />
+167-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:7-67
+167-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:17-65
+168
+169                <data android:scheme="jugol" />
+169-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+169-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+170                <data android:scheme="com.jugol.bd" />
+170-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+170-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+171                <data android:scheme="fb127108596968889" />
+171-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+171-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+172            </intent-filter>
+173        </activity>
+174        <activity
+174-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:59:5-106
+175            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+175-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:59:15-79
+176            android:exported="false" />
+176-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:59:80-104
+177        <activity
+177-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:60:5-67:16
+178            android:name="com.facebook.CustomTabActivity"
+178-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:60:15-60
+179            android:exported="true" >
+179-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:60:61-84
+180            <intent-filter>
+180-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:61:7-66:23
+181                <action android:name="android.intent.action.VIEW" />
+181-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+181-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+182
+183                <category android:name="android.intent.category.DEFAULT" />
+183-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:9-67
+183-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:19-65
+184                <category android:name="android.intent.category.BROWSABLE" />
+184-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:7-67
+184-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:17-65
+185
+186                <data android:scheme="@string/fb_login_protocol_scheme" />
+186-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+186-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+187            </intent-filter>
+188            <intent-filter>
+188-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:31:13-40:29
+189                <action android:name="android.intent.action.VIEW" />
+189-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+189-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+190
+191                <category android:name="android.intent.category.DEFAULT" />
+191-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:9-67
+191-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:19-65
+192                <category android:name="android.intent.category.BROWSABLE" />
+192-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:7-67
+192-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:17-65
+193
+194                <data
+194-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+195                    android:host="cct.com.jugol.bd"
+196                    android:scheme="fbconnect" />
+196-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+197            </intent-filter>
+198        </activity>
+199
+200        <provider
+200-->[:notifee_react-native] D:\React Native\jugol-expo\node_modules\@notifee\react-native\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:8:9-12:40
+201            android:name="io.invertase.notifee.NotifeeInitProvider"
+201-->[:notifee_react-native] D:\React Native\jugol-expo\node_modules\@notifee\react-native\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-68
+202            android:authorities="com.jugol.bd.notifee-init-provider"
+202-->[:notifee_react-native] D:\React Native\jugol-expo\node_modules\@notifee\react-native\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:13-73
+203            android:exported="false"
+203-->[:notifee_react-native] D:\React Native\jugol-expo\node_modules\@notifee\react-native\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-37
+204            android:initOrder="-100" /> <!-- Disable crashlytics by default so we can custom init with CrashlyticsNdk support -->
+204-->[:notifee_react-native] D:\React Native\jugol-expo\node_modules\@notifee\react-native\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-37
+205        <meta-data
+205-->[:react-native-firebase_crashlytics] D:\React Native\jugol-expo\node_modules\@react-native-firebase\crashlytics\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:9-12:37
+206            android:name="firebase_crashlytics_collection_enabled"
+206-->[:react-native-firebase_crashlytics] D:\React Native\jugol-expo\node_modules\@react-native-firebase\crashlytics\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-67
+207            android:value="false" />
+207-->[:react-native-firebase_crashlytics] D:\React Native\jugol-expo\node_modules\@react-native-firebase\crashlytics\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-34
+208
+209        <provider
+209-->[:react-native-firebase_crashlytics] D:\React Native\jugol-expo\node_modules\@react-native-firebase\crashlytics\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:9-18:38
+210            android:name="io.invertase.firebase.crashlytics.ReactNativeFirebaseCrashlyticsInitProvider"
+210-->[:react-native-firebase_crashlytics] D:\React Native\jugol-expo\node_modules\@react-native-firebase\crashlytics\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-104
+211            android:authorities="com.jugol.bd.reactnativefirebasecrashlyticsinitprovider"
+211-->[:react-native-firebase_crashlytics] D:\React Native\jugol-expo\node_modules\@react-native-firebase\crashlytics\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-94
+212            android:exported="false"
+212-->[:react-native-firebase_crashlytics] D:\React Native\jugol-expo\node_modules\@react-native-firebase\crashlytics\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:13-37
+213            android:initOrder="98" />
+213-->[:react-native-firebase_crashlytics] D:\React Native\jugol-expo\node_modules\@react-native-firebase\crashlytics\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-35
+214
+215        <service
+215-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:9-14:40
+216            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService"
+216-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-103
+217            android:exported="false" />
+217-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-37
+218        <service
+218-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:9-21:19
+219            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
+219-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-95
+220            android:exported="false" >
+220-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:17:13-37
+221            <intent-filter>
+221-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-20:29
+222                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+222-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:17-78
+222-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:25-75
+223            </intent-filter>
+224        </service>
+225
+226        <receiver
+226-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:9-30:20
+227            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
+227-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-96
+228            android:exported="true"
+228-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:25:13-36
+229            android:permission="com.google.android.c2dm.permission.SEND" >
+229-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:26:13-73
+230            <intent-filter>
+230-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:27:13-29:29
+231                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+231-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:17-81
+231-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:25-78
+232            </intent-filter>
+233        </receiver>
+234
+235        <meta-data
+235-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:32:9-34:36
+236            android:name="firebase_messaging_auto_init_enabled"
+236-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:33:13-64
+237            android:value="true" />
+237-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:34:13-33
+238        <meta-data
+238-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:35:9-37:32
+239            android:name="com.google.firebase.messaging.default_notification_channel_id"
+239-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:36:13-89
+240            android:value="" />
+240-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:37:13-29
+241        <meta-data
+241-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:38:9-40:47
+242            android:name="com.google.firebase.messaging.default_notification_color"
+242-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:39:13-84
+243            android:resource="@color/white" />
+243-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:40:13-44
+244        <meta-data
+244-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:9-11:36
+245            android:name="app_data_collection_default_enabled"
+245-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:13-63
+246            android:value="true" />
+246-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-33
+247
+248        <service
+248-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:9-21:19
+249            android:name="com.google.firebase.components.ComponentDiscoveryService"
+249-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-84
+250            android:directBootAware="true"
+250-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-43
+251            android:exported="false" >
+251-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:16:13-37
+252            <meta-data
+252-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-20:85
+253                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+253-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:17-120
+254                android:value="com.google.firebase.components.ComponentRegistrar" />
+254-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:17-82
+255            <meta-data
+255-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:67:13-69:85
+256                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+256-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:68:17-109
+257                android:value="com.google.firebase.components.ComponentRegistrar" />
+257-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:69:17-82
+258            <meta-data
+258-->[com.google.firebase:firebase-crashlytics-ndk:18.3.6] C:\Users\Asus\.gradle\caches\transforms-3\4b1124b3836d00ed7cd190b1ca1373cc\transformed\jetified-firebase-crashlytics-ndk-18.3.6\AndroidManifest.xml:34:13-36:85
+259                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar"
+259-->[com.google.firebase:firebase-crashlytics-ndk:18.3.6] C:\Users\Asus\.gradle\caches\transforms-3\4b1124b3836d00ed7cd190b1ca1373cc\transformed\jetified-firebase-crashlytics-ndk-18.3.6\AndroidManifest.xml:35:17-122
+260                android:value="com.google.firebase.components.ComponentRegistrar" />
+260-->[com.google.firebase:firebase-crashlytics-ndk:18.3.6] C:\Users\Asus\.gradle\caches\transforms-3\4b1124b3836d00ed7cd190b1ca1373cc\transformed\jetified-firebase-crashlytics-ndk-18.3.6\AndroidManifest.xml:36:17-82
+261            <meta-data
+261-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:55:13-57:85
+262                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+262-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:56:17-119
+263                android:value="com.google.firebase.components.ComponentRegistrar" />
+263-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:57:17-82
+264            <meta-data
+264-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\Asus\.gradle\caches\transforms-3\41987fea57391794b1598e88fc1e23de\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:17:13-19:85
+265                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+265-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\Asus\.gradle\caches\transforms-3\41987fea57391794b1598e88fc1e23de\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:18:17-115
+266                android:value="com.google.firebase.components.ComponentRegistrar" />
+266-->[com.google.firebase:firebase-crashlytics:18.3.6] C:\Users\Asus\.gradle\caches\transforms-3\41987fea57391794b1598e88fc1e23de\transformed\jetified-firebase-crashlytics-18.3.6\AndroidManifest.xml:19:17-82
+267            <meta-data
+267-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Asus\.gradle\caches\transforms-3\bfaa22c602c3ef840508286b45087e3b\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+268                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+268-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Asus\.gradle\caches\transforms-3\bfaa22c602c3ef840508286b45087e3b\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+269                android:value="com.google.firebase.components.ComponentRegistrar" />
+269-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\Asus\.gradle\caches\transforms-3\bfaa22c602c3ef840508286b45087e3b\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+270            <meta-data
+270-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\Asus\.gradle\caches\transforms-3\a6148b1454f97c7b3b8f630977be5002\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+271                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+271-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\Asus\.gradle\caches\transforms-3\a6148b1454f97c7b3b8f630977be5002\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:18:17-127
+272                android:value="com.google.firebase.components.ComponentRegistrar" />
+272-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\Asus\.gradle\caches\transforms-3\a6148b1454f97c7b3b8f630977be5002\transformed\jetified-firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
+273        </service>
+274
+275        <provider
+275-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:9-27:38
+276            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+276-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-88
+277            android:authorities="com.jugol.bd.reactnativefirebaseappinitprovider"
+277-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:25:13-86
+278            android:exported="false"
+278-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:26:13-37
+279            android:initOrder="99" />
+279-->[:react-native-firebase_app] D:\React Native\jugol-expo\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:27:13-35
+280        <provider
+280-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:8:9-16:20
+281            android:name="com.imagepicker.ImagePickerProvider"
+281-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-63
+282            android:authorities="com.jugol.bd.imagepickerprovider"
+282-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:13-71
+283            android:exported="false"
+283-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-37
+284            android:grantUriPermissions="true" >
+284-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:13-47
+285            <meta-data
+285-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-15:70
+286                android:name="android.support.FILE_PROVIDER_PATHS"
+286-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:17-67
+287                android:resource="@xml/imagepicker_provider_paths" />
+287-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:17-67
+288        </provider>
+289        <provider
+289-->[:expo-file-system] D:\React Native\jugol-expo\node_modules\expo-file-system\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:21:9-30:20
+290            android:name="expo.modules.filesystem.FileSystemFileProvider"
+290-->[:expo-file-system] D:\React Native\jugol-expo\node_modules\expo-file-system\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-74
+291            android:authorities="com.jugol.bd.FileSystemFileProvider"
+291-->[:expo-file-system] D:\React Native\jugol-expo\node_modules\expo-file-system\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:13-74
+292            android:exported="false"
+292-->[:expo-file-system] D:\React Native\jugol-expo\node_modules\expo-file-system\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:13-37
+293            android:grantUriPermissions="true" >
+293-->[:expo-file-system] D:\React Native\jugol-expo\node_modules\expo-file-system\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:25:13-47
+294            <meta-data
+294-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-15:70
+295                android:name="android.support.FILE_PROVIDER_PATHS"
+295-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:17-67
+296                android:resource="@xml/file_system_provider_paths" />
+296-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:17-67
+297        </provider>
+298
+299        <activity
+299-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:29:9-31:59
+300            android:name="com.canhub.cropper.CropImageActivity"
+300-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:30:13-64
+301            android:exported="true"
+301-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:35:13-36
+302            android:theme="@style/Base.Theme.AppCompat" /> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
+302-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:31:13-56
+303        <provider
+303-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:33:9-41:20
+304            android:name="expo.modules.imagepicker.fileprovider.ImagePickerFileProvider"
+304-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:34:13-89
+305            android:authorities="com.jugol.bd.ImagePickerFileProvider"
+305-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:35:13-75
+306            android:exported="false"
+306-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:36:13-37
+307            android:grantUriPermissions="true" >
+307-->[:expo-image-picker] D:\React Native\jugol-expo\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:37:13-47
+308            <meta-data
+308-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-15:70
+309                android:name="android.support.FILE_PROVIDER_PATHS"
+309-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:17-67
+310                android:resource="@xml/image_picker_provider_paths" />
+310-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:17-67
+311        </provider>
+312
+313        <service
+313-->[:expo-location] D:\React Native\jugol-expo\node_modules\expo-location\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:9-15:56
+314            android:name="expo.modules.location.services.LocationTaskService"
+314-->[:expo-location] D:\React Native\jugol-expo\node_modules\expo-location\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-78
+315            android:exported="false"
+315-->[:expo-location] D:\React Native\jugol-expo\node_modules\expo-location\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:13-37
+316            android:foregroundServiceType="location" />
+316-->[:expo-location] D:\React Native\jugol-expo\node_modules\expo-location\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:13-53
+317
+318        <receiver
+318-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:8:9-16:20
+319            android:name="expo.modules.taskManager.TaskBroadcastReceiver"
+319-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-74
+320            android:exported="false" >
+320-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:13-37
+321            <intent-filter>
+321-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:13-15:29
+322                <action android:name="expo.modules.taskManager.TaskBroadcastReceiver.INTENT_ACTION" />
+322-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:17-103
+322-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:25-100
+323                <action android:name="android.intent.action.BOOT_COMPLETED" />
+323-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-79
+323-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:25-76
+324                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+324-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:17-84
+324-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:25-81
+325            </intent-filter>
+326        </receiver>
+327
+328        <service
+328-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:9-22:72
+329            android:name="expo.modules.taskManager.TaskJobService"
+329-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:13-67
+330            android:enabled="true"
+330-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:13-35
+331            android:exported="false"
+331-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:21:13-37
+332            android:permission="android.permission.BIND_JOB_SERVICE" />
+332-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:13-69
+333
+334        <meta-data
+334-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:24:9-26:36
+335            android:name="expo.modules.taskManager.oneAppId"
+335-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:25:13-61
+336            android:value="true" />
+336-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:26:13-33
+337        <meta-data
+337-->[:expo-modules-core] D:\React Native\jugol-expo\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:8:9-10:89
+338            android:name="org.unimodules.core.AppLoader#react-native-headless"
+338-->[:expo-modules-core] D:\React Native\jugol-expo\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:13-79
+339            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+339-->[:expo-modules-core] D:\React Native\jugol-expo\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:13-86
+340
+341        <activity
+341-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:22:9-25:66
+342            android:name="com.facebook.FacebookActivity"
+342-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:23:13-57
+343            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+343-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:24:13-96
+344            android:theme="@style/com_facebook_activity_theme" />
+344-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:25:13-63
+345        <activity android:name="com.facebook.CustomTabMainActivity" />
+345-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:26:9-71
+345-->[com.facebook.android:facebook-common:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\23255e2e0e8251f871dc4b69497c648d\transformed\jetified-facebook-common-15.2.0\AndroidManifest.xml:26:19-68
+346        <activity
+346-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:8:9-12:58
+347            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+347-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:9:13-80
+348            android:exported="false"
+348-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:10:13-37
+349            android:theme="@style/StripePaymentSheetDefaultTheme"
+349-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:11:13-66
+350            android:windowSoftInputMode="adjustResize" />
+350-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:12:13-55
+351        <activity
+351-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:13:9-17:58
+352            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+352-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:14:13-82
+353            android:exported="false"
+353-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:15:13-37
+354            android:theme="@style/StripePaymentSheetDefaultTheme"
+354-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:16:13-66
+355            android:windowSoftInputMode="adjustResize" />
+355-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:17:13-55
+356        <activity
+356-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:18:9-21:69
+357            android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity"
+357-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:19:13-97
+358            android:exported="false"
+358-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:20:13-37
+359            android:theme="@style/StripePaymentSheetDefaultTheme" />
+359-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:21:13-66
+360        <activity
+360-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:22:9-25:69
+361            android:name="com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity"
+361-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:23:13-105
+362            android:exported="false"
+362-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:24:13-37
+363            android:theme="@style/StripePaymentSheetDefaultTheme" />
+363-->[com.stripe:paymentsheet:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\1c3419754cc7c5dc63473217cc6d18de\transformed\jetified-paymentsheet-20.19.5\AndroidManifest.xml:25:13-66
+364        <activity
+364-->[com.stripe:link:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\25018757b500ca0a0fb7b4a6ead52965\transformed\jetified-link-20.19.5\AndroidManifest.xml:8:9-13:58
+365            android:name="com.stripe.android.link.LinkActivity"
+365-->[com.stripe:link:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\25018757b500ca0a0fb7b4a6ead52965\transformed\jetified-link-20.19.5\AndroidManifest.xml:9:13-64
+366            android:exported="false"
+366-->[com.stripe:link:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\25018757b500ca0a0fb7b4a6ead52965\transformed\jetified-link-20.19.5\AndroidManifest.xml:10:13-37
+367            android:label="@string/link"
+367-->[com.stripe:link:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\25018757b500ca0a0fb7b4a6ead52965\transformed\jetified-link-20.19.5\AndroidManifest.xml:11:13-41
+368            android:theme="@style/LinkBaseTheme"
+368-->[com.stripe:link:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\25018757b500ca0a0fb7b4a6ead52965\transformed\jetified-link-20.19.5\AndroidManifest.xml:12:13-49
+369            android:windowSoftInputMode="adjustResize" />
+369-->[com.stripe:link:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\25018757b500ca0a0fb7b4a6ead52965\transformed\jetified-link-20.19.5\AndroidManifest.xml:13:13-55
+370        <activity
+370-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:21:9-64:20
+371            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+371-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:22:13-109
+372            android:exported="true" >
+372-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:23:13-36
+373            <intent-filter>
+373-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:24:13-63:29
+374                <action android:name="android.intent.action.VIEW" />
+374-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+374-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+375
+376                <category android:name="android.intent.category.DEFAULT" />
+376-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:9-67
+376-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:19-65
+377                <category android:name="android.intent.category.BROWSABLE" />
+377-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:7-67
+377-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:17-65
+378
+379                <!-- Returning from app2app: return_url is triggered to reopen web AuthFlow and poll accounts. -->
+380                <data
+380-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+381                    android:host="link-accounts"
+382                    android:pathPrefix="/com.jugol.bd/authentication_return"
+383                    android:scheme="stripe-auth" />
+383-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+384
+385                <!-- Returning from app2app: return_url is triggered to reopen native AuthFlow and poll accounts. -->
+386                <data
+386-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+387                    android:host="link-native-accounts"
+388                    android:pathPrefix="/com.jugol.bd/authentication_return"
+389                    android:scheme="stripe-auth" />
+389-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+390
+391                <!-- End of web AuthFlow success and cancel URIs that begin with "stripe-auth://link-accounts/{app-id}/...” -->
+392                <data
+392-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+393                    android:host="link-accounts"
+394                    android:path="/com.jugol.bd/success"
+395                    android:scheme="stripe-auth" />
+395-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+396                <data
+396-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+397                    android:host="link-accounts"
+398                    android:path="/com.jugol.bd/cancel"
+399                    android:scheme="stripe-auth" />
+399-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+400
+401                <!-- Opening app2app: Web flow triggers stripe-auth://native-redirect/{app-id}/http://web-that-redirects-to-native -->
+402                <data
+402-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+403                    android:host="native-redirect"
+404                    android:pathPrefix="/com.jugol.bd"
+405                    android:scheme="stripe-auth" />
+405-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+406
+407                <!-- Accepts success/cancel/fail URIs that begin with "stripe://auth-redirect” -->
+408                <data
+408-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+409                    android:host="auth-redirect"
+410                    android:pathPrefix="/com.jugol.bd"
+411                    android:scheme="stripe" />
+411-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+412            </intent-filter>
+413        </activity>
+414        <activity
+414-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:65:9-68:57
+415            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+415-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:66:13-101
+416            android:exported="false"
+416-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:67:13-37
+417            android:theme="@style/StripeDefaultTheme" />
+417-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:68:13-54
+418        <activity
+418-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:69:9-73:58
+419            android:name="com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity"
+419-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:70:13-110
+420            android:exported="false"
+420-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:71:13-37
+421            android:theme="@style/StripeDefaultTheme"
+421-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:72:13-54
+422            android:windowSoftInputMode="adjustResize" />
+422-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:73:13-55
+423
+424        <provider
+424-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:75:9-79:43
+425            android:name="com.stripe.android.financialconnections.appinitializer.FinancialConnectionsInitializer"
+425-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:76:13-114
+426            android:authorities="com.jugol.bd.financialconnections-init"
+426-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:77:13-77
+427            android:exported="false"
+427-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:78:13-37
+428            android:multiprocess="true" />
+428-->[com.stripe:financial-connections:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\c9725d6ec025790153c9681008ed0737\transformed\jetified-financial-connections-20.19.5\AndroidManifest.xml:79:13-40
+429
+430        <activity
+430-->[com.stripe:payments-ui-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\8beae49483c8644500d87f908072f020\transformed\jetified-payments-ui-core-20.19.5\AndroidManifest.xml:8:9-11:69
+431            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+431-->[com.stripe:payments-ui-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\8beae49483c8644500d87f908072f020\transformed\jetified-payments-ui-core-20.19.5\AndroidManifest.xml:9:13-80
+432            android:exported="false"
+432-->[com.stripe:payments-ui-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\8beae49483c8644500d87f908072f020\transformed\jetified-payments-ui-core-20.19.5\AndroidManifest.xml:10:13-37
+433            android:theme="@style/StripePaymentSheetDefaultTheme" />
+433-->[com.stripe:payments-ui-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\8beae49483c8644500d87f908072f020\transformed\jetified-payments-ui-core-20.19.5\AndroidManifest.xml:11:13-66
+434        <activity
+434-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:15:9-18:57
+435            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+435-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:16:13-76
+436            android:exported="false"
+436-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:17:13-37
+437            android:theme="@style/StripeDefaultTheme" />
+437-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:18:13-54
+438        <activity
+438-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:19:9-22:57
+439            android:name="com.stripe.android.view.PaymentMethodsActivity"
+439-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:20:13-74
+440            android:exported="false"
+440-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:21:13-37
+441            android:theme="@style/StripeDefaultTheme" />
+441-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:22:13-54
+442        <activity
+442-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:23:9-26:57
+443            android:name="com.stripe.android.view.PaymentFlowActivity"
+443-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:24:13-71
+444            android:exported="false"
+444-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:25:13-37
+445            android:theme="@style/StripeDefaultTheme" />
+445-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:26:13-54
+446        <activity
+446-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:27:9-31:58
+447            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+447-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:28:13-78
+448            android:exported="false"
+448-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:29:13-37
+449            android:theme="@style/StripeDefaultTheme"
+449-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:30:13-54
+450            android:windowSoftInputMode="adjustResize" />
+450-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:31:13-55
+451        <activity
+451-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:32:9-35:61
+452            android:name="com.stripe.android.view.PaymentRelayActivity"
+452-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:33:13-72
+453            android:exported="false"
+453-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:34:13-37
+454            android:theme="@style/StripeTransparentTheme" />
+454-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:35:13-58
+455        <!--
+456        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+457        launched the browser Activity will also handle the return URL deep link.
+458        -->
+459        <activity
+459-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:41:9-45:61
+460            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+460-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:42:13-85
+461            android:exported="false"
+461-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:43:13-37
+462            android:launchMode="singleTask"
+462-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:44:13-44
+463            android:theme="@style/StripeTransparentTheme" />
+463-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:45:13-58
+464        <activity
+464-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:46:9-63:20
+465            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+465-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:47:13-88
+466            android:exported="true"
+466-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:48:13-36
+467            android:launchMode="singleTask"
+467-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:49:13-44
+468            android:theme="@style/StripeTransparentTheme" >
+468-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:50:13-58
+469            <intent-filter>
+469-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:51:13-62:29
+470                <action android:name="android.intent.action.VIEW" />
+470-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+470-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+471
+472                <category android:name="android.intent.category.DEFAULT" />
+472-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:9-67
+472-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:19-65
+473                <category android:name="android.intent.category.BROWSABLE" />
+473-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:7-67
+473-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:17-65
+474
+475                <!-- Must match `DefaultReturnUrl#value`. -->
+476                <data
+476-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+477                    android:host="payment_return_url"
+478                    android:path="/com.jugol.bd"
+479                    android:scheme="stripesdk" />
+479-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+480            </intent-filter>
+481        </activity>
+482        <activity
+482-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:64:9-67:57
+483            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+483-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:65:13-114
+484            android:exported="false"
+484-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:66:13-37
+485            android:theme="@style/StripeDefaultTheme" />
+485-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:67:13-54
+486        <activity
+486-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:68:9-71:66
+487            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+487-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:69:13-88
+488            android:exported="false"
+488-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:70:13-37
+489            android:theme="@style/StripeGooglePayDefaultTheme" />
+489-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:71:13-63
+490        <activity
+490-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:72:9-75:66
+491            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+491-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:73:13-90
+492            android:exported="false"
+492-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:74:13-37
+493            android:theme="@style/StripeGooglePayDefaultTheme" />
+493-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:75:13-63
+494        <activity
+494-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:76:9-79:66
+495            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+495-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:77:13-103
+496            android:exported="false"
+496-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:78:13-37
+497            android:theme="@style/StripeGooglePayDefaultTheme" />
+497-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:79:13-63
+498        <activity
+498-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:80:9-83:62
+499            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+499-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:81:13-107
+500            android:exported="false"
+500-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:82:13-37
+501            android:theme="@style/PayLauncherDefaultTheme" />
+501-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:83:13-59
+502        <activity
+502-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:84:9-87:61
+503            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+503-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:85:13-97
+504            android:exported="false"
+504-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:86:13-37
+505            android:theme="@style/StripeTransparentTheme" />
+505-->[com.stripe:payments-core:20.19.5] C:\Users\Asus\.gradle\caches\transforms-3\9d2be84c431c3b8b6f8254ce71ea423d\transformed\jetified-payments-core-20.19.5\AndroidManifest.xml:87:13-58
+506
+507        <provider
+507-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:23:9-31:20
+508            android:name="com.canhub.cropper.CropFileProvider"
+508-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:24:13-63
+509            android:authorities="com.jugol.bd.cropper.fileprovider"
+509-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:25:13-72
+510            android:exported="false"
+510-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:26:13-37
+511            android:grantUriPermissions="true" >
+511-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:27:13-47
+512            <meta-data
+512-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:13-15:70
+513                android:name="android.support.FILE_PROVIDER_PATHS"
+513-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:14:17-67
+514                android:resource="@xml/library_file_paths" />
+514-->[:react-native-image-picker] D:\React Native\jugol-expo\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:15:17-67
+515        </provider> <!-- This is here because the library did not update yet to Android 12 so we force the exported value when merging manifests -->
+516        <activity
+516-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:38:9-45:20
+517            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+517-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:39:13-99
+518            android:exported="true"
+518-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:40:13-36
+519            android:theme="@android:style/Theme" >
+519-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:41:13-49
+520            <intent-filter>
+520-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+521                <action android:name="android.intent.action.MAIN" />
+521-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:47:9-60
+521-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:47:17-58
+522            </intent-filter>
+523        </activity>
+524        <activity
+524-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:46:9-53:20
+525            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+525-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:47:13-95
+526            android:exported="true"
+526-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:48:13-36
+527            android:theme="@android:style/Theme" >
+527-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:49:13-49
+528            <intent-filter>
+528-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+529                <action android:name="android.intent.action.MAIN" />
+529-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:47:9-60
+529-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:47:17-58
+530            </intent-filter>
+531        </activity>
+532        <activity
+532-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:54:9-61:20
+533            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+533-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:55:13-103
+534            android:exported="true"
+534-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:56:13-36
+535            android:theme="@android:style/Theme.Dialog" >
+535-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:57:13-56
+536            <intent-filter>
+536-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\Asus\.gradle\caches\transforms-3\fbaa494c195bac626d54787063b89dd1\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+537                <action android:name="android.intent.action.MAIN" />
+537-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:47:9-60
+537-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:47:17-58
+538            </intent-filter>
+539        </activity>
+540        <activity
+540-->[com.stripe:stripe-3ds2-android:6.1.7] C:\Users\Asus\.gradle\caches\transforms-3\6713e6afa6ce81c848a3577baad0d3f9\transformed\jetified-stripe-3ds2-android-6.1.7\AndroidManifest.xml:8:9-11:54
+541            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+541-->[com.stripe:stripe-3ds2-android:6.1.7] C:\Users\Asus\.gradle\caches\transforms-3\6713e6afa6ce81c848a3577baad0d3f9\transformed\jetified-stripe-3ds2-android-6.1.7\AndroidManifest.xml:9:13-81
+542            android:exported="false"
+542-->[com.stripe:stripe-3ds2-android:6.1.7] C:\Users\Asus\.gradle\caches\transforms-3\6713e6afa6ce81c848a3577baad0d3f9\transformed\jetified-stripe-3ds2-android-6.1.7\AndroidManifest.xml:10:13-37
+543            android:theme="@style/Stripe3DS2Theme" />
+543-->[com.stripe:stripe-3ds2-android:6.1.7] C:\Users\Asus\.gradle\caches\transforms-3\6713e6afa6ce81c848a3577baad0d3f9\transformed\jetified-stripe-3ds2-android-6.1.7\AndroidManifest.xml:11:13-51
+544
+545        <meta-data
+545-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\Asus\.gradle\caches\transforms-3\de412f2cfe07f9be08ada78d898b6f41\transformed\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:11:9-13:43
+546            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+546-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\Asus\.gradle\caches\transforms-3\de412f2cfe07f9be08ada78d898b6f41\transformed\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:12:13-84
+547            android:value="GlideModule" />
+547-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] C:\Users\Asus\.gradle\caches\transforms-3\de412f2cfe07f9be08ada78d898b6f41\transformed\jetified-okhttp3-integration-4.11.0\AndroidManifest.xml:13:13-40
+548        <meta-data
+548-->[com.github.zjupure:webpdecoder:2.1.4.13.2] C:\Users\Asus\.gradle\caches\transforms-3\2a11fcbfa58692e3379042a0ca9f12da\transformed\jetified-webpdecoder-2.1.4.13.2\AndroidManifest.xml:10:9-12:43
+549            android:name="com.bumptech.glide.integration.webp.WebpGlideModule"
+549-->[com.github.zjupure:webpdecoder:2.1.4.13.2] C:\Users\Asus\.gradle\caches\transforms-3\2a11fcbfa58692e3379042a0ca9f12da\transformed\jetified-webpdecoder-2.1.4.13.2\AndroidManifest.xml:11:13-79
+550            android:value="GlideModule" />
+550-->[com.github.zjupure:webpdecoder:2.1.4.13.2] C:\Users\Asus\.gradle\caches\transforms-3\2a11fcbfa58692e3379042a0ca9f12da\transformed\jetified-webpdecoder-2.1.4.13.2\AndroidManifest.xml:12:13-40
+551
+552        <activity
+552-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:23:9-27:75
+553            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+553-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:24:13-93
+554            android:excludeFromRecents="true"
+554-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:25:13-46
+555            android:exported="false"
+555-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:26:13-37
+556            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+556-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:27:13-72
+557        <!--
+558            Service handling Google Sign-In user revocation. For apps that do not integrate with
+559            Google Sign-In, this service will never be started.
+560        -->
+561        <service
+561-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:33:9-37:51
+562            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+562-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:34:13-89
+563            android:exported="true"
+563-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:35:13-36
+564            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+564-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:36:13-107
+565            android:visibleToInstantApps="true" />
+565-->[com.google.android.gms:play-services-auth:20.3.0] C:\Users\Asus\.gradle\caches\transforms-3\c0dc02644c0b69e39bf35d16b0d6fd76\transformed\jetified-play-services-auth-20.3.0\AndroidManifest.xml:37:13-48
+566
+567        <activity
+567-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:27:9-44:20
+568            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+568-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:28:13-80
+569            android:excludeFromRecents="true"
+569-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:29:13-46
+570            android:exported="true"
+570-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:30:13-36
+571            android:launchMode="singleTask"
+571-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:31:13-44
+572            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+572-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:32:13-72
+573            <intent-filter>
+573-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:33:13-43:29
+574                <action android:name="android.intent.action.VIEW" />
+574-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+574-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+575
+576                <category android:name="android.intent.category.DEFAULT" />
+576-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:9-67
+576-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:19-65
+577                <category android:name="android.intent.category.BROWSABLE" />
+577-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:7-67
+577-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:17-65
+578
+579                <data
+579-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+580                    android:host="firebase.auth"
+581                    android:path="/"
+582                    android:scheme="genericidp" />
+582-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+583            </intent-filter>
+584        </activity>
+585        <activity
+585-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:45:9-62:20
+586            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+586-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:46:13-79
+587            android:excludeFromRecents="true"
+587-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:47:13-46
+588            android:exported="true"
+588-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:48:13-36
+589            android:launchMode="singleTask"
+589-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:49:13-44
+590            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+590-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:50:13-72
+591            <intent-filter>
+591-->[com.google.firebase:firebase-auth:21.1.0] C:\Users\Asus\.gradle\caches\transforms-3\6403eba63ab61c9670118f299a8b331d\transformed\jetified-firebase-auth-21.1.0\AndroidManifest.xml:51:13-61:29
+592                <action android:name="android.intent.action.VIEW" />
+592-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:7-58
+592-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:28:15-56
+593
+594                <category android:name="android.intent.category.DEFAULT" />
+594-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:9-67
+594-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:52:19-65
+595                <category android:name="android.intent.category.BROWSABLE" />
+595-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:7-67
+595-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:29:17-65
+596
+597                <data
+597-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:7-37
+598                    android:host="firebase.auth"
+599                    android:path="/"
+600                    android:scheme="recaptcha" />
+600-->D:\React Native\jugol-expo\android\app\src\main\AndroidManifest.xml:30:13-35
+601            </intent-filter>
+602        </activity>
+603
+604        <receiver
+604-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:31:9-38:20
+605            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+605-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:32:13-78
+606            android:exported="true"
+606-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:33:13-36
+607            android:permission="com.google.android.c2dm.permission.SEND" >
+607-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:34:13-73
+608            <intent-filter>
+608-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:27:13-29:29
+609                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+609-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:17-81
+609-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:25-78
+610            </intent-filter>
+611        </receiver>
+612        <!--
+613             FirebaseMessagingService performs security checks at runtime,
+614             but set to not exported to explicitly avoid allowing another app to call it.
+615        -->
+616        <service
+616-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:44:9-51:19
+617            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+617-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:45:13-82
+618            android:directBootAware="true"
+618-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:46:13-43
+619            android:exported="false" >
+619-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\Asus\.gradle\caches\transforms-3\d820e8da7c89752cf579f51607e8fa4c\transformed\jetified-firebase-messaging-23.1.2\AndroidManifest.xml:47:13-37
+620            <intent-filter android:priority="-500" >
+620-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:13-20:29
+621                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+621-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:17-78
+621-->[:react-native-firebase_messaging] D:\React Native\jugol-expo\node_modules\@react-native-firebase\messaging\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:25-75
+622            </intent-filter>
+623        </service>
+624
+625        <provider
+625-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Asus\.gradle\caches\transforms-3\23a91367f651645c45f4644f594687af\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:25:9-30:39
+626            android:name="com.google.firebase.provider.FirebaseInitProvider"
+626-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Asus\.gradle\caches\transforms-3\23a91367f651645c45f4644f594687af\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:26:13-77
+627            android:authorities="com.jugol.bd.firebaseinitprovider"
+627-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Asus\.gradle\caches\transforms-3\23a91367f651645c45f4644f594687af\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:27:13-72
+628            android:directBootAware="true"
+628-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Asus\.gradle\caches\transforms-3\23a91367f651645c45f4644f594687af\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:28:13-43
+629            android:exported="false"
+629-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Asus\.gradle\caches\transforms-3\23a91367f651645c45f4644f594687af\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:29:13-37
+630            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
+630-->[com.google.firebase:firebase-common:20.3.2] C:\Users\Asus\.gradle\caches\transforms-3\23a91367f651645c45f4644f594687af\transformed\jetified-firebase-common-20.3.2\AndroidManifest.xml:30:13-36
+631        <uses-library
+631-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\Asus\.gradle\caches\transforms-3\ba27fdf77112b4c99edfaa0e5e1c850b\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+632            android:name="org.apache.http.legacy"
+632-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\Asus\.gradle\caches\transforms-3\ba27fdf77112b4c99edfaa0e5e1c850b\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
+633            android:required="false" />
+633-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\Asus\.gradle\caches\transforms-3\ba27fdf77112b4c99edfaa0e5e1c850b\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+634
+635        <activity
+635-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Asus\.gradle\caches\transforms-3\af11826daf59754ff829595372941fcd\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+636            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+636-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Asus\.gradle\caches\transforms-3\af11826daf59754ff829595372941fcd\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+637            android:exported="false"
+637-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Asus\.gradle\caches\transforms-3\af11826daf59754ff829595372941fcd\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+638            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+638-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Asus\.gradle\caches\transforms-3\af11826daf59754ff829595372941fcd\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+639        <!--
+640         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+641         with the application context. This config is merged in with the host app's manifest,
+642         but there can only be one provider with the same authority activated at any given
+643         point; so if the end user has two or more different apps that use Facebook SDK, only the
+644         first one will be able to use the provider. To work around this problem, we use the
+645         following placeholder in the authority to identify each host application as if it was
+646         a completely different provider.
+647        -->
+648        <provider
+648-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:29:9-32:40
+649            android:name="com.facebook.internal.FacebookInitProvider"
+649-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:30:13-70
+650            android:authorities="com.jugol.bd.FacebookInitProvider"
+650-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:31:13-72
+651            android:exported="false" />
+651-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:32:13-37
+652
+653        <receiver
+653-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:34:9-40:20
+654            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+654-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:35:13-86
+655            android:exported="false" >
+655-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:36:13-37
+656            <intent-filter>
+656-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:37:13-39:29
+657                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+657-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:38:17-95
+657-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:38:25-92
+658            </intent-filter>
+659        </receiver>
+660        <receiver
+660-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:41:9-47:20
+661            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
+661-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:42:13-118
+662            android:exported="false" >
+662-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:43:13-37
+663            <intent-filter>
+663-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:44:13-46:29
+664                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED" />
+664-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:45:17-103
+664-->[com.facebook.android:facebook-core:15.2.0] C:\Users\Asus\.gradle\caches\transforms-3\1d937fe1fca3538cb2317540064cf574\transformed\jetified-facebook-core-15.2.0\AndroidManifest.xml:45:25-100
+665            </intent-filter>
+666        </receiver>
+667
+668        <meta-data
+668-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Asus\.gradle\caches\transforms-3\c1b8ba6309087eb65752ce1bda51fbfc\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+669            android:name="com.google.android.gms.version"
+669-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Asus\.gradle\caches\transforms-3\c1b8ba6309087eb65752ce1bda51fbfc\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+670            android:value="@integer/google_play_services_version" />
+670-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Asus\.gradle\caches\transforms-3\c1b8ba6309087eb65752ce1bda51fbfc\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+671
+672        <provider
+672-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:29:9-37:20
+673            android:name="androidx.startup.InitializationProvider"
+673-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:30:13-67
+674            android:authorities="com.jugol.bd.androidx-startup"
+674-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:31:13-68
+675            android:exported="false" >
+675-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:32:13-37
+676            <meta-data
+676-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:34:13-36:52
+677                android:name="androidx.work.WorkManagerInitializer"
+677-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:35:17-68
+678                android:value="androidx.startup" />
+678-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:36:17-49
+679            <meta-data
+679-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\f69a57593dd045c3a6d9febe23c7298a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+680                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+680-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\f69a57593dd045c3a6d9febe23c7298a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+681                android:value="androidx.startup" />
+681-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\f69a57593dd045c3a6d9febe23c7298a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+682            <meta-data
+682-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
+683                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+683-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
+684                android:value="androidx.startup" />
+684-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
+685            <meta-data
+685-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Asus\.gradle\caches\transforms-3\a465c12e6a54e9d81c0ee7dc483ad302\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+686                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+686-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Asus\.gradle\caches\transforms-3\a465c12e6a54e9d81c0ee7dc483ad302\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+687                android:value="androidx.startup" />
+687-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Asus\.gradle\caches\transforms-3\a465c12e6a54e9d81c0ee7dc483ad302\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+688        </provider>
+689
+690        <service
+690-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:39:9-45:35
+691            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+691-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:40:13-88
+692            android:directBootAware="false"
+692-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:41:13-44
+693            android:enabled="@bool/enable_system_alarm_service_default"
+693-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:42:13-72
+694            android:exported="false" />
+694-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:43:13-37
+695        <service
+695-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:46:9-52:35
+696            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+696-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:47:13-84
+697            android:directBootAware="false"
+697-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:48:13-44
+698            android:enabled="@bool/enable_system_job_service_default"
+698-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:49:13-70
+699            android:exported="true"
+699-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:50:13-36
+700            android:permission="android.permission.BIND_JOB_SERVICE" />
+700-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:51:13-69
+701        <service
+701-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:53:9-59:35
+702            android:name="androidx.work.impl.foreground.SystemForegroundService"
+702-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:54:13-81
+703            android:directBootAware="false"
+703-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:55:13-44
+704            android:enabled="@bool/enable_system_foreground_service_default"
+704-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:56:13-77
+705            android:exported="false" />
+705-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:57:13-37
+706
+707        <receiver
+707-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:61:9-66:35
+708            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+708-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:62:13-88
+709            android:directBootAware="false"
+709-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:63:13-44
+710            android:enabled="true"
+710-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:64:13-35
+711            android:exported="false" />
+711-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:65:13-37
+712        <receiver
+712-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:67:9-77:20
+713            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+713-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:68:13-106
+714            android:directBootAware="false"
+714-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:69:13-44
+715            android:enabled="false"
+715-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:70:13-36
+716            android:exported="false" >
+716-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:71:13-37
+717            <intent-filter>
+717-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:73:13-76:29
+718                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+718-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:74:17-87
+718-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:74:25-84
+719                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+719-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:75:17-90
+719-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:75:25-87
+720            </intent-filter>
+721        </receiver>
+722        <receiver
+722-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:78:9-88:20
+723            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+723-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:79:13-104
+724            android:directBootAware="false"
+724-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:80:13-44
+725            android:enabled="false"
+725-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:81:13-36
+726            android:exported="false" >
+726-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:82:13-37
+727            <intent-filter>
+727-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:84:13-87:29
+728                <action android:name="android.intent.action.BATTERY_OKAY" />
+728-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:85:17-77
+728-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:85:25-74
+729                <action android:name="android.intent.action.BATTERY_LOW" />
+729-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:86:17-76
+729-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:86:25-73
+730            </intent-filter>
+731        </receiver>
+732        <receiver
+732-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:89:9-99:20
+733            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+733-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:90:13-104
+734            android:directBootAware="false"
+734-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:91:13-44
+735            android:enabled="false"
+735-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:92:13-36
+736            android:exported="false" >
+736-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:93:13-37
+737            <intent-filter>
+737-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:95:13-98:29
+738                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+738-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:96:17-83
+738-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:96:25-80
+739                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+739-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:97:17-82
+739-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:97:25-79
+740            </intent-filter>
+741        </receiver>
+742        <receiver
+742-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:100:9-109:20
+743            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+743-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:101:13-103
+744            android:directBootAware="false"
+744-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:102:13-44
+745            android:enabled="false"
+745-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:103:13-36
+746            android:exported="false" >
+746-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:104:13-37
+747            <intent-filter>
+747-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:106:13-108:29
+748                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+748-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:107:17-79
+748-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:107:25-76
+749            </intent-filter>
+750        </receiver>
+751        <receiver
+751-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:110:9-121:20
+752            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+752-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:111:13-88
+753            android:directBootAware="false"
+753-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:112:13-44
+754            android:enabled="false"
+754-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:113:13-36
+755            android:exported="false" >
+755-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:114:13-37
+756            <intent-filter>
+756-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:116:13-120:29
+757                <action android:name="android.intent.action.BOOT_COMPLETED" />
+757-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-79
+757-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:25-76
+758                <action android:name="android.intent.action.TIME_SET" />
+758-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:118:17-73
+758-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:118:25-70
+759                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+759-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:119:17-81
+759-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:119:25-78
+760            </intent-filter>
+761        </receiver>
+762        <receiver
+762-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:122:9-131:20
+763            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+763-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:123:13-99
+764            android:directBootAware="false"
+764-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:124:13-44
+765            android:enabled="@bool/enable_system_alarm_service_default"
+765-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:125:13-72
+766            android:exported="false" >
+766-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:126:13-37
+767            <intent-filter>
+767-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:128:13-130:29
+768                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+768-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:129:17-98
+768-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:129:25-95
+769            </intent-filter>
+770        </receiver>
+771        <receiver
+771-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:132:9-142:20
+772            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+772-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:133:13-78
+773            android:directBootAware="false"
+773-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:134:13-44
+774            android:enabled="true"
+774-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:135:13-35
+775            android:exported="true"
+775-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:136:13-36
+776            android:permission="android.permission.DUMP" >
+776-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:137:13-57
+777            <intent-filter>
+777-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:139:13-141:29
+778                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+778-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:140:17-88
+778-->[androidx.work:work-runtime:2.8.0] C:\Users\Asus\.gradle\caches\transforms-3\3c0c0470754fceea5a9bce4269d0b063\transformed\work-runtime-2.8.0\AndroidManifest.xml:140:25-85
+779            </intent-filter>
+780        </receiver>
+781        <receiver
+781-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
+782            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+782-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
+783            android:directBootAware="false"
+783-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
+784            android:enabled="true"
+784-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
+785            android:exported="true"
+785-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
+786            android:permission="android.permission.DUMP" >
+786-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
+787            <intent-filter>
+787-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
+788                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+788-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
+788-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
+789            </intent-filter>
+790            <intent-filter>
+790-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
+791                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+791-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
+791-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\Asus\.gradle\caches\transforms-3\976955d81ae91535605f543b843a4024\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
+792            </intent-filter>
+793        </receiver>
+794
+795        <service
+795-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2d4014aaa8795071954a9b5bc5bbf0c1\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+796            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+796-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2d4014aaa8795071954a9b5bc5bbf0c1\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+797            android:exported="false" >
+797-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2d4014aaa8795071954a9b5bc5bbf0c1\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
+798            <meta-data
+798-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2d4014aaa8795071954a9b5bc5bbf0c1\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+799                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+799-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2d4014aaa8795071954a9b5bc5bbf0c1\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+800                android:value="cct" />
+800-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2d4014aaa8795071954a9b5bc5bbf0c1\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+801        </service>
+802        <service
+802-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2c60a4e38c81de61ba3a7c31113b66dc\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+803            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+803-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2c60a4e38c81de61ba3a7c31113b66dc\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+804            android:exported="false"
+804-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2c60a4e38c81de61ba3a7c31113b66dc\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+805            android:permission="android.permission.BIND_JOB_SERVICE" >
+805-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2c60a4e38c81de61ba3a7c31113b66dc\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+806        </service>
+807
+808        <receiver
+808-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2c60a4e38c81de61ba3a7c31113b66dc\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+809            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+809-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2c60a4e38c81de61ba3a7c31113b66dc\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+810            android:exported="false" />
+810-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\Asus\.gradle\caches\transforms-3\2c60a4e38c81de61ba3a7c31113b66dc\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+811
+812        <service
+812-->[androidx.room:room-runtime:2.5.0] C:\Users\Asus\.gradle\caches\transforms-3\11f90251401d3cbb5c0d9203583b06b4\transformed\room-runtime-2.5.0\AndroidManifest.xml:24:9-28:63
+813            android:name="androidx.room.MultiInstanceInvalidationService"
+813-->[androidx.room:room-runtime:2.5.0] C:\Users\Asus\.gradle\caches\transforms-3\11f90251401d3cbb5c0d9203583b06b4\transformed\room-runtime-2.5.0\AndroidManifest.xml:25:13-74
+814            android:directBootAware="true"
+814-->[androidx.room:room-runtime:2.5.0] C:\Users\Asus\.gradle\caches\transforms-3\11f90251401d3cbb5c0d9203583b06b4\transformed\room-runtime-2.5.0\AndroidManifest.xml:26:13-43
+815            android:exported="false" /> <!-- Receiver Service -->
+815-->[androidx.room:room-runtime:2.5.0] C:\Users\Asus\.gradle\caches\transforms-3\11f90251401d3cbb5c0d9203583b06b4\transformed\room-runtime-2.5.0\AndroidManifest.xml:27:13-37
+816        <service
+816-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:29:9-31:40
+817            android:name="app.notifee.core.ReceiverService"
+817-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:30:13-60
+818            android:exported="false" />
+818-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:31:13-37
+819
+820        <activity
+820-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:33:9-39:75
+821            android:name="app.notifee.core.NotificationReceiverActivity"
+821-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:34:13-73
+822            android:excludeFromRecents="true"
+822-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:35:13-46
+823            android:exported="true"
+823-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:36:13-36
+824            android:noHistory="true"
+824-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:37:13-37
+825            android:taskAffinity=""
+825-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:38:13-36
+826            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Foreground Service -->
+826-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:39:13-72
+827        <service
+827-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:42:9-44:40
+828            android:name="app.notifee.core.ForegroundService"
+828-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:43:13-62
+829            android:exported="false" />
+829-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:44:13-37
+830
+831        <receiver
+831-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:46:9-54:20
+832            android:name="app.notifee.core.RebootBroadcastReceiver"
+832-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:47:13-68
+833            android:exported="false" >
+833-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:48:13-37
+834            <intent-filter>
+834-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:49:13-53:29
+835                <action android:name="android.intent.action.BOOT_COMPLETED" />
+835-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-79
+835-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:25-76
+836                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+836-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:51:17-82
+836-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:51:25-79
+837                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+837-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:52:17-82
+837-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:52:25-79
+838            </intent-filter>
+839        </receiver>
+840        <receiver
+840-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:55:9-61:20
+841            android:name="app.notifee.core.AlarmPermissionBroadcastReceiver"
+841-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:56:13-77
+842            android:exported="true" >
+842-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:57:13-36
+843            <intent-filter>
+843-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:58:13-60:29
+844                <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" />
+844-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:59:17-107
+844-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:59:25-104
+845            </intent-filter>
+846        </receiver>
+847        <receiver
+847-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:62:9-70:20
+848            android:name="app.notifee.core.NotificationAlarmReceiver"
+848-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:63:13-70
+849            android:exported="false" >
+849-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:64:13-37
+850            <intent-filter>
+850-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:49:13-53:29
+851                <action android:name="android.intent.action.BOOT_COMPLETED" />
+851-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:17-79
+851-->[:expo-task-manager] D:\React Native\jugol-expo\node_modules\expo-task-manager\android\build\intermediates\merged_manifest\release\AndroidManifest.xml:13:25-76
+852                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+852-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:51:17-82
+852-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:51:25-79
+853                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+853-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:52:17-82
+853-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:52:25-79
+854            </intent-filter>
+855        </receiver> <!-- Broadcast Receiver -->
+856        <receiver
+856-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:73:9-81:20
+857            android:name="app.notifee.core.BlockStateBroadcastReceiver"
+857-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:74:13-72
+858            android:exported="false" >
+858-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:75:13-37
+859            <intent-filter>
+859-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:76:13-80:29
+860                <action android:name="android.app.action.APP_BLOCK_STATE_CHANGED" />
+860-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:77:17-85
+860-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:77:25-82
+861                <action android:name="android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED" />
+861-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:78:17-102
+861-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:78:25-99
+862                <action android:name="android.app.action.NOTIFICATION_CHANNEL_GROUP_BLOCK_STATE_CHANGED" />
+862-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:79:17-108
+862-->[app.notifee:core:202108261754] C:\Users\Asus\.gradle\caches\transforms-3\70ab56753b619acfaaa96b9f1b7a7366\transformed\jetified-core-202108261754\AndroidManifest.xml:79:25-105
+863            </intent-filter>
+864        </receiver>
+865
+866        <activity
+866-->[io.agora.rtc:full-screen-sharing:4.1.0-1] C:\Users\Asus\.gradle\caches\transforms-3\6784ae2c00dd79eaf1b02cee4f7f5ea0\transformed\jetified-full-screen-sharing-4.1.0-1\AndroidManifest.xml:10:9-13:63
+867            android:name="io.agora.rtc2.extensions.MediaProjectionMgr$LocalScreenCaptureAssistantActivity"
+867-->[io.agora.rtc:full-screen-sharing:4.1.0-1] C:\Users\Asus\.gradle\caches\transforms-3\6784ae2c00dd79eaf1b02cee4f7f5ea0\transformed\jetified-full-screen-sharing-4.1.0-1\AndroidManifest.xml:10:19-89
+868            android:configChanges="screenSize|orientation"
+868-->[io.agora.rtc:full-screen-sharing:4.1.0-1] C:\Users\Asus\.gradle\caches\transforms-3\6784ae2c00dd79eaf1b02cee4f7f5ea0\transformed\jetified-full-screen-sharing-4.1.0-1\AndroidManifest.xml:11:13-59
+869            android:screenOrientation="fullUser"
+869-->[io.agora.rtc:full-screen-sharing:4.1.0-1] C:\Users\Asus\.gradle\caches\transforms-3\6784ae2c00dd79eaf1b02cee4f7f5ea0\transformed\jetified-full-screen-sharing-4.1.0-1\AndroidManifest.xml:12:13-49
+870            android:theme="@android:style/Theme.Translucent" />
+870-->[io.agora.rtc:full-screen-sharing:4.1.0-1] C:\Users\Asus\.gradle\caches\transforms-3\6784ae2c00dd79eaf1b02cee4f7f5ea0\transformed\jetified-full-screen-sharing-4.1.0-1\AndroidManifest.xml:13:13-61
+871
+872        <service
+872-->[io.agora.rtc:full-screen-sharing:4.1.0-1] C:\Users\Asus\.gradle\caches\transforms-3\6784ae2c00dd79eaf1b02cee4f7f5ea0\transformed\jetified-full-screen-sharing-4.1.0-1\AndroidManifest.xml:15:9-18:19
+873            android:name="io.agora.rtc2.extensions.MediaProjectionMgr$LocalScreenSharingService"
+873-->[io.agora.rtc:full-screen-sharing:4.1.0-1] C:\Users\Asus\.gradle\caches\transforms-3\6784ae2c00dd79eaf1b02cee4f7f5ea0\transformed\jetified-full-screen-sharing-4.1.0-1\AndroidManifest.xml:16:13-73
+874            android:foregroundServiceType="mediaProjection" >
+874-->[io.agora.rtc:full-screen-sharing:4.1.0-1] C:\Users\Asus\.gradle\caches\transforms-3\6784ae2c00dd79eaf1b02cee4f7f5ea0\transformed\jetified-full-screen-sharing-4.1.0-1\AndroidManifest.xml:17:13-60
+875        </service>
+876        <service
+876-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:19:9-21:40
+877            android:name="io.nlopez.smartlocation.activity.providers.ActivityGooglePlayServicesProvider$ActivityRecognitionService"
+877-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:20:13-132
+878            android:exported="false" />
+878-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:21:13-37
+879        <service
+879-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:22:9-24:40
+880            android:name="io.nlopez.smartlocation.geofencing.providers.GeofencingGooglePlayServicesProvider$GeofencingService"
+880-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:23:13-127
+881            android:exported="false" />
+881-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:24:13-37
+882        <service
+882-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:25:9-27:40
+883            android:name="io.nlopez.smartlocation.geocoding.providers.AndroidGeocodingProvider$AndroidGeocodingService"
+883-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:26:13-120
+884            android:exported="false" />
+884-->[io.nlopez.smartlocation:library:3.2.11] C:\Users\Asus\.gradle\caches\transforms-3\9025ef26572698200f45b2f4c0894e51\transformed\jetified-library-3.2.11\AndroidManifest.xml:27:13-37
+885
+886        <meta-data
+886-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\Asus\.gradle\caches\transforms-3\885eb9d43fb3b612bb31e1e06a10c6d9\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:10:9-12:33
+887            android:name="aia-compat-api-min-version"
+887-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\Asus\.gradle\caches\transforms-3\885eb9d43fb3b612bb31e1e06a10c6d9\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:11:13-54
+888            android:value="1" />
+888-->[com.google.android.instantapps:instantapps:1.1.0] C:\Users\Asus\.gradle\caches\transforms-3\885eb9d43fb3b612bb31e1e06a10c6d9\transformed\jetified-instantapps-1.1.0\AndroidManifest.xml:12:13-30
+889    </application>
+890
+891</manifest>

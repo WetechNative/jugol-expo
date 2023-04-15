@@ -1,0 +1,478 @@
+[
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_300light_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_300light_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_filter.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_filter.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxhdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_700bold_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_700bold_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_rocket.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_rocket.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backiconmask.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_extreme.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_extreme.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable_rn_edit_text_material.xml.flat",
+        "source": "com.jugol.bd.app-main-113:/drawable/rn_edit_text_material.xml"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_300light.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_300light.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_card.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_card.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable_splashscreen.xml.flat",
+        "source": "com.jugol.bd.app-main-113:/drawable/splashscreen.xml"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_call.mp3.flat",
+        "source": "com.jugol.bd.app-main-113:/raw/call.mp3"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xhdpi/node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_drink.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_drink.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_assets_images_chat.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/assets_images_chat.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_500medium_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_500medium_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_800extrabold.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_800extrabold.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_assets_images_people.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/assets_images_people.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxxhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxxhdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_entypo.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_entypo.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_cooking.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_cooking.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_materialcommunityicons.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_materialcommunityicons.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_swimming.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_swimming.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_regular.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_regular.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_node_modules_reactnativecountrypickermodal_lib_assets_images_close.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/node_modules_reactnativecountrypickermodal_lib_assets_images_close.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxxhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxxhdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_200extralight.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_200extralight.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_octicons.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_octicons.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_foundation.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_foundation.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_feather.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_feather.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_100thin.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_100thin.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxhdpi/node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-hdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-hdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_brands.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_brands.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_travelling.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_travelling.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_art.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_art.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_splashscreen_image.png.flat",
+        "source": "com.jugol.bd.app-main-113:/drawable-mdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_800extrabold_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_800extrabold_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_assets_images_matchpicture1.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/assets_images_matchpicture1.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxhdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxxhdpi_splashscreen_image.png.flat",
+        "source": "com.jugol.bd.app-main-113:/drawable-xxxhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_premium.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_premium.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_materialicons.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_materialicons.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_success_payment.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_success_payment.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_100thin_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_100thin_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_camera.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_camera.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_400regular_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_400regular_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_run.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_run.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontisto.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontisto.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_message.mp3.flat",
+        "source": "com.jugol.bd.app-main-113:/raw/message.mp3"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_assets_images_defaultprofile.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/assets_images_defaultprofile.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxxhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxxhdpi/node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-hdpi_splashscreen_image.png.flat",
+        "source": "com.jugol.bd.app-main-113:/drawable-hdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-hdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-hdpi/node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_900black.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_900black.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_music.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_music.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_cameraprofile.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_cameraprofile.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_yoga.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_yoga.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_node_modules_reactnativecountrypickermodal_lib_assets_images_closeios.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/node_modules_reactnativecountrypickermodal_lib_assets_images_closeios.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-hdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-hdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_bkash.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_bkash.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_solid.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_solid.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_700bold.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_700bold.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_microphone.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_microphone.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xhdpi_splashscreen_image.png.flat",
+        "source": "com.jugol.bd.app-main-113:/drawable-xhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_200extralight_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_200extralight_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_antdesign.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_antdesign.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xhdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_cards.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_cards.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_600semibold_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_600semibold_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_nagad.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_nagad.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxhdpi_splashscreen_image.png.flat",
+        "source": "com.jugol.bd.app-main-113:/drawable-xxhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxhdpi/node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_zocial.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_zocial.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_dots.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_dots.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_400regular.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_400regular.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xxxhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xxxhdpi/node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_ionicons.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_ionicons.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_600semibold.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_600semibold.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_900black_italic.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_900black_italic.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expogooglefonts_poppins_poppins_500medium.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expogooglefonts_poppins_poppins_500medium.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_playing.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_playing.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_calendar.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_calendar.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_simplelineicons.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_simplelineicons.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-hdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-hdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_videogame.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_videogame.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xhdpi/node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_shopping.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_shopping.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_error_payment.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_error_payment.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_assets_images_logo.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/assets_images_logo.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_evilicons.ttf.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_evilicons.ttf"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-hdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-hdpi/node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-xhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-xhdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/raw_assets_svg_message.svg.flat",
+        "source": "com.jugol.bd.app-react-107:/raw/assets_svg_message.svg"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/drawable-mdpi_assets_images_logo1.png.flat",
+        "source": "com.jugol.bd.app-react-107:/drawable-mdpi/assets_images_logo1.png"
+    },
+    {
+        "merged": "com.jugol.bd.app-merged_res-112:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.jugol.bd.app-main-113:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    }
+]

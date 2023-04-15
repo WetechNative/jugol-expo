@@ -1,6 +1,6 @@
 import auth from "@react-native-firebase/auth";
 import { useNavigation } from "@react-navigation/native";
-import { authRoutes } from "@routes/index";
+import { authRoutes, dashBoardRoutes } from "@routes/index";
 import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 import {
   setUID,
@@ -25,7 +25,6 @@ export default function FacebookButton() {
       const result = await LoginManager.logInWithPermissions([
         "email",
         "public_profile",
-        "user_friends",
       ]);
 
       if (result.isCancelled) {
@@ -44,36 +43,20 @@ export default function FacebookButton() {
         data.accessToken
       );
 
-      // Sign-in the user with the credential
-      await auth().signInWithCredential(facebookCredential);
-
+      // // Sign-in the user with the credential
+      const userDetails = await auth().signInWithCredential(facebookCredential);
+      console.log(userDetails);
       const iDToken = await auth().currentUser?.getIdToken();
       const user = auth().currentUser;
       dispatch(setUID(user?.uid));
       dispatch(login(iDToken));
-      const results = await checkUser(user?.uid).unwrap();
 
-      const {
-        hasUpdatedGender,
-        hasUpdatedAddress,
-        hasUpdatedProfile,
-        hasUpdatedInterest,
-        isNewUser,
-      } = results.data;
-      if (
-        !hasUpdatedGender ||
-        !hasUpdatedAddress ||
-        !hasUpdatedProfile ||
-        !hasUpdatedInterest ||
-        isNewUser
-      ) {
+      if (userDetails?.additionalUserInfo?.isNewUser) {
         navigation.navigate(authRoutes.selectGenderScreen.path as never);
         dispatch(setCheckUserInformation(true));
-        return;
       } else {
         navigation.navigate(authRoutes.bottomTab.path as never);
         dispatch(setCheckUserInformation(false));
-        return;
       }
     } catch (error: any) {
       console.log(error);

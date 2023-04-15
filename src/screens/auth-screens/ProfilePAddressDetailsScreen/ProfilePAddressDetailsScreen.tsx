@@ -12,7 +12,7 @@ import {
   useToast,
   VStack,
 } from "native-base";
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import CountryPicker from "react-native-country-picker-modal";
 import * as Yup from "yup";
 import KeyboardAwareView from "@ui/KeyboardAwareView/KeyboardAwareView";
@@ -22,7 +22,7 @@ import OutLineButton from "@ui/OutlineButton/OutLineButton";
 import AuthHeader from "@ui/AuthHeader/AuthHeader";
 import { IInitialValues } from "./ProfilePAddressDetailsScreen.types";
 import { useNavigation } from "@react-navigation/native";
-import { authRoutes } from "@routes/index";
+import { authRoutes, dashBoardRoutes } from "@routes/index";
 import SkipButton from "@ui/SkipButton/SkipButton";
 import {
   useGetProfessionListQuery,
@@ -31,7 +31,11 @@ import {
 } from "@store/api/userApi/userApiSlice";
 import { useDispatch, useSelector } from "react-redux";
 import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
-import { setCheckUserInformation } from "@store/features/auth/authSlice";
+import {
+  selectUID,
+  setCheckUserInformation,
+} from "@store/features/auth/authSlice";
+import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 
 export default function ProfilePAddressDetailsScreen() {
   const [countryModalVisible, setCountryModalVisible] =
@@ -59,8 +63,6 @@ export default function ProfilePAddressDetailsScreen() {
     isSuccess: religionIsSuccess,
   } = useGetReligionListQuery(undefined);
   const [updateUserData, results] = useUpdateUserDataMutation();
-
-  const user = useSelector((autuUser: any) => autuUser.user);
 
   const schema = Yup.object().shape({
     countryName: Yup.string().required("Country name is required"),
