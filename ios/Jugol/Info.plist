@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
+    <key>BGTaskSchedulerPermittedIdentifiers</key>
+    <array>
+      <string>com.jugol.bd.background-fetch</string>
+      <string>com.jugol.bd.background-location</string>
+      <string>com.jugol.bd</string>
+    </array>
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
     <key>CFBundleDisplayName</key>
@@ -96,10 +102,12 @@
     </dict>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>This app requires location access to provide you with the best experience.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Allow $(PRODUCT_NAME) to access your microphone</string>
     <key>NSMotionUsageDescription</key>
     <string>This app requires motion access to provide you with the best experience.</string>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>This app requires photo library access to provide you with the best experience.</string>
+    <string>The app accesses your photos to let you share them with your friends.</string>
     <key>NSUserTrackingUsageDescription</key>
     <string>This app requires location access to provide you with the best experience.</string>
     <key>SKAdNetworkItems</key>
