@@ -58,7 +58,7 @@ export default function LikedCard({ item, type, isPremium }: ILikedCard) {
       position="relative"
       mt={"20px"}
       onPress={() => {
-        if (type === "likedYou") {
+        if (type === "likedYou" && !isPremium) {
           navigation.navigate("BePremium" as never);
         } else {
           navigation.navigate("LikeProfileScreen" as never, item as never);
@@ -69,7 +69,7 @@ export default function LikedCard({ item, type, isPremium }: ILikedCard) {
         source={{ uri: item.profilePic }}
         alt={item.firstName}
         h={"full"}
-        blurRadius={isPremium || type !== "likedYou" ? 0 : 100}
+        blurRadius={isPremium || type !== "likedYou" ? 0 : 15}
       />
       {!isPremium ? (
         type === "likedYou" ? (

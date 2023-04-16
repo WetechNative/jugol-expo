@@ -99,6 +99,11 @@ export default function PremiumPackagesScreen() {
             "PaymentMethodScreen" as never,
             {
               price: price,
+              packageDuration: packageDuration.month1
+                ? 1
+                : packageDuration.month3
+                ? 3
+                : 12,
             } as never
           )
         }

@@ -8,6 +8,19 @@ const paymentApiSlice = apiSlice.injectEndpoints({
         method: 'POST',
         body,
       }),
+    }),
+    addPayment: builder.mutation({
+      query: (body) => ({
+        url: `payment/addUserToPaymentList`,
+        method: 'POST',
+        body,
+      }),
+    }),
+    getPayment: builder.query({
+      query: () => ({
+        url: `payment/getPayment`,
+        method: 'GET',
+      }),
     })
   }),
   overrideExisting: true,
@@ -15,4 +28,6 @@ const paymentApiSlice = apiSlice.injectEndpoints({
 
 export const {
     useCreatePaymentMutation,
+    useAddPaymentMutation,
+    useGetPaymentQuery
 } = paymentApiSlice;

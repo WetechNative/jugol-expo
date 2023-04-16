@@ -4,7 +4,7 @@
             "outputFile": "com.jugol.bd.app-mergeDebugResources-110:/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\46eb77bd76abd1070275a060f9691e20\\transformed\\appcompat-1.6.1\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\86b50f038d86ab253ea5f94bf0266909\\transformed\\appcompat-1.6.1\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

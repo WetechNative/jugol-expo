@@ -4,7 +4,7 @@
             "outputFile": "com.jugol.bd.app-mergeDebugResources-110:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\74384973846a28598cad1e8e14db8413\\transformed\\material-1.8.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\fb742e7e28812e781081307edf3b4eb5\\transformed\\material-1.8.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

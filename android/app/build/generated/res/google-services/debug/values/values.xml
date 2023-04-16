@@ -3,7 +3,7 @@
     <string name="default_web_client_id" translatable="false">722045760591-teupqlohuqfrtckptccoomuccb8mj1st.apps.googleusercontent.com</string>
     <string name="gcm_defaultSenderId" translatable="false">722045760591</string>
     <string name="google_api_key" translatable="false">AIzaSyACQhexv471M93WbSXy39YcYKthezUaKZA</string>
-    <string name="google_app_id" translatable="false">1:722045760591:android:033d226a5bdef191fda63a</string>
+    <string name="google_app_id" translatable="false">1:722045760591:android:aa10d769fd918ed9fda63a</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyACQhexv471M93WbSXy39YcYKthezUaKZA</string>
     <string name="google_storage_bucket" translatable="false">jugol-494d8.appspot.com</string>
     <string name="project_id" translatable="false">jugol-494d8</string>

@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import getSocket from "@utils/socketClient";
 import { RefreshControl, ScrollView } from "react-native";
 import colors from "@colors";
+import useIsPremium from "@hooks/useIsPremium";
 
 export default function LikeScreen() {
   const [isClicked, setClicked] = useState({
@@ -16,6 +17,9 @@ export default function LikeScreen() {
     youLiked: false,
     match: false,
   });
+
+  const { isPremium } = useIsPremium();
+  console.log(isPremium);
 
   const [refreshing, setRefreshing] = React.useState(false);
 
@@ -156,7 +160,7 @@ export default function LikeScreen() {
             }
             data={likedYouData}
             type="likedYou"
-            isPremium={true}
+            isPremium={isPremium}
           />
         ) : (
           <ScrollView

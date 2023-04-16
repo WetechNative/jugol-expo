@@ -12,6 +12,10 @@ import UserEditableProfileScreen from '../screens/account-screens/UserEditablePr
 import UserProfileScreen from '../screens/account-screens/UserProfileScreen/UserProfileScreen';
 import { fontConfig } from '../theme-config/fontConfig';
 import { IReactNavigationRoutes } from '../types/route.types';
+import PrivacyPolicy from '@screens/account-screens/PrivacyPolicy/PrivacyPolicy';
+import FAQ from '@screens/account-screens/FAQ/FAQ';
+import SafetyTips from '@screens/account-screens/SafetyTips/SafetyTips';
+import AboutUs from '@screens/account-screens/AboutUs/AboutUs';
 
 const profileScreens: IReactNavigationRoutes = {
   userProfile: {
@@ -65,6 +69,22 @@ const profileScreens: IReactNavigationRoutes = {
   userPartner: {
     path: 'userPartner',
     component: EditUserPartnerDetails,
+  },
+  privacyPolicy: {
+    path: 'privacyPolicy',
+    component: PrivacyPolicy,
+  },
+  faq: {
+    path: 'faq',
+    component: FAQ,
+  },
+  safetyTips: {
+    path: 'safetyTips',
+    component: SafetyTips,
+  },
+  aboutUs: {
+    path: 'aboutUs',
+    component: AboutUs,
   },
 };
 

@@ -12,6 +12,8 @@ import { logout, selectFCMToken } from "@store/features/auth/authSlice";
 import { useDeleteFCMTokenMutation } from "@store/api/authApi/authApiSlice";
 import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import useIsPremium from "@hooks/useIsPremium";
+import { Alert } from "react-native";
 
 export default function MessageSettingScreen() {
   const navigation = useNavigation();
@@ -20,6 +22,7 @@ export default function MessageSettingScreen() {
   const [deleteFCMToken, results] = useDeleteFCMTokenMutation();
   const [loading, setLoading] = useState<boolean>(false);
   const fcmToken = useSelector(selectFCMToken);
+  const { isPremium } = useIsPremium();
 
   const removeData = async () => {
     try {
@@ -43,7 +46,13 @@ export default function MessageSettingScreen() {
         <SettingButton
           title="Become Premium"
           subTitle="Chicago, IL United States"
-          onPress={() => navigation.navigate("BePremium" as never)}
+          onPress={() => {
+            if (isPremium) {
+              Alert.alert("Premium", "You are already a premium user!");
+            } else {
+              navigation.navigate("BePremium" as never);
+            }
+          }}
         />
       </VStack>
       <Button

@@ -10,14 +10,22 @@ import { fontSizes } from "@typography";
 import { useNavigation } from "@react-navigation/native";
 import { Alert } from "react-native";
 import { useStripe } from "@stripe/stripe-react-native";
-import { useCreatePaymentMutation } from "@store/api/paymentApi/paymentApiSlice";
+import {
+  useAddPaymentMutation,
+  useCreatePaymentMutation,
+} from "@store/api/paymentApi/paymentApiSlice";
 import { Bkash, Card, Nagad, Rocket } from "@assets/svg/icons";
+import { useSelector } from "react-redux";
+import { selectUID } from "@store/features/auth/authSlice";
+import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
 
 export default function PaymentMethodScreen({ route }: any) {
   const navigation = useNavigation();
-  const { price } = route.params;
+  const { price, packageDuration } = route.params;
   const stripe = useStripe();
   const [createPayment, result] = useCreatePaymentMutation();
+  const uid = useSelector(selectUID);
+  const [addPayment, paymentResult] = useAddPaymentMutation();
 
   const handleCreditCard = async () => {
     try {
@@ -36,6 +44,11 @@ export default function PaymentMethodScreen({ route }: any) {
         clientSecret,
       });
       if (presentSheet.error) return Alert.alert(presentSheet.error.message);
+
+      await addPayment({
+        amount: price.split(" ")[1],
+        package: packageDuration,
+      });
       navigation.navigate(
         "PaymentSuccess" as never,
         { status: "success" } as never
@@ -129,6 +142,7 @@ export default function PaymentMethodScreen({ route }: any) {
         </VStack>
       </VStack>
       {/* <Button variant={'primary'}>{price}</Button> */}
+      <CustomLoadingModal modalVisible={paymentResult.isLoading} />
     </VStack>
   );
 }

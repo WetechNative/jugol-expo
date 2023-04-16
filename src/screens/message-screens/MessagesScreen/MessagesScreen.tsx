@@ -11,14 +11,24 @@ import MessageRenderItem from "@ui/MessageRenderItem/MessageRenderItem";
 import SearchInput from "@ui/SearchInput/SearchInput";
 import StoryCardRounded from "@ui/StoryCardRounded/StoryCardRounded";
 import getSocket from "@utils/socketClient";
-import { Center, FlatList, HStack, Skeleton, Text, VStack } from "native-base";
+import {
+  Button,
+  Center,
+  FlatList,
+  HStack,
+  Skeleton,
+  Text,
+  VStack,
+} from "native-base";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
 import SettingButtonWithIcon from "../../../components/SettingButtonWithIcon/SettingButtonWithIcon";
 import { IConversationProps } from "./MessageScreen.types";
-import { RefreshControl } from "react-native";
+import { RefreshControl, useWindowDimensions } from "react-native";
 import colors from "@colors";
+import useIsPremium from "@hooks/useIsPremium";
+import { Premium } from "@assets/svg/icons";
 
 const EmptyConversation = () => {
   return (
@@ -42,6 +52,8 @@ export default function MessagesScreen() {
       setRefreshing(false);
     }, 2000);
   }, []);
+  const { isPremium } = useIsPremium();
+  const { height, width } = useWindowDimensions();
 
   const {
     data: conversations,
@@ -158,6 +170,32 @@ export default function MessagesScreen() {
         ) : (
           <EmptyConversation />
         )}
+        {!isPremium ? (
+          <VStack
+            backgroundColor={"rgba(250, 250, 250, 0.5)"}
+            h={height}
+            position="absolute"
+            // opacity={0.2}
+            w="full"
+            // top="0px"
+            bottom="0px"
+            alignItems="center"
+            justifyContent="center"
+            p="20px"
+          >
+            <Premium style={{ height: 100, width: 100 }} />
+            <Text fontSize="lg">Be premium,</Text>
+            <Text fontSize="lg">To chat with others!</Text>
+            <Button
+              variant="primary"
+              w="80"
+              mt="50"
+              onPress={() => navigation.navigate("BePremium" as never)}
+            >
+              Be Premium
+            </Button>
+          </VStack>
+        ) : null}
       </VStack>
     </>
   );

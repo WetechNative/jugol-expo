@@ -12,36 +12,37 @@ import React, { useState } from "react";
 import { Alert } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFCMToken } from "../../../../redux/features/auth/authSlice";
+import useIsPremium from "@hooks/useIsPremium";
 
 const settings = [
   {
     title: "Edit Profile",
-    subTitle: "Integer libero ut facilisis enim at.",
+    subTitle: "Keep Your Profile Up-to-Date",
     type: "reset",
   },
   {
     title: "Become Premium",
-    subTitle: "Chicago, IL United States",
+    subTitle: "Upgrade Your Matrimony Experience",
     type: "premium",
   },
   {
     title: "Safety & Tips",
-    subTitle: "Chicago, IL United States",
+    subTitle: "Advice to Help You Stay Safe While Using Our App",
     type: "safety",
   },
   {
     title: "FAQ",
-    subTitle: "Chicago, IL United States",
+    subTitle: "Answers to Commonly Asked Questions About Our App and Services",
     type: "faq",
   },
   {
     title: "About Us",
-    subTitle: "Chicago, IL United States",
+    subTitle: "Discover Our Vision for Helping You Find Your Life Partner",
     type: "about",
   },
   {
     title: "Privacy Policy",
-    subTitle: "Chicago, IL United States",
+    subTitle: "Information on How We Collect, Use, and Secure Your Data",
     type: "policy",
   },
 ];
@@ -61,25 +62,32 @@ export default function SettingScreen() {
     }
   };
 
+  const { isPremium } = useIsPremium();
+  console.log(isPremium);
+
   const handleSettings = (type: string) => {
     switch (type) {
       case "reset":
         navigation.navigate(accountRoutes.userEditableProfile.path as never);
         break;
       case "premium":
-        navigation.navigate("BePremium" as never);
+        if (isPremium) {
+          Alert.alert("Premium", "You are already a premium user!");
+        } else {
+          navigation.navigate("BePremium" as never);
+        }
         break;
       case "safety":
-        Alert.alert("Upcoming", "This feature will be updated soon!");
+        navigation.navigate(accountRoutes.safetyTips.path as never);
         break;
       case "faq":
-        Alert.alert("Upcoming", "This feature will be updated soon!");
+        navigation.navigate(accountRoutes.faq.path as never);
         break;
       case "about":
-        Alert.alert("Upcoming", "This feature will be updated soon!");
+        navigation.navigate(accountRoutes.aboutUs.path as never);
         break;
       case "policy":
-        Alert.alert("Upcoming", "This feature will be updated soon!");
+        navigation.navigate(accountRoutes.privacyPolicy.path as never);
         break;
     }
   };
