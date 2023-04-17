@@ -104,6 +104,7 @@ export default function PremiumPackagesScreen() {
                 : packageDuration.month3
                 ? 3
                 : 12,
+              type: "premium",
             } as never
           )
         }

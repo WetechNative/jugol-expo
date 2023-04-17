@@ -15,12 +15,29 @@ const paymentApiSlice = apiSlice.injectEndpoints({
         method: 'POST',
         body,
       }),
+      invalidatesTags: ['getPayment'],
+    }),
+    addSMSPackage: builder.mutation({
+      query: (body) => ({
+        url: `payment/addSMSPackage`,
+        method: 'POST',
+        body,
+      }),
+      invalidatesTags: ['getSMSPackage'],
     }),
     getPayment: builder.query({
       query: () => ({
         url: `payment/getPayment`,
         method: 'GET',
       }),
+      providesTags: ['getPayment']
+    }),
+    getSMSPackage: builder.query({
+      query: () => ({
+        url: `payment/getSMSPackage`,
+        method: 'GET',
+      }),
+      providesTags: ['getSMSPackage'],
     })
   }),
   overrideExisting: true,
@@ -29,5 +46,7 @@ const paymentApiSlice = apiSlice.injectEndpoints({
 export const {
     useCreatePaymentMutation,
     useAddPaymentMutation,
-    useGetPaymentQuery
+    useGetPaymentQuery,
+    useAddSMSPackageMutation,
+    useGetSMSPackageQuery
 } = paymentApiSlice;

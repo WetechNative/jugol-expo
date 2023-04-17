@@ -17,6 +17,7 @@ import auth from "@react-native-firebase/auth";
 import LikeProfileScreen from "@screens/like-screens/LikeProfileScreen/LikeProfileScreen";
 import { useCheckUserMutation } from "@store/api/authApi/authApiSlice";
 import { VStack } from "native-base";
+import SMSPackage from "@screens/premium-screens/SMSPackage/SMSPackage";
 
 export default function DashBoardRoutes() {
   const screens = Object.values(dashBoardScreens);
@@ -106,6 +107,13 @@ export default function DashBoardRoutes() {
       <Stack.Screen
         name="PremiumPackagesScreen"
         component={PremiumPackagesScreen}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="SMSPackage"
+        component={SMSPackage}
         options={{
           headerShown: true,
         }}

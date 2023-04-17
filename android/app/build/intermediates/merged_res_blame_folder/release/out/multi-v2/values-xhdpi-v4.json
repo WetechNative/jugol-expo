@@ -4,7 +4,7 @@
             "outputFile": "com.jugol.bd.app-mergeReleaseResources-110:/values-xhdpi-v4/values-xhdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\9d2be84c431c3b8b6f8254ce71ea423d\\transformed\\jetified-payments-core-20.19.5\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\b9f75ab6bde4eca256700a2ee7a8f334\\transformed\\jetified-payments-core-20.19.5\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

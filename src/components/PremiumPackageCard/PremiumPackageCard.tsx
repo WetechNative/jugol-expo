@@ -28,7 +28,7 @@ export default function PremiumPackageCard({
           color={"rgba(0, 0, 0, 0.4)"}
           bg={"white"}
           px={"2px"}
-          fontSize={fontSizes["2xs"]}
+          fontSize={fontSizes["xs"]}
         >
           {duration}
         </Text>

@@ -12,6 +12,7 @@ import { Alert } from "react-native";
 import { useStripe } from "@stripe/stripe-react-native";
 import {
   useAddPaymentMutation,
+  useAddSMSPackageMutation,
   useCreatePaymentMutation,
 } from "@store/api/paymentApi/paymentApiSlice";
 import { Bkash, Card, Nagad, Rocket } from "@assets/svg/icons";
@@ -21,11 +22,12 @@ import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
 
 export default function PaymentMethodScreen({ route }: any) {
   const navigation = useNavigation();
-  const { price, packageDuration } = route.params;
+  const { price, packageDuration, type } = route.params;
   const stripe = useStripe();
   const [createPayment, result] = useCreatePaymentMutation();
   const uid = useSelector(selectUID);
   const [addPayment, paymentResult] = useAddPaymentMutation();
+  const [addSMSPackage, smsPackageResult] = useAddSMSPackageMutation();
 
   const handleCreditCard = async () => {
     try {
@@ -45,10 +47,18 @@ export default function PaymentMethodScreen({ route }: any) {
       });
       if (presentSheet.error) return Alert.alert(presentSheet.error.message);
 
-      await addPayment({
-        amount: price.split(" ")[1],
-        package: packageDuration,
-      });
+      if (type === "sms") {
+        await addSMSPackage({
+          amount: price.split(" ")[1],
+          sms: packageDuration,
+        });
+      } else {
+        await addPayment({
+          amount: price.split(" ")[1],
+          package: packageDuration,
+        });
+      }
+
       navigation.navigate(
         "PaymentSuccess" as never,
         { status: "success" } as never

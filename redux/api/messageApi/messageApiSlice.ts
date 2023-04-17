@@ -518,6 +518,7 @@ export const messageApiSlice = apiSlice.injectEndpoints({
         url: "/messages/sendMessage",
         body: data?.message,
       }),
+      invalidatesTags: ['getSMSPackage'],
       async onQueryStarted(data, { dispatch, queryFulfilled }) {
         const id = data?.messageData?._id;
         console.log(id);

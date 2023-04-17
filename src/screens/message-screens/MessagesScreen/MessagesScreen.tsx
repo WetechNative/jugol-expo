@@ -29,6 +29,7 @@ import { RefreshControl, useWindowDimensions } from "react-native";
 import colors from "@colors";
 import useIsPremium from "@hooks/useIsPremium";
 import { Premium } from "@assets/svg/icons";
+import { useGetSMSPackageQuery } from "@store/api/paymentApi/paymentApiSlice";
 
 const EmptyConversation = () => {
   return (
@@ -54,6 +55,13 @@ export default function MessagesScreen() {
   }, []);
   const { isPremium } = useIsPremium();
   const { height, width } = useWindowDimensions();
+  const {
+    data: smsPackage,
+    isLoading,
+    isError,
+  } = useGetSMSPackageQuery(undefined);
+
+  console.log({ smsPackage, isPremium });
 
   const {
     data: conversations,
@@ -170,21 +178,19 @@ export default function MessagesScreen() {
         ) : (
           <EmptyConversation />
         )}
-        {!isPremium ? (
+        {!isPremium && smsPackage?.sms <= 0 ? (
           <VStack
             backgroundColor={"rgba(250, 250, 250, 0.5)"}
             h={height}
             position="absolute"
-            // opacity={0.2}
             w="full"
-            // top="0px"
             bottom="0px"
             alignItems="center"
             justifyContent="center"
             p="20px"
           >
-            <Premium style={{ height: 100, width: 100 }} />
-            <Text fontSize="lg">Be premium,</Text>
+            <Premium style={{ height: 100, width: 100, marginTop: 100 }} />
+            <Text fontSize="lg">Be premium or Buy SMS,</Text>
             <Text fontSize="lg">To chat with others!</Text>
             <Button
               variant="primary"
@@ -193,6 +199,14 @@ export default function MessagesScreen() {
               onPress={() => navigation.navigate("BePremium" as never)}
             >
               Be Premium
+            </Button>
+            <Button
+              variant="outline"
+              w="80"
+              mt="10px"
+              onPress={() => navigation.navigate("SMSPackage" as never)}
+            >
+              Buy SMS
             </Button>
           </VStack>
         ) : null}

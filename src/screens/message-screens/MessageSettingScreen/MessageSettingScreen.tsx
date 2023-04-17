@@ -14,6 +14,7 @@ import CustomLoadingModal from "@ui/CustomLoadingModal/CustomLoadingModal";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import useIsPremium from "@hooks/useIsPremium";
 import { Alert } from "react-native";
+import { useGetSMSPackageQuery } from "@store/api/paymentApi/paymentApiSlice";
 
 export default function MessageSettingScreen() {
   const navigation = useNavigation();
@@ -23,6 +24,11 @@ export default function MessageSettingScreen() {
   const [loading, setLoading] = useState<boolean>(false);
   const fcmToken = useSelector(selectFCMToken);
   const { isPremium } = useIsPremium();
+  const {
+    data: smsPackage,
+    isLoading,
+    isError,
+  } = useGetSMSPackageQuery(undefined);
 
   const removeData = async () => {
     try {
@@ -38,19 +44,31 @@ export default function MessageSettingScreen() {
       <VStack flex={1} space={8}>
         <SettingButton
           title="Blocked Users"
-          subTitle="Integer libero ut facilisis enim at."
+          subTitle="View and Unblock Users!"
           onPress={() =>
             navigation.navigate(messageRoutes.blockedUsers.path as never)
           }
         />
         <SettingButton
           title="Become Premium"
-          subTitle="Chicago, IL United States"
+          subTitle="Upgrade Your Matrimony Experience!"
           onPress={() => {
             if (isPremium) {
               Alert.alert("Premium", "You are already a premium user!");
             } else {
               navigation.navigate("BePremium" as never);
+            }
+          }}
+        />
+
+        <SettingButton
+          title="Buy SMS"
+          subTitle="Buy SMS to chat with others"
+          onPress={() => {
+            if (smsPackage?.sms > 0) {
+              Alert.alert("SMS", `You have ${smsPackage?.sms} SMS remaining!`);
+            } else {
+              navigation.navigate("SMSPackage" as never);
             }
           }}
         />

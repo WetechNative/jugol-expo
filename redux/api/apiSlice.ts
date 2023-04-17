@@ -44,7 +44,9 @@ export const apiSlice = createApi({
     'getMessages',
     'getAllLikes',
     'getAllUser',
-    'getAllBlocks'
+    'getAllBlocks',
+    'getSMSPackage',
+    'getPayment'
   ],
   endpoints: builder => ({}),
 });

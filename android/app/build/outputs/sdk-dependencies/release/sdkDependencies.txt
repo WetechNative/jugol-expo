@@ -5,10 +5,10 @@ library {
   maven_library {
     groupId: "com.facebook.react"
     artifactId: "react-android"
-    version: "0.71.4"
+    version: "0.71.6"
   }
   digests {
-    sha256: "\005fC$T\320\317\333$\311\300\350\222x\337\264\037\267\313\330\340\020DO6\033\350\005_A\2158"
+    sha256: "H\032\214\312\330\b\327A\322\'\2644\326\364\032r\351&O\022B\213\253-\\\363\223\201\254\324\352E"
   }
   repo_index {
     value: 1
@@ -1096,10 +1096,10 @@ library {
   maven_library {
     groupId: "com.facebook.react"
     artifactId: "hermes-android"
-    version: "0.71.4"
+    version: "0.71.6"
   }
   digests {
-    sha256: "b^\v\352b\370.9?u\332~\a\364\212}\377\256\263\004eD\341\214\361z\262\032\203\320Z("
+    sha256: "\302E\344\017\226%/\245\346\027\3540\314U@$!\000[c\366\363_V\277q\315\361P\344\341="
   }
   repo_index {
     value: 1

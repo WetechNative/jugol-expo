@@ -4,7 +4,7 @@
             "outputFile": "com.jugol.bd.app-mergeReleaseResources-110:/values-ru-rRU/values-ru-rRU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\6713e6afa6ce81c848a3577baad0d3f9\\transformed\\jetified-stripe-3ds2-android-6.1.7\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\a9442091776401d60a2fddf8908a2a68\\transformed\\jetified-stripe-3ds2-android-6.1.7\\res\\values-ru-rRU\\values-ru-rRU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\fbaa494c195bac626d54787063b89dd1\\transformed\\jetified-Android-Image-Cropper-4.3.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\17c3a22f202d1e2e632066757d7d1168\\transformed\\jetified-Android-Image-Cropper-4.3.0\\res\\values-ru-rRU\\values-ru-rRU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

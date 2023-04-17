@@ -4,7 +4,7 @@
             "outputFile": "com.jugol.bd.app-mergeReleaseResources-110:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\74384973846a28598cad1e8e14db8413\\transformed\\material-1.8.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-3\\fb742e7e28812e781081307edf3b4eb5\\transformed\\material-1.8.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
