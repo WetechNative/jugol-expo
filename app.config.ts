@@ -38,7 +38,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
             googleServicesFile: "./GoogleService-Info.plist",
             config: {},
             bundleIdentifier: "com.jugol.bd",
-            buildNumber: "1.0.4",
+            buildNumber: "1.0.2",
             bitcode: false,
             infoPlist: {
                 NSLocationAlwaysAndWhenInUseUsageDescription:
